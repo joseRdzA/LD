@@ -1,0 +1,616 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AADFLDModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ACTIVOS_LUZ_DIVINA_COMPUTO">
+          <Key>
+            <PropertyRef Name="CODIGO_ACTIVO_COMPUTO" />
+          </Key>
+          <Property Name="CODIGO_ACTIVO_COMPUTO" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="DESCRIPCION" Type="varchar" MaxLength="30" />
+          <Property Name="MARCA" Type="varchar" MaxLength="30" />
+          <Property Name="SERIE" Type="varchar" MaxLength="50" />
+          <Property Name="FECHA_COMPRA" Type="date" />
+          <Property Name="FECHA_SALIDA" Type="date" />
+          <Property Name="VIDA_UTIL_MESES" Type="int" />
+          <Property Name="COSTO_ADQUISITIVO" Type="int" />
+          <Property Name="DEPREC_MES" Type="int" />
+          <Property Name="DEPREC_ACUM" Type="int" />
+          <Property Name="VALOR_LIBROS" Type="int" />
+        </EntityType>
+        <EntityType Name="ACTIVOS_LUZ_DIVINA_ELECTRICOS">
+          <Key>
+            <PropertyRef Name="CODIGO_ACTIVO_ELECTRICO" />
+          </Key>
+          <Property Name="CODIGO_ACTIVO_ELECTRICO" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="DESCRIPCION" Type="varchar" MaxLength="30" />
+          <Property Name="MARCA" Type="varchar" MaxLength="30" />
+          <Property Name="SERIE" Type="varchar" MaxLength="50" />
+          <Property Name="FECHA_COMPRA" Type="date" />
+          <Property Name="FECHA_SALIDA" Type="date" />
+          <Property Name="VIDA_UTIL_MESES" Type="int" />
+          <Property Name="COSTO_ADQUISITIVO" Type="int" />
+          <Property Name="DEPREC_MES" Type="int" />
+          <Property Name="DEPREC_ACUM" Type="int" />
+          <Property Name="VALOR_LIBROS" Type="int" />
+        </EntityType>
+        <EntityType Name="ACTIVOS_LUZ_DIVINA_RECREATIVOS">
+          <Key>
+            <PropertyRef Name="CODIGO_ACTIVO_RECREATIVO" />
+          </Key>
+          <Property Name="CODIGO_ACTIVO_RECREATIVO" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="DESCRIPCION" Type="varchar" MaxLength="30" />
+          <Property Name="MARCA" Type="varchar" MaxLength="30" />
+          <Property Name="SERIE" Type="varchar" MaxLength="50" />
+          <Property Name="FECHA_COMPRA" Type="date" />
+          <Property Name="FECHA_SALIDA" Type="date" />
+          <Property Name="VIDA_UTIL_MESES" Type="int" />
+          <Property Name="COSTO_ADQUISITIVO" Type="int" />
+          <Property Name="DEPREC_MES" Type="int" />
+          <Property Name="DEPREC_ACUM" Type="int" />
+          <Property Name="VALOR_LIBROS" Type="int" />
+        </EntityType>
+        <EntityType Name="Cargos">
+          <Key>
+            <PropertyRef Name="ID_CARGO" />
+          </Key>
+          <Property Name="ID_CARGO" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="NOMBRE_CARGO" Type="varchar" MaxLength="25" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Estudiantes">
+          <Key>
+            <PropertyRef Name="IDESTUDIANTE" />
+          </Key>
+          <Property Name="IDESTUDIANTE" Type="int" Nullable="false" />
+          <Property Name="NOMBRECOMPLETO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FECHA_NACIMIENTO" Type="date" Nullable="false" />
+          <Property Name="RESPONSABLE" Type="varchar" MaxLength="50" />
+          <Property Name="ID_NIVEL" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="ASISTENCIA" Type="int" />
+          <Property Name="AUSENCIA" Type="varchar" MaxLength="800" />
+          <Property Name="TELEFONO" Type="int" />
+        </EntityType>
+        <EntityType Name="Funcionario">
+          <Key>
+            <PropertyRef Name="ID_FUNCIONARIO" />
+          </Key>
+          <Property Name="ID_FUNCIONARIO" Type="int" Nullable="false" />
+          <Property Name="NOMBRECOMPLETO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="NUM_TEL" Type="int" />
+          <Property Name="CORREO_ELECTRONICO" Type="varchar" MaxLength="80" />
+          <Property Name="ID_CARGO" Type="varchar" MaxLength="25" Nullable="false" />
+        </EntityType>
+        <EntityType Name="INVENTARIO_COCINA">
+          <Key>
+            <PropertyRef Name="CODIGO_COCINA" />
+          </Key>
+          <Property Name="CODIGO_COCINA" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="PRODUCTO" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="MEDIDA" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="EXISTENCIA_INICIAL" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="ENTRADAS" Type="int" Nullable="false" />
+          <Property Name="SALIDAS" Type="int" Nullable="false" />
+          <Property Name="EXISTENCIAS" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Niveles">
+          <Key>
+            <PropertyRef Name="ID_NIVEL" />
+          </Key>
+          <Property Name="ID_NIVEL" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="NOMBRE_NIVEL" Type="varchar" MaxLength="15" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Reserva_Matriculas">
+          <Key>
+            <PropertyRef Name="ID_RESERVA" />
+          </Key>
+          <Property Name="ID_RESERVA" Type="int" Nullable="false" />
+          <Property Name="NOMBRETUTOR" Type="varchar" MaxLength="65" Nullable="false" />
+          <Property Name="CEDULATUTOR" Type="varchar" MaxLength="25" />
+          <Property Name="CORREOTUTOR" Type="varchar" MaxLength="60" />
+          <Property Name="NUM_TEL" Type="int" Nullable="false" />
+          <Property Name="NOMBREALUMNO" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="FECHA_NACIMIENTO" Type="date" />
+          <Property Name="EDAD" Type="int" />
+          <Property Name="SEXO" Type="varchar" MaxLength="9" />
+          <Property Name="NACIONALIDAD" Type="varchar" MaxLength="25" />
+          <Property Name="PROVINCIA" Type="varchar" MaxLength="10" />
+          <Property Name="DIRECCIONDETALLADA" Type="varchar" MaxLength="200" />
+          <Property Name="FECHA_CITA" Type="date" Nullable="false" />
+          <Property Name="HORA_CITA" Type="varchar" MaxLength="25" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ROL">
+          <Key>
+            <PropertyRef Name="IdRol" />
+          </Key>
+          <Property Name="IdRol" Type="int" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Servicio_Comunales">
+          <Key>
+            <PropertyRef Name="ID_SERVICIO_COMUNAL" />
+          </Key>
+          <Property Name="ID_SERVICIO_COMUNAL" Type="int" Nullable="false" />
+          <Property Name="NOMBRE_SERVICIO" Type="varchar" MaxLength="35" Nullable="false" />
+          <Property Name="NOMBRE_PERSONA" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="EMAIL" Type="varchar" MaxLength="60" />
+          <Property Name="NUMTEL" Type="int" />
+          <Property Name="MENSAJE" Type="varchar" MaxLength="400" />
+        </EntityType>
+        <EntityType Name="USUARIOS">
+          <Key>
+            <PropertyRef Name="idUsuario" />
+          </Key>
+          <Property Name="idUsuario" Type="int" Nullable="false" />
+          <Property Name="Nombres" Type="varchar" MaxLength="50" />
+          <Property Name="Correo" Type="varchar" MaxLength="50" />
+          <Property Name="Clave" Type="varchar" MaxLength="50" />
+          <Property Name="IdRol" Type="int" />
+        </EntityType>
+        <Association Name="FK__USUARIOS__IdRol__2B3F6F97">
+          <End Role="ROL" Type="Self.ROL" Multiplicity="0..1" />
+          <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ROL">
+              <PropertyRef Name="IdRol" />
+            </Principal>
+            <Dependent Role="USUARIOS">
+              <PropertyRef Name="IdRol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_cargos">
+          <End Role="Cargos" Type="Self.Cargos" Multiplicity="1" />
+          <End Role="Funcionario" Type="Self.Funcionario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cargos">
+              <PropertyRef Name="ID_CARGO" />
+            </Principal>
+            <Dependent Role="Funcionario">
+              <PropertyRef Name="ID_CARGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_NIVELES">
+          <End Role="Niveles" Type="Self.Niveles" Multiplicity="1" />
+          <End Role="Estudiantes" Type="Self.Estudiantes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Niveles">
+              <PropertyRef Name="ID_NIVEL" />
+            </Principal>
+            <Dependent Role="Estudiantes">
+              <PropertyRef Name="ID_NIVEL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AADFLDModelStoreContainer">
+          <EntitySet Name="ACTIVOS_LUZ_DIVINA_COMPUTO" EntityType="Self.ACTIVOS_LUZ_DIVINA_COMPUTO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ACTIVOS_LUZ_DIVINA_ELECTRICOS" EntityType="Self.ACTIVOS_LUZ_DIVINA_ELECTRICOS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ACTIVOS_LUZ_DIVINA_RECREATIVOS" EntityType="Self.ACTIVOS_LUZ_DIVINA_RECREATIVOS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cargos" EntityType="Self.Cargos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Estudiantes" EntityType="Self.Estudiantes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Funcionario" EntityType="Self.Funcionario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="INVENTARIO_COCINA" EntityType="Self.INVENTARIO_COCINA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Niveles" EntityType="Self.Niveles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Reserva_Matriculas" EntityType="Self.Reserva_Matriculas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ROL" EntityType="Self.ROL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Servicio_Comunales" EntityType="Self.Servicio_Comunales" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USUARIOS" EntityType="Self.USUARIOS" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__USUARIOS__IdRol__2B3F6F97" Association="Self.FK__USUARIOS__IdRol__2B3F6F97">
+            <End Role="ROL" EntitySet="ROL" />
+            <End Role="USUARIOS" EntitySet="USUARIOS" />
+          </AssociationSet>
+          <AssociationSet Name="fk_cargos" Association="Self.fk_cargos">
+            <End Role="Cargos" EntitySet="Cargos" />
+            <End Role="Funcionario" EntitySet="Funcionario" />
+          </AssociationSet>
+          <AssociationSet Name="fk_NIVELES" Association="Self.fk_NIVELES">
+            <End Role="Niveles" EntitySet="Niveles" />
+            <End Role="Estudiantes" EntitySet="Estudiantes" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AADFLDModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ACTIVOS_LUZ_DIVINA_COMPUTO">
+          <Key>
+            <PropertyRef Name="CODIGO_ACTIVO_COMPUTO" />
+          </Key>
+          <Property Name="CODIGO_ACTIVO_COMPUTO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DESCRIPCION" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="MARCA" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="SERIE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FECHA_COMPRA" Type="DateTime" Precision="0" />
+          <Property Name="FECHA_SALIDA" Type="DateTime" Precision="0" />
+          <Property Name="VIDA_UTIL_MESES" Type="Int32" />
+          <Property Name="COSTO_ADQUISITIVO" Type="Int32" />
+          <Property Name="DEPREC_MES" Type="Int32" />
+          <Property Name="DEPREC_ACUM" Type="Int32" />
+          <Property Name="VALOR_LIBROS" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ACTIVOS_LUZ_DIVINA_ELECTRICOS">
+          <Key>
+            <PropertyRef Name="CODIGO_ACTIVO_ELECTRICO" />
+          </Key>
+          <Property Name="CODIGO_ACTIVO_ELECTRICO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DESCRIPCION" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="MARCA" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="SERIE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FECHA_COMPRA" Type="DateTime" Precision="0" />
+          <Property Name="FECHA_SALIDA" Type="DateTime" Precision="0" />
+          <Property Name="VIDA_UTIL_MESES" Type="Int32" />
+          <Property Name="COSTO_ADQUISITIVO" Type="Int32" />
+          <Property Name="DEPREC_MES" Type="Int32" />
+          <Property Name="DEPREC_ACUM" Type="Int32" />
+          <Property Name="VALOR_LIBROS" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ACTIVOS_LUZ_DIVINA_RECREATIVOS">
+          <Key>
+            <PropertyRef Name="CODIGO_ACTIVO_RECREATIVO" />
+          </Key>
+          <Property Name="CODIGO_ACTIVO_RECREATIVO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DESCRIPCION" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="MARCA" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="SERIE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FECHA_COMPRA" Type="DateTime" Precision="0" />
+          <Property Name="FECHA_SALIDA" Type="DateTime" Precision="0" />
+          <Property Name="VIDA_UTIL_MESES" Type="Int32" />
+          <Property Name="COSTO_ADQUISITIVO" Type="Int32" />
+          <Property Name="DEPREC_MES" Type="Int32" />
+          <Property Name="DEPREC_ACUM" Type="Int32" />
+          <Property Name="VALOR_LIBROS" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Cargos">
+          <Key>
+            <PropertyRef Name="ID_CARGO" />
+          </Key>
+          <Property Name="ID_CARGO" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NOMBRE_CARGO" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Funcionario" Relationship="Self.fk_cargos" FromRole="Cargos" ToRole="Funcionario" />
+        </EntityType>
+        <EntityType Name="Estudiantes">
+          <Key>
+            <PropertyRef Name="IDESTUDIANTE" />
+          </Key>
+          <Property Name="IDESTUDIANTE" Type="Int32" Nullable="false" />
+          <Property Name="NOMBRECOMPLETO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FECHA_NACIMIENTO" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="RESPONSABLE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ID_NIVEL" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ASISTENCIA" Type="Int32" />
+          <Property Name="AUSENCIA" Type="String" MaxLength="800" FixedLength="false" Unicode="false" />
+          <Property Name="TELEFONO" Type="Int32" />
+          <NavigationProperty Name="Niveles" Relationship="Self.fk_NIVELES" FromRole="Estudiantes" ToRole="Niveles" />
+        </EntityType>
+        <EntityType Name="Funcionario">
+          <Key>
+            <PropertyRef Name="ID_FUNCIONARIO" />
+          </Key>
+          <Property Name="ID_FUNCIONARIO" Type="Int32" Nullable="false" />
+          <Property Name="NOMBRECOMPLETO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NUM_TEL" Type="Int32" />
+          <Property Name="CORREO_ELECTRONICO" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="ID_CARGO" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Cargos" Relationship="Self.fk_cargos" FromRole="Funcionario" ToRole="Cargos" />
+        </EntityType>
+        <EntityType Name="INVENTARIO_COCINA">
+          <Key>
+            <PropertyRef Name="CODIGO_COCINA" />
+          </Key>
+          <Property Name="CODIGO_COCINA" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PRODUCTO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MEDIDA" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EXISTENCIA_INICIAL" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ENTRADAS" Type="Int32" Nullable="false" />
+          <Property Name="SALIDAS" Type="Int32" Nullable="false" />
+          <Property Name="EXISTENCIAS" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Niveles">
+          <Key>
+            <PropertyRef Name="ID_NIVEL" />
+          </Key>
+          <Property Name="ID_NIVEL" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NOMBRE_NIVEL" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Estudiantes" Relationship="Self.fk_NIVELES" FromRole="Niveles" ToRole="Estudiantes" />
+        </EntityType>
+        <EntityType Name="Reserva_Matriculas">
+          <Key>
+            <PropertyRef Name="ID_RESERVA" />
+          </Key>
+          <Property Name="ID_RESERVA" Type="Int32" Nullable="false" />
+          <Property Name="NOMBRETUTOR" Type="String" MaxLength="65" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CEDULATUTOR" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="CORREOTUTOR" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="NUM_TEL" Type="Int32" Nullable="false" />
+          <Property Name="NOMBREALUMNO" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FECHA_NACIMIENTO" Type="DateTime" Precision="0" />
+          <Property Name="EDAD" Type="Int32" />
+          <Property Name="SEXO" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
+          <Property Name="NACIONALIDAD" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="PROVINCIA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="DIRECCIONDETALLADA" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="FECHA_CITA" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="HORA_CITA" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ROL">
+          <Key>
+            <PropertyRef Name="IdRol" />
+          </Key>
+          <Property Name="IdRol" Type="Int32" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="USUARIOS" Relationship="Self.FK__USUARIOS__IdRol__2B3F6F97" FromRole="ROL" ToRole="USUARIOS" />
+        </EntityType>
+        <EntityType Name="Servicio_Comunales">
+          <Key>
+            <PropertyRef Name="ID_SERVICIO_COMUNAL" />
+          </Key>
+          <Property Name="ID_SERVICIO_COMUNAL" Type="Int32" Nullable="false" />
+          <Property Name="NOMBRE_SERVICIO" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NOMBRE_PERSONA" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EMAIL" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="NUMTEL" Type="Int32" />
+          <Property Name="MENSAJE" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="USUARIOS">
+          <Key>
+            <PropertyRef Name="idUsuario" />
+          </Key>
+          <Property Name="idUsuario" Type="Int32" Nullable="false" />
+          <Property Name="Nombres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Clave" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IdRol" Type="Int32" />
+          <NavigationProperty Name="ROL" Relationship="Self.FK__USUARIOS__IdRol__2B3F6F97" FromRole="USUARIOS" ToRole="ROL" />
+        </EntityType>
+        <Association Name="fk_cargos">
+          <End Role="Cargos" Type="Self.Cargos" Multiplicity="1" />
+          <End Role="Funcionario" Type="Self.Funcionario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cargos">
+              <PropertyRef Name="ID_CARGO" />
+            </Principal>
+            <Dependent Role="Funcionario">
+              <PropertyRef Name="ID_CARGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_NIVELES">
+          <End Role="Niveles" Type="Self.Niveles" Multiplicity="1" />
+          <End Role="Estudiantes" Type="Self.Estudiantes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Niveles">
+              <PropertyRef Name="ID_NIVEL" />
+            </Principal>
+            <Dependent Role="Estudiantes">
+              <PropertyRef Name="ID_NIVEL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__USUARIOS__IdRol__2B3F6F97">
+          <End Role="ROL" Type="Self.ROL" Multiplicity="0..1" />
+          <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ROL">
+              <PropertyRef Name="IdRol" />
+            </Principal>
+            <Dependent Role="USUARIOS">
+              <PropertyRef Name="IdRol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AADFLDEntities3" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ACTIVOS_LUZ_DIVINA_COMPUTO" EntityType="Self.ACTIVOS_LUZ_DIVINA_COMPUTO" />
+          <EntitySet Name="ACTIVOS_LUZ_DIVINA_ELECTRICOS" EntityType="Self.ACTIVOS_LUZ_DIVINA_ELECTRICOS" />
+          <EntitySet Name="ACTIVOS_LUZ_DIVINA_RECREATIVOS" EntityType="Self.ACTIVOS_LUZ_DIVINA_RECREATIVOS" />
+          <EntitySet Name="Cargos" EntityType="Self.Cargos" />
+          <EntitySet Name="Estudiantes" EntityType="Self.Estudiantes" />
+          <EntitySet Name="Funcionario" EntityType="Self.Funcionario" />
+          <EntitySet Name="INVENTARIO_COCINA" EntityType="Self.INVENTARIO_COCINA" />
+          <EntitySet Name="Niveles" EntityType="Self.Niveles" />
+          <EntitySet Name="Reserva_Matriculas" EntityType="Self.Reserva_Matriculas" />
+          <EntitySet Name="ROL" EntityType="Self.ROL" />
+          <EntitySet Name="Servicio_Comunales" EntityType="Self.Servicio_Comunales" />
+          <EntitySet Name="USUARIOS" EntityType="Self.USUARIOS" />
+          <AssociationSet Name="fk_cargos" Association="Self.fk_cargos">
+            <End Role="Cargos" EntitySet="Cargos" />
+            <End Role="Funcionario" EntitySet="Funcionario" />
+          </AssociationSet>
+          <AssociationSet Name="fk_NIVELES" Association="Self.fk_NIVELES">
+            <End Role="Niveles" EntitySet="Niveles" />
+            <End Role="Estudiantes" EntitySet="Estudiantes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__USUARIOS__IdRol__2B3F6F97" Association="Self.FK__USUARIOS__IdRol__2B3F6F97">
+            <End Role="ROL" EntitySet="ROL" />
+            <End Role="USUARIOS" EntitySet="USUARIOS" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AADFLDModelStoreContainer" CdmEntityContainer="AADFLDEntities3">
+          <EntitySetMapping Name="ACTIVOS_LUZ_DIVINA_COMPUTO">
+            <EntityTypeMapping TypeName="AADFLDModel.ACTIVOS_LUZ_DIVINA_COMPUTO">
+              <MappingFragment StoreEntitySet="ACTIVOS_LUZ_DIVINA_COMPUTO">
+                <ScalarProperty Name="CODIGO_ACTIVO_COMPUTO" ColumnName="CODIGO_ACTIVO_COMPUTO" />
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="MARCA" ColumnName="MARCA" />
+                <ScalarProperty Name="SERIE" ColumnName="SERIE" />
+                <ScalarProperty Name="FECHA_COMPRA" ColumnName="FECHA_COMPRA" />
+                <ScalarProperty Name="FECHA_SALIDA" ColumnName="FECHA_SALIDA" />
+                <ScalarProperty Name="VIDA_UTIL_MESES" ColumnName="VIDA_UTIL_MESES" />
+                <ScalarProperty Name="COSTO_ADQUISITIVO" ColumnName="COSTO_ADQUISITIVO" />
+                <ScalarProperty Name="DEPREC_MES" ColumnName="DEPREC_MES" />
+                <ScalarProperty Name="DEPREC_ACUM" ColumnName="DEPREC_ACUM" />
+                <ScalarProperty Name="VALOR_LIBROS" ColumnName="VALOR_LIBROS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ACTIVOS_LUZ_DIVINA_ELECTRICOS">
+            <EntityTypeMapping TypeName="AADFLDModel.ACTIVOS_LUZ_DIVINA_ELECTRICOS">
+              <MappingFragment StoreEntitySet="ACTIVOS_LUZ_DIVINA_ELECTRICOS">
+                <ScalarProperty Name="CODIGO_ACTIVO_ELECTRICO" ColumnName="CODIGO_ACTIVO_ELECTRICO" />
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="MARCA" ColumnName="MARCA" />
+                <ScalarProperty Name="SERIE" ColumnName="SERIE" />
+                <ScalarProperty Name="FECHA_COMPRA" ColumnName="FECHA_COMPRA" />
+                <ScalarProperty Name="FECHA_SALIDA" ColumnName="FECHA_SALIDA" />
+                <ScalarProperty Name="VIDA_UTIL_MESES" ColumnName="VIDA_UTIL_MESES" />
+                <ScalarProperty Name="COSTO_ADQUISITIVO" ColumnName="COSTO_ADQUISITIVO" />
+                <ScalarProperty Name="DEPREC_MES" ColumnName="DEPREC_MES" />
+                <ScalarProperty Name="DEPREC_ACUM" ColumnName="DEPREC_ACUM" />
+                <ScalarProperty Name="VALOR_LIBROS" ColumnName="VALOR_LIBROS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ACTIVOS_LUZ_DIVINA_RECREATIVOS">
+            <EntityTypeMapping TypeName="AADFLDModel.ACTIVOS_LUZ_DIVINA_RECREATIVOS">
+              <MappingFragment StoreEntitySet="ACTIVOS_LUZ_DIVINA_RECREATIVOS">
+                <ScalarProperty Name="CODIGO_ACTIVO_RECREATIVO" ColumnName="CODIGO_ACTIVO_RECREATIVO" />
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="MARCA" ColumnName="MARCA" />
+                <ScalarProperty Name="SERIE" ColumnName="SERIE" />
+                <ScalarProperty Name="FECHA_COMPRA" ColumnName="FECHA_COMPRA" />
+                <ScalarProperty Name="FECHA_SALIDA" ColumnName="FECHA_SALIDA" />
+                <ScalarProperty Name="VIDA_UTIL_MESES" ColumnName="VIDA_UTIL_MESES" />
+                <ScalarProperty Name="COSTO_ADQUISITIVO" ColumnName="COSTO_ADQUISITIVO" />
+                <ScalarProperty Name="DEPREC_MES" ColumnName="DEPREC_MES" />
+                <ScalarProperty Name="DEPREC_ACUM" ColumnName="DEPREC_ACUM" />
+                <ScalarProperty Name="VALOR_LIBROS" ColumnName="VALOR_LIBROS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cargos">
+            <EntityTypeMapping TypeName="AADFLDModel.Cargos">
+              <MappingFragment StoreEntitySet="Cargos">
+                <ScalarProperty Name="ID_CARGO" ColumnName="ID_CARGO" />
+                <ScalarProperty Name="NOMBRE_CARGO" ColumnName="NOMBRE_CARGO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Estudiantes">
+            <EntityTypeMapping TypeName="AADFLDModel.Estudiantes">
+              <MappingFragment StoreEntitySet="Estudiantes">
+                <ScalarProperty Name="IDESTUDIANTE" ColumnName="IDESTUDIANTE" />
+                <ScalarProperty Name="NOMBRECOMPLETO" ColumnName="NOMBRECOMPLETO" />
+                <ScalarProperty Name="FECHA_NACIMIENTO" ColumnName="FECHA_NACIMIENTO" />
+                <ScalarProperty Name="RESPONSABLE" ColumnName="RESPONSABLE" />
+                <ScalarProperty Name="ID_NIVEL" ColumnName="ID_NIVEL" />
+                <ScalarProperty Name="ASISTENCIA" ColumnName="ASISTENCIA" />
+                <ScalarProperty Name="AUSENCIA" ColumnName="AUSENCIA" />
+                <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Funcionario">
+            <EntityTypeMapping TypeName="AADFLDModel.Funcionario">
+              <MappingFragment StoreEntitySet="Funcionario">
+                <ScalarProperty Name="ID_FUNCIONARIO" ColumnName="ID_FUNCIONARIO" />
+                <ScalarProperty Name="NOMBRECOMPLETO" ColumnName="NOMBRECOMPLETO" />
+                <ScalarProperty Name="NUM_TEL" ColumnName="NUM_TEL" />
+                <ScalarProperty Name="CORREO_ELECTRONICO" ColumnName="CORREO_ELECTRONICO" />
+                <ScalarProperty Name="ID_CARGO" ColumnName="ID_CARGO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="INVENTARIO_COCINA">
+            <EntityTypeMapping TypeName="AADFLDModel.INVENTARIO_COCINA">
+              <MappingFragment StoreEntitySet="INVENTARIO_COCINA">
+                <ScalarProperty Name="CODIGO_COCINA" ColumnName="CODIGO_COCINA" />
+                <ScalarProperty Name="PRODUCTO" ColumnName="PRODUCTO" />
+                <ScalarProperty Name="MEDIDA" ColumnName="MEDIDA" />
+                <ScalarProperty Name="EXISTENCIA_INICIAL" ColumnName="EXISTENCIA_INICIAL" />
+                <ScalarProperty Name="ENTRADAS" ColumnName="ENTRADAS" />
+                <ScalarProperty Name="SALIDAS" ColumnName="SALIDAS" />
+                <ScalarProperty Name="EXISTENCIAS" ColumnName="EXISTENCIAS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Niveles">
+            <EntityTypeMapping TypeName="AADFLDModel.Niveles">
+              <MappingFragment StoreEntitySet="Niveles">
+                <ScalarProperty Name="ID_NIVEL" ColumnName="ID_NIVEL" />
+                <ScalarProperty Name="NOMBRE_NIVEL" ColumnName="NOMBRE_NIVEL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Reserva_Matriculas">
+            <EntityTypeMapping TypeName="AADFLDModel.Reserva_Matriculas">
+              <MappingFragment StoreEntitySet="Reserva_Matriculas">
+                <ScalarProperty Name="ID_RESERVA" ColumnName="ID_RESERVA" />
+                <ScalarProperty Name="NOMBRETUTOR" ColumnName="NOMBRETUTOR" />
+                <ScalarProperty Name="CEDULATUTOR" ColumnName="CEDULATUTOR" />
+                <ScalarProperty Name="CORREOTUTOR" ColumnName="CORREOTUTOR" />
+                <ScalarProperty Name="NUM_TEL" ColumnName="NUM_TEL" />
+                <ScalarProperty Name="NOMBREALUMNO" ColumnName="NOMBREALUMNO" />
+                <ScalarProperty Name="FECHA_NACIMIENTO" ColumnName="FECHA_NACIMIENTO" />
+                <ScalarProperty Name="EDAD" ColumnName="EDAD" />
+                <ScalarProperty Name="SEXO" ColumnName="SEXO" />
+                <ScalarProperty Name="NACIONALIDAD" ColumnName="NACIONALIDAD" />
+                <ScalarProperty Name="PROVINCIA" ColumnName="PROVINCIA" />
+                <ScalarProperty Name="DIRECCIONDETALLADA" ColumnName="DIRECCIONDETALLADA" />
+                <ScalarProperty Name="FECHA_CITA" ColumnName="FECHA_CITA" />
+                <ScalarProperty Name="HORA_CITA" ColumnName="HORA_CITA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ROL">
+            <EntityTypeMapping TypeName="AADFLDModel.ROL">
+              <MappingFragment StoreEntitySet="ROL">
+                <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Servicio_Comunales">
+            <EntityTypeMapping TypeName="AADFLDModel.Servicio_Comunales">
+              <MappingFragment StoreEntitySet="Servicio_Comunales">
+                <ScalarProperty Name="ID_SERVICIO_COMUNAL" ColumnName="ID_SERVICIO_COMUNAL" />
+                <ScalarProperty Name="NOMBRE_SERVICIO" ColumnName="NOMBRE_SERVICIO" />
+                <ScalarProperty Name="NOMBRE_PERSONA" ColumnName="NOMBRE_PERSONA" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="NUMTEL" ColumnName="NUMTEL" />
+                <ScalarProperty Name="MENSAJE" ColumnName="MENSAJE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USUARIOS">
+            <EntityTypeMapping TypeName="AADFLDModel.USUARIOS">
+              <MappingFragment StoreEntitySet="USUARIOS">
+                <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+                <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+                <ScalarProperty Name="Clave" ColumnName="Clave" />
+                <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

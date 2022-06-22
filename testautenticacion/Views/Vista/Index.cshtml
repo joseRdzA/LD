@@ -1,0 +1,460 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luz Divina</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- metodo de seguridad  QUEDA PENDIENTE YA QUE SE SECOMIENDA COLOCAR EN HHTTP ESTE ENCABEZADO-->
+    <meta http-equiv="Content-Security-Policy" content="[directive] [resource type]">
+
+    
+
+
+
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="~/lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="~/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+ 
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+
+    <link href="~/css/style.css" rel="stylesheet" />
+
+
+</head>
+<body>
+    <!-- Spinner Start -->
+    <!-- Spinner End -->
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small>123 Heredia  San José, Costa Rica</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center py-3">
+                    <small class="far fa-clock text-primary me-2"></small>
+                    <small>Horario - Lunes a Viernes de:  07.00 AM - 07.00 PM</small>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-phone text-primary me-2"></small>
+                    <small>+506 2260 6139</small>
+                </div>
+                <!-- eliminamos los href=""  de las redes sociales mientras nos indiquen su url -->
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-0"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
+        <a href="#page-top" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img src="" /><h1 class="m-0 text-primary">Luz Divina</h1>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="#page-top" class="nav-item nav-link active">Inicio</a>
+                <a href="#sobre" class="nav-item nav-link">Sobre nosotros</a>
+                <a href="#vision" class="nav-item nav-link">Visión</a>
+                <a href="#servicio" class="nav-item nav-link">Servicios</a>
+                <a href="#contacto" class="nav-item nav-link">Contacto</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Otros</a>
+                    <div class="dropdown-menu rounded-0 rounded-bottom m-0">
+
+
+
+
+                        <a><p style="text-align:center">@Html.ActionLink("Iniciar Sesión", "Index", "Acceso")</p></a>
+                        <a><p style="text-align:center">@Html.ActionLink("Servicio TCU", "TCU", "Vista")</p></a>
+                        <a><p style="text-align:center">@Html.ActionLink("Matricula", "Matricula", "Vista")</p></a>
+
+
+                    </div>
+                </div>
+
+            </div>
+            <a class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block" @Html.ActionLink("Donaciones", "Donaciones", "Vista")
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- Header Start -->
+    <!-- inici carrusel -->
+
+    <section id="container-slider">
+       
+        <ul class="listslider">
+            <li><a itlist="itList_0" href="#" class="item-select-slid"></a></li>
+            <li><a itlist="itList_1" href="#"></a></li>
+            <li><a itlist="itList_2" href="#"></a></li>
+        </ul>
+        <ul id="slider">
+
+         
+
+
+            <li style="background-image: url('/img/Frente.jpeg'); z-index:0; opacity: 1;">
+                <div class="content_slider">
+                    <div>
+                        <h2 class="text-white">Enseñansas</h2>
+                        <p>Con mucho amor y cariño</p>
+                        <!-- <a href="#" class="btnSlider">Ver más</a>  +++ un boton para el carrusel +++  -->
+                    </div>
+                </div>
+            </li>
+            <li style="background-image: url('/img/Hamacas.jpeg'); ">
+                <div class="content_slider">
+                    <div>
+                        <h2 class="text-white">Juegos</h2>
+                        <p>Llenos de diversion y cariño</p>
+                        <!-- <a href="#" class="btnSlider">Ver más</a> -->
+                    </div>
+                </div>
+            </li>
+            <li style="background-image: url('/img/Zona_Juego.jpeg'); ">
+                <div class="content_slider">
+                    <div>
+                        <h2 class="text-white">Invitados</h2>
+                        <p>Conozca mas de nuestro centro LUZ DIVINA</p>
+                        <!-- <a href="#" class="btnSlider">Ver más</a> -->
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- fin carrusel -->
+    <!-- Header End -->
+    <!-- About Start -->
+    <div id="sobre" class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="d-flex flex-column">
+                        <img class="img-fluid rounded w-75 align-self-end" src="~/img/Cocina.jpeg" alt="">
+                        <img class="img-fluid rounded w-50 bg-white pt-3 pe-3" src="/img/EntradaKids.jpeg" alt="" style="margin-top: -25%;">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <p class="d-inline-block border rounded-pill py-1 px-4">Sobre nosotros</p>
+                    <h1 class="mb-4">Recuerdos de nuestra esencia!</h1>
+                    <p>Fundación Luz Divina es una organización no gubernamental, sin fines de lucro, sin filiación político-partidista, de carácter técnico y naturaleza preventiva, que trabaja para incorporar la cultura de los derechos de la niñez y la adolescencia en la acción política y social.</p>
+                    <p class="mb-4">La Fundación Luz Divina construye, desarrolla y valida modelos de intervención relevantes y efectivos para nuestros objetivos, basados en la experiencia y en la evidencia de resultados. Modelos que se transfieren al Estado por su potencial de escalamiento mediante políticas públicas y programas institucionalizados</p>
+                    <p><i class="far fa-check-circle text-primary me-3"></i><strong>VISIÓN</strong>, Una Costa Rica en la que niñas, niños y adolescentes construyen vidas plenas de luz y de valor, libres de toda violencia y de toda discriminación.</p>
+                    <p><i class="far fa-check-circle text-primary me-3"></i><strong>MISIÓN</strong>, Potenciar la incorporación de la cultura de los derechos de la niñez y la adolescencia en la acción política y social de la nación.</p>
+                    <p><i class="far fa-check-circle text-primary me-3"></i><strong>VALORES</strong>, El que hacer de la Fundación Luz Divina responde al enfoque de derechos y responsabilidades de las personas menores de edad, el enfoque de curso de vida y el enfoque de género.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+    <!-- Feature Start -->
+    <div id="vision" class="container-fluid bg-primary overflow-hidden my-5 px-lg-0">
+        <div class="container feature px-lg-0">
+            <div class="row g-0 mx-lg-0">
+                <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="p-lg-5 ps-lg-0">
+                        <p class="d-inline-block border rounded-pill text-light py-1 px-4">Vision</p>
+                        <h1 class="text-white mb-4">Cambia gracias a su apoyo incondisional</h1>
+                        <p class="text-white mb-4 pb-2">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
+                        <div class="row g-4">
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light" style="width: 55px; height: 55px;">
+                                        <i class="fa fa-check text-primary"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        <p class="text-white mb-2">Experiencia</p>
+                                        <h5 class="text-white mb-0">Con niños</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light" style="width: 55px; height: 55px;">
+                                        <i class="fa fa-check text-primary"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        <p class="text-white mb-2">Concientes</p>
+                                        <h5 class="text-white mb-0">con el trabajo</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light" style="width: 55px; height: 55px;">
+                                        <i class="fa fa-check text-primary"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        <p class="text-white mb-2">Inspirados a servir</p>
+                                        <h5 class="text-white mb-0">con pasión</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light" style="width: 55px; height: 55px;">
+                                        <i class="fa fa-check text-primary"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        <p class="text-white mb-2">Clases</p>
+                                        <h5 class="text-white mb-0">de 7 a 6 de la tarde</h5>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <a class="btn btn-info rounded-pill py-3 px-5 mt-3" href="http://asofeluzdivina.blogspot.com/" target="_blank">Nuestro blog</a>
+                </div>
+
+                <div class="col-lg-6 pe-lg-0 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-100 h-100" src="/img/nino.JPG" style="object-fit: cover;" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature End -->
+    <!-- Service Start -->
+    <div id="servicio" class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="d-inline-block border rounded-pill py-1 px-4">Servicios</p>
+                <h1>Servicios que se brindan</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item bg-light rounded h-100 p-5">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style="width: 65px; height: 65px;">
+                            <i class="fa fa-heart text-primary fs-4"></i>
+                        </div>
+                        <h4 class="mb-3">Cuidos</h4>
+                        <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+                        <a class="btn" href=""><i class=" text-primary me-3"></i>Amor</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item bg-light rounded h-100 p-5">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style="width: 65px; height: 65px;">
+                            <i class="fas fa-utensils text-primary fs-4"></i>
+                        </div>
+                        <h4 class="mb-3">Comida</h4>
+                        <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+                        <a class="btn" href=""><i class=" text-primary me-3"></i>Cariño</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item bg-light rounded h-100 p-5">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style="width: 65px; height: 65px;">
+                            <i class="fas fa-futbol text-primary fs-4"></i>
+
+                        </div>
+                        <h4 class="mb-3">Juegos</h4>
+                        <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+                        <a class="btn" href=""><i class=" text-primary me-3"></i>Pasión</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+    <!-- Contact Start -->
+    <div class="container-xxl py-5" id="contacto">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="d-inline-block border rounded-pill py-1 px-4">Contacto</p>
+                <h1>Comunicate con nosostros</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="h-100 bg-light rounded d-flex align-items-center p-5">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+                            <i class="fa fa-map-marker-alt text-primary"></i>
+                        </div>
+                        <div class="ms-4">
+                            <p class="mb-2">Dirección</p>
+                            <h5 class="mb-0">123 Heredia, San José, Cecudi</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="h-100 bg-light rounded d-flex align-items-center p-5">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+                            <i class="fa fa-phone text-primary"></i>
+                        </div>
+                        <div class="ms-4">
+                            <p class="mb-2">Telefono</p>
+                            <h5 class="mb-0">+506 2260 6139</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="h-100 bg-light rounded d-flex align-items-center p-5">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+                            <i class="fa fa-envelope-open text-primary"></i>
+                        </div>
+                        <div class="ms-4">
+                            <p class="mb-2">Correo Electrónico</p>
+                            <h5 class="mb-0">asofeluzdivina@gmail.com</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="bg-light rounded p-5">
+                        <p class="d-inline-block border rounded-pill py-1 px-4">CONTACTO</p>
+                        <h1 class="mb-4">¡Será un Placer Atenderle!</h1>
+
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                        <label for="name">Nombre</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                        <label for="email">Apellidos</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                        <label for="subject">Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
+                                        <label for="message">Mensaje</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Enviar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="h-100" style="min-height: 400px;">
+                        <iframe class="rounded w-100 h-100"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.032437847878!2d-84.13316998474224!3d10.014179275536561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0fa91bb25d56b%3A0x578fe5283fe8e95e!2sCecudi%2C%20Luz%20Divina!5e0!3m2!1ses!2scr!4v1650136833862!5m2!1ses!2scr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                                frameborder="0" allowfullscreen="" aria-hidden="false"
+                                tabindex="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Dirección</h5>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Heredia  San José, Costa Rica</p>
+                    <p class="mb-2"><i class="fa fa-phone me-3"></i>+506 2260 6139</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>asofeluzdivina@gmail.com</p>
+                    <!-- <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div> -->
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Servicios</h5>
+                    <a class="btn btn-link">Cuidos</a>
+                    <a class="btn btn-link">Comidas</a>
+                    <a class="btn btn-link">Clases</a>
+                    <a class="btn btn-link">Orientacion</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Quick Links</h5>
+                    <a href="#page-top" class="nav-item nav-link active">Misión</a>
+                    <a href="#sobre" class="nav-item nav-link">Sobre nosotros</a>
+                    <a href="#vision" class="nav-item nav-link">Visión</a>
+                    <a href="#servicio" class="nav-item nav-link">Servicios</a>
+                    <a href="#contacto" class="nav-item nav-link">Contacto</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Escribenos</h5>
+                    <p>asofeluzdivina@gmail.com</p>
+                    <!-- <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Luz Divina</a>, Todos los derechos reservados.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <!-- Back to Top -->
+   
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+   
+    <script src="~/lib/wow/wow.min.js"></script>
+    <script src="~/lib/easing/easing.min.js"></script>
+    <script src="~/lib/waypoints/waypoints.min.js"></script>
+    <script src="~/lib/counterup/counterup.min.js"></script>
+    <script src="~/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="~/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="~/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="~/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+
+    <script src="~/js/main.js"></script>
+</body>

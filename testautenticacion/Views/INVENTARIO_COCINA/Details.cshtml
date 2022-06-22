@@ -1,0 +1,67 @@
+﻿@model testautenticacion.Models.INVENTARIO_COCINA
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>INVENTARIO_COCINA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PRODUCTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRODUCTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MEDIDA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MEDIDA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EXISTENCIA_INICIAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EXISTENCIA_INICIAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ENTRADAS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ENTRADAS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SALIDAS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SALIDAS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EXISTENCIAS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EXISTENCIAS)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CODIGO_COCINA }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

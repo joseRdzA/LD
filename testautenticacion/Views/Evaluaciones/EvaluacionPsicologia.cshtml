@@ -1,0 +1,1058 @@
+﻿
+@{
+    ViewBag.Title = "EvaluacionPsicologia";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script>
+        function Calcular() {
+
+
+            //Cumple con la normativa interna
+            var CNITOTAL;
+            var cont1 = 0;
+
+            var CNI1 = document.getElementById("CNI1");
+            if (CNI1.checked == true) {
+                cont1 = 5;
+            }
+            var CNI2 = document.getElementById("CNI2");
+            if (CNI2.checked == true) {
+                cont1 = 4;
+            }
+            var CNI3 = document.getElementById("CNI3");
+            if (CNI3.checked == true) {
+                cont1 = 3;
+            }
+            var CNI4 = document.getElementById("CNI4");
+            if (CNI4.checked == true) {
+                cont1 = 2;
+            }
+            var CNI5 = document.getElementById("CNI5");
+            if (CNI5.checked == true) {
+                cont1 = 1;
+            }
+            var CNITOTAL = cont1;
+            document.getElementById('CNITOTAL').value = CNITOTAL;
+            //Cumple con el horario establecido
+            var CCHETOTAL;
+            var cont2 = 0;
+            var CCHE1 = document.getElementById("CCHE1");
+            if (CCHE1.checked == true) {
+                cont2 = 5;
+            }
+            var CCHE2 = document.getElementById("CCHE2");
+            if (CCHE2.checked == true) {
+                cont2 = 4;
+            }
+            var CCHE3 = document.getElementById("CCHE3");
+            if (CCHE3.checked == true) {
+                cont2 = 3;
+            }
+            var CCHE4 = document.getElementById("CCHE4");
+            if (CCHE4.checked == true) {
+                cont2 = 2;
+            }
+            var CCHE5 = document.getElementById("CCHE5");
+            if (CCHE5.checked == true) {
+                cont2 = 1;
+            }
+            var CCHETOTAL = cont2;
+            document.getElementById('CCHETOTAL').value = CCHETOTAL;
+
+            //Hace reportes y seguimientos de planes remediales
+            var HRSPRTOTAL;
+            var cont3 = 0;
+            var HRSPR1 = document.getElementById("HRSPR1");
+            if (HRSPR1.checked == true) {
+                cont3 = 5;
+            }
+            var HRSPR2 = document.getElementById("HRSPR2");
+            if (HRSPR2.checked == true) {
+                cont3 = 4;
+            }
+            var HRSPR3 = document.getElementById("HRSPR3");
+            if (HRSPR3.checked == true) {
+                cont3 = 3;
+            }
+            var HRSPR4 = document.getElementById("HRSPR4");
+            if (HRSPR4.checked == true) {
+                cont3 = 2;
+            }
+            var HRSPR5 = document.getElementById("HRSPR5");
+            if (HRSPR5.checked == true) {
+                cont3 = 1;
+            }
+            var HRSPRTOTAL = cont3;
+            document.getElementById('HRSPRTOTAL').value = HRSPRTOTAL;
+
+            //Verifica estudios socioeconomicos
+            var VEETOTAL;
+            var cont4 = 0;
+            var VEE1 = document.getElementById("VEE1");
+            if (VEE1.checked == true) {
+                cont4 = 5;
+            }
+            var VEE2 = document.getElementById("VEE2");
+            if (VEE2.checked == true) {
+                cont4 = 4;
+            }
+            var VEE3 = document.getElementById("VEE3");
+            if (VEE3.checked == true) {
+                cont4 = 3;
+            }
+            var VEE4 = document.getElementById("VEE4");
+            if (VEE4.checked == true) {
+                cont4 = 2;
+            }
+            var VEE5 = document.getElementById("VEE5");
+            if (VEE5.checked == true) {
+                cont4 = 1;
+            }
+            var VEETOTAL = cont4;
+            document.getElementById('VEETOTAL').value = VEETOTAL;
+
+
+
+            //  COORDINA Y APLICA CHARLAS A POBLACION MENORES DE EDAD Y PADRES DE FAMILIA
+            var CACPMYFTOTAL;
+            var cont5 = 0;
+            var CACPMYF1 = document.getElementById("CACPMYF1");
+            if (CACPMYF1.checked == true) {
+                cont5 = 5;
+            }
+            var CACPMYF2 = document.getElementById("CACPMYF2");
+            if (CACPMYF2.checked == true) {
+                cont5 = 4;
+            }
+            var CACPMYF3 = document.getElementById("CACPMYF3");
+            if (CACPMYF3.checked == true) {
+                cont5 = 3;
+            }
+            var CACPMYF4 = document.getElementById("CACPMYF4");
+            if (CACPMYF4.checked == true) {
+                cont5 = 2;
+            }
+            var CACPMYF5 = document.getElementById("CACPMYF5");
+            if (CACPMYF5.checked == true) {
+                cont5 = 1;
+            }
+            var CACPMYFTOTAL = cont5;
+            document.getElementById('CACPMYFTOTAL').value = CACPMYFTOTAL;
+
+
+            //ELABORACION DEL PLAN ANUAL DE LAS CAPACITAIONES TANTO A LOS PADRES COMO A LAS PERSONAS
+            var EPACPYPTOTAL;
+            var cont6 = 0;
+            var EPACPYP1 = document.getElementById("EPACPYP1");
+            if (EPACPYP1.checked == true) {
+                cont6 = 5;
+            }
+            var EPACPYP2 = document.getElementById("EPACPYP2");
+            if (EPACPYP2.checked == true) {
+                cont6 = 4;
+            }
+            var EPACPYP3 = document.getElementById("EPACPYP3");
+            if (EPACPYP3.checked == true) {
+                cont6 = 3;
+            }
+            var EPACPYP4 = document.getElementById("EPACPYP4");
+            if (EPACPYP4.checked == true) {
+                cont6 = 2;
+            }
+            var EPACPYP5 = document.getElementById("EPACPYP5");
+            if (EPACPYP5.checked == true) {
+                cont6 = 1;
+            }
+            var EPACPYPTOTAL = cont6;
+            document.getElementById('EPACPYPTOTAL').value = EPACPYPTOTAL;
+
+
+
+            //SUPERVISA Y PREPARA EXPEDIENTES PARA LAS PME
+            var SPEPMETOTAL;
+            var cont7 = 0;
+            var SPEPME1 = document.getElementById("SPEPME1");
+            if (SPEPME1.checked == true) {
+                cont7 = 5;
+            }
+            var SPEPME2 = document.getElementById("SPEPME2");
+            if (SPEPME2.checked == true) {
+                cont7 = 4;
+            }
+            var SPEPME3 = document.getElementById("SPEPME3");
+            if (SPEPME3.checked == true) {
+                cont7 = 3;
+            }
+            var SPEPME4 = document.getElementById("SPEPME4");
+            if (SPEPME4.checked == true) {
+                cont7 = 2;
+            }
+            var SPEPME5 = document.getElementById("SPEPME5");
+            if (SPEPME5.checked == true) {
+                cont7 = 1;
+            }
+            var SPEPMETOTAL = cont7;
+            document.getElementById('SPEPMETOTAL').value = SPEPMETOTAL;
+
+
+
+            //Participa en las capacitaciones
+            var PECTOTAL;
+            var cont8 = 0;
+            var PEC1 = document.getElementById("PEC1");
+            if (PEC1.checked == true) {
+                cont8 = 5;
+            }
+            var PEC2 = document.getElementById("PEC2");
+            if (PEC2.checked == true) {
+                cont8 = 4;
+            }
+            var PEC3 = document.getElementById("PEC3");
+            if (PEC3.checked == true) {
+                cont8 = 3;
+            }
+            var PEC4 = document.getElementById("PEC4");
+            if (PEC4.checked == true) {
+                cont8 = 2;
+            }
+            var PEC5 = document.getElementById("PEC5");
+            if (PEC5.checked == true) {
+                cont8 = 1;
+            }
+            var PECTOTAL = cont8;
+            document.getElementById('PECTOTAL').value = PECTOTAL;
+
+
+
+            //PARTICIPA EN PROCESOS DE MATRICULA
+            var PEPMTOTAL;
+            var cont9 = 0;
+            var PEPM1 = document.getElementById("PEPM1");
+            if (PEPM1.checked == true) {
+                cont9 = 5;
+            }
+            var PEPM2 = document.getElementById("PEPM2");
+            if (PEPM2.checked == true) {
+                cont9 = 4;
+            }
+            var PEPM3 = document.getElementById("PEPM3");
+            if (PEPM3.checked == true) {
+                cont9 = 3;
+            }
+            var PEPM4 = document.getElementById("PEPM4");
+            if (PEPM4.checked == true) {
+                cont9 = 2;
+            }
+            var PEPM5 = document.getElementById("PEPM5");
+            if (PEPM5.checked == true) {
+                cont9 = 1;
+            }
+            var PEPMTOTAL = cont9;
+            document.getElementById('PEPMTOTAL').value = PEPMTOTAL;
+
+
+
+
+
+            //DISPONIBILIDAD
+            var DISPTOTAL;
+            var cont10 = 0;
+            var DISP1 = document.getElementById("DISP1");
+            if (DISP1.checked == true) {
+                cont10 = 5;
+            }
+            var DISP2 = document.getElementById("DISP2");
+            if (DISP2.checked == true) {
+                cont10 = 4;
+            }
+            var DISP3 = document.getElementById("DISP3");
+            if (DISP3.checked == true) {
+                cont10 = 3;
+            }
+            var DISP4 = document.getElementById("DISP4");
+            if (DISP4.checked == true) {
+                cont10 = 2;
+            }
+            var DISP5 = document.getElementById("DISP5");
+            if (DISP5.checked == true) {
+                cont10 = 1;
+            }
+            var DISPTOTAL = cont10;
+            document.getElementById('DISPTOTAL').value = DISPTOTAL;
+
+
+            //PUNTUALIDAD
+            var PNTLTOTAL;
+            var cont11 = 0;
+            var PNTL1 = document.getElementById("PNTL1");
+            if (PNTL1.checked == true) {
+                cont11 = 5;
+            }
+            var PNTL2 = document.getElementById("PNTL2");
+            if (PNTL2.checked == true) {
+                cont11 = 4;
+            }
+            var PNTL3 = document.getElementById("PNTL3");
+            if (PNTL3.checked == true) {
+                cont11 = 3;
+            }
+            var PNTL4 = document.getElementById("PNTL4");
+            if (PNTL4.checked == true) {
+                cont11 = 2;
+            }
+            var PNTL5 = document.getElementById("PNTL5");
+            if (PNTL5.checked == true) {
+                cont11 = 1;
+            }
+            var PNTLTOTAL = cont11;
+            document.getElementById('PNTLTOTAL').value = PNTLTOTAL;
+
+
+            //FORTALECE VALORES DE LA INSTITUCION
+            var FVITOTAL;
+            var cont12 = 0;
+            var FVI1 = document.getElementById("FVI1");
+            if (FVI1.checked == true) {
+                cont12 = 5;
+            }
+            var FVI2 = document.getElementById("FVI2");
+            if (FVI2.checked == true) {
+                cont12 = 4;
+            }
+            var FVI3 = document.getElementById("FVI3");
+            if (FVI3.checked == true) {
+                cont12 = 3;
+            }
+            var FVI4 = document.getElementById("FVI4");
+            if (FVI4.checked == true) {
+                cont12 = 2;
+            }
+            var FVI5 = document.getElementById("FVI5");
+            if (FVI5.checked == true) {
+                cont12 = 1;
+            }
+            var FVITOTAL = cont12;
+            document.getElementById('FVITOTAL').value = FVITOTAL;
+
+
+            //CUMPLE LOS PROTOCOLOS DE LA INSTITUCION
+            var CPITOTAL;
+            var cont13 = 0;
+            var CPI1 = document.getElementById("CPI1");
+            if (CPI1.checked == true) {
+                cont13 = 5;
+            }
+            var CPI2 = document.getElementById("CPI2");
+            if (CPI2.checked == true) {
+                cont13 = 4;
+            }
+            var CPI3 = document.getElementById("CPI3");
+            if (CPI3.checked == true) {
+                cont13 = 3;
+            }
+            var CPI4 = document.getElementById("CPI4");
+            if (CPI4.checked == true) {
+                cont13 = 2;
+            }
+            var CPI5 = document.getElementById("CPI5");
+            if (CPI5.checked == true) {
+                cont13 = 1;
+            }
+            var CPITOTAL = cont13;
+            document.getElementById('CPITOTAL').value = CPITOTAL;
+
+
+            //REALIZA SESIONES DE TRABAJO CON NINOS Y PADRES DE FAMILIA
+            var RSTNPFTOTAL;
+            var cont14 = 0;
+            var RSTNPF1 = document.getElementById("RSTNPF1");
+            if (RSTNPF1.checked == true) {
+                cont14 = 5;
+            }
+            var RSTNPF2 = document.getElementById("RSTNPF2");
+            if (RSTNPF2.checked == true) {
+                cont14 = 4;
+            }
+            var RSTNPF3 = document.getElementById("RSTNPF3");
+            if (RSTNPF3.checked == true) {
+                cont14 = 3;
+            }
+            var RSTNPF4 = document.getElementById("RSTNPF4");
+            if (RSTNPF4.checked == true) {
+                cont14 = 2;
+            }
+            var RSTNPF5 = document.getElementById("RSTNPF5");
+            if (RSTNPF5.checked == true) {
+                cont14 = 1;
+            }
+            var RSTNPFTOTAL = cont14;
+            document.getElementById('RSTNPFTOTAL').value = RSTNPFTOTAL;
+
+
+
+            //COLABORA CON CONTROL E IMPLEMENTACION DE METODOS DISCIPLINARIOS
+            var CCIMDTOTAL;
+            var cont15 = 0;
+            var CCIMD1 = document.getElementById("CCIMD1");
+            if (CCIMD1.checked == true) {
+                cont15 = 5;
+            }
+            var CCIMD2 = document.getElementById("CCIMD2");
+            if (CCIMD2.checked == true) {
+                cont15 = 4;
+            }
+            var CCIMD3 = document.getElementById("CCIMD3");
+            if (CCIMD3.checked == true) {
+                cont15 = 3;
+            }
+            var CCIMD4 = document.getElementById("CCIMD4");
+            if (CCIMD4.checked == true) {
+                cont15 = 2;
+            }
+            var CCIMD5 = document.getElementById("CCIMD5");
+            if (CCIMD5.checked == true) {
+                cont15 = 1;
+            }
+            var CCIMDTOTAL = cont15;
+            document.getElementById('CCIMDTOTAL').value = CCIMDTOTAL;
+
+
+
+            //ELABORACION DE DENUNCIAS DEL PANI
+            var EDPTOTAL;
+            var cont16 = 0;
+            var EDP1 = document.getElementById("EDP1");
+            if (EDP1.checked == true) {
+                cont16 = 5;
+            }
+            var EDP2 = document.getElementById("EDP2");
+            if (EDP2.checked == true) {
+                cont16 = 4;
+            }
+            var EDP3 = document.getElementById("EDP3");
+            if (EDP3.checked == true) {
+                cont16 = 3;
+            }
+            var EDP4 = document.getElementById("EDP4");
+            if (EDP4.checked == true) {
+                cont16 = 2;
+            }
+            var EDP5 = document.getElementById("EDP5");
+            if (EDP5.checked == true) {
+                cont16 = 1;
+            }
+            var EDPTOTAL = cont16;
+            document.getElementById('EDPTOTAL').value = EDPTOTAL;
+
+
+
+            //IMPLEMENTACION PLAN DE TRABAJO DEL PANI
+            var IPTPTOTAL;
+            var cont17 = 0;
+            var IPTP1 = document.getElementById("IPTP1");
+            if (IPTP1.checked == true) {
+                cont17 = 5;
+            }
+            var IPTP2 = document.getElementById("IPTP2");
+            if (IPTP2.checked == true) {
+                cont17 = 4;
+            }
+            var IPTP3 = document.getElementById("IPTP3");
+            if (IPTP3.checked == true) {
+                cont17 = 3;
+            }
+            var IPTP4 = document.getElementById("IPTP4");
+            if (IPTP4.checked == true) {
+                cont17 = 2;
+            }
+            var IPTP5 = document.getElementById("IPTP5");
+            if (IPTP5.checked == true) {
+                cont17 = 1;
+            }
+            var IPTPTOTAL = cont17;
+            document.getElementById('IPTPTOTAL').value = IPTPTOTAL;
+
+
+
+
+            //TRABAJO COLABORATIVO
+            var TCTOTAL;
+            var cont18 = 0;
+            var TC1 = document.getElementById("TC1");
+            if (TC1.checked == true) {
+                cont18 = 5;
+            }
+            var TC2 = document.getElementById("TC2");
+            if (TC2.checked == true) {
+                cont18 = 4;
+            }
+            var TC3 = document.getElementById("TC3");
+            if (TC3.checked == true) {
+                cont18 = 3;
+            }
+            var TC4 = document.getElementById("TC4");
+            if (TC4.checked == true) {
+                cont18 = 2;
+            }
+            var TC5 = document.getElementById("TC5");
+            if (TC5.checked == true) {
+                cont18 = 1;
+            }
+            var TCTOTAL = cont18;
+            document.getElementById('TCTOTAL').value = TCTOTAL;
+
+
+
+            //COLABORA CON LOS SIMULACROS DE EMERGENCIA PROGRAMADOS
+            var CSEPTOTAL;
+            var cont19 = 0;
+            var CSEP1 = document.getElementById("CSEP1");
+            if (CSEP1.checked == true) {
+                cont19 = 5;
+            }
+            var CSEP2 = document.getElementById("CSEP2");
+            if (CSEP2.checked == true) {
+                cont19 = 4;
+            }
+            var CSEP3 = document.getElementById("CSEP3");
+            if (CSEP3.checked == true) {
+                cont19 = 3;
+            }
+            var CSEP4 = document.getElementById("CSEP4");
+            if (CSEP4.checked == true) {
+                cont19 = 2;
+            }
+            var CSEP5 = document.getElementById("CSEP5");
+            if (CSEP5.checked == true) {
+                cont19 = 1;
+            }
+            var CSEPTOTAL = cont19;
+            document.getElementById('CSEPTOTAL').value = CSEPTOTAL;
+
+
+
+            //Aplica examenes de idoneidad mental a los funcionarios
+            var AEOMFTOTAL;
+            var cont20 = 0;
+            var AEOMF1 = document.getElementById("AEOMF1");
+            if (AEOMF1.checked == true) {
+                cont20 = 5;
+            }
+            var AEOMF2 = document.getElementById("AEOMF2");
+            if (AEOMF2.checked == true) {
+                cont20 = 4;
+            }
+            var AEOMF3 = document.getElementById("AEOMF3");
+            if (AEOMF3.checked == true) {
+                cont20 = 3;
+            }
+            var AEOMF4 = document.getElementById("AEOMF4");
+            if (AEOMF4.checked == true) {
+                cont20 = 2;
+            }
+            var AEOMF5 = document.getElementById("AEOMF5");
+            if (AEOMF5.checked == true) {
+                cont20 = 1;
+            }
+            var AEOMFTOTAL = cont20;
+            document.getElementById('AEOMFTOTAL').value = AEOMFTOTAL;
+
+
+
+            //coordina academia de crianza
+            var CACTOTAL;
+            var cont21 = 0;
+            var CAC1 = document.getElementById("CAC1");
+            if (CAC1.checked == true) {
+                cont21 = 5;
+            }
+            var CAC2 = document.getElementById("CAC2");
+            if (CAC2.checked == true) {
+                cont21 = 4;
+            }
+            var CAC3 = document.getElementById("CAC3");
+            if (CAC3.checked == true) {
+                cont21 = 3;
+            }
+            var CAC4 = document.getElementById("CAC4");
+            if (CAC4.checked == true) {
+                cont21 = 2;
+            }
+            var CAC5 = document.getElementById("CAC5");
+            if (CAC5.checked == true) {
+                cont21 = 1;
+            }
+            var CACTOTAL = cont21;
+            document.getElementById('CACTOTAL').value = CACTOTAL;
+
+
+            //total de calificaciones
+            var CNITOTAL = Number(document.getElementById('CNITOTAL').value);
+            var CCHETOTAL = Number(document.getElementById('CCHETOTAL').value);
+            var HRSPRTOTAL = Number(document.getElementById('HRSPRTOTAL').value);
+            var VEETOTAL = Number(document.getElementById('VEETOTAL').value);
+            var CACPMYFTOTAL = Number(document.getElementById('CACPMYFTOTAL').value);
+            var EPACPYPTOTAL = Number(document.getElementById('EPACPYPTOTAL').value);
+
+            var SPEPMETOTAL = Number(document.getElementById('SPEPMETOTAL').value);
+            var PECTOTAL = Number(document.getElementById('PECTOTAL').value);
+            var PEPMTOTAL = Number(document.getElementById('PEPMTOTAL').value);
+
+            var DISPTOTAL = Number(document.getElementById('DISPTOTAL').value);
+            var PNTLTOTAL = Number(document.getElementById('PNTLTOTAL').value);
+            var FVITOTAL = Number(document.getElementById('FVITOTAL').value);
+            var CPITOTAL = Number(document.getElementById('CPITOTAL').value);
+            var RSTNPFTOTAL = Number(document.getElementById('RSTNPFTOTAL').value);
+            var CCIMDTOTAL = Number(document.getElementById('CCIMDTOTAL').value);
+            var EDPTOTAL = Number(document.getElementById('EDPTOTAL').value);
+            var IPTPTOTAL = Number(document.getElementById('IPTPTOTAL').value);
+
+            var TCTOTAL = Number(document.getElementById('TCTOTAL').value);
+            var CSEPTOTAL = Number(document.getElementById('CSEPTOTAL').value);
+            var AEOMFTOTAL = Number(document.getElementById('AEOMFTOTAL').value);
+            var CACTOTAL = Number(document.getElementById('CACTOTAL').value);
+
+            //TOTAL GENERAL
+            var TotalGenPsico = CNITOTAL + CCHETOTAL + HRSPRTOTAL + VEETOTAL + CACPMYFTOTAL + EPACPYPTOTAL +
+                SPEPMETOTAL + PECTOTAL + PEPMTOTAL + DISPTOTAL + PNTLTOTAL + FVITOTAL + CPITOTAL + RSTNPFTOTAL +
+                CCIMDTOTAL + EDPTOTAL + IPTPTOTAL + TCTOTAL + CSEPTOTAL + AEOMFTOTAL + CACTOTAL;
+
+
+            TotalGenPsico = ((TotalGenPsico / 105) * 100).toFixed();
+
+            document.getElementById('TotalGenPsico').value = TotalGenPsico;
+        }
+    </script>
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="evalPsico.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <title>Evaluaciones</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.debug.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+
+<br />
+<br />
+<br />
+
+<div class="col-md-6 col-md-offset-1">
+
+    <a href="javascript:generatePDF()" id="downloadButton">
+
+        <input type="button" style="float: right; margin-right: 90px;" class="btn btn-danger" name="Descargar PDF"
+               value="PDF">
+    </a>
+
+    <input type="button" style="float: right; margin-right: 90px;" class="btn btn-success" name="suma"
+           value="Calcular" onclick="Calcular()"><a href="javascript:location.reload()">
+
+        <input type="button" style="float: right; margin-right: 90px;" class="btn btn-primary" name="Nuevo"
+               value="Nuevo">
+
+    </a>
+
+
+</div>
+<br />
+<br />
+<br />
+
+<div id="whatToPrint" style="font-size: large; text-shadow: 1px 0px 0px black, 0px 1px 0px black, -1px 0px 0px black, 0px -1px 0px black; width: 500px;">
+    <form>
+        <table class="table table-bordered">
+            <tr>
+                <td colspan="2"> <img src="~/images/Imagen1.png" width="100" height="100"></td>
+                <td colspan="5" style="font-size: large; color: white; background-color: rgb(17, 164, 17); ">
+                    Evaluación del Desemepeno Luz Divina
+                </td>
+                <td colspan="2">
+                    <input type="text" style="border:white;" placeholder="Fecha del documento">
+                    <form>
+                        <input class="form-control" type="datetime-local" placeholder="Selecione la fecha">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">Nombre:</td>
+                <td colspan="2"><input type="text" style="border:white;"></td>
+                <td colspan="1">5</td>
+                <td colspan="1">4</td>
+                <td colspan="1">3</td>
+                <td colspan="1">2</td>
+                <td colspan="1">1</td>
+                <td colspan="1"></td>
+            </tr>
+            <tr>
+                <td>Area de Evaluación:</td>
+                <td>Psicologia</td>
+                <td>Puntos a otorgar</td>
+                <td>Excelente</td>
+                <td>Muy bueno</td>
+                <td>Bueno</td>
+                <td>Regular</td>
+                <td>Malo</td>
+                <td>Total</td>
+            </tr>
+            <tr>
+                <td rowspan="6" style="color:white; background-color: rgb(17, 164, 17);">Administrativo</td>
+                <td colspan="1">Cumple con la normativa interna </td>
+                <td colspan="1"> 5</td>
+                <td colspan="1"><input type="checkbox" id="CNI1"></td>
+                <td colspan="1"><input type="checkbox" id="CNI2"></td>
+                <td colspan="1"><input type="checkbox" id="CNI3"></td>
+                <td colspan="1"><input type="checkbox" id="CNI4"></td>
+                <td colspan="1"><input type="checkbox" id="CNI5"></td>
+                <td colspan="1"><input type="text" placeholder="Total" id="CNITOTAL" style="border:white; text-align: center;"></td>
+            </tr>
+            <tr>
+                <td colspan="1">Cumple con el horario establecido</td>
+                <td colspan="1"> 5</td>
+                <td colspan="1"><input type="checkbox" id="CCHE1"></td>
+                <td colspan="1"><input type="checkbox" id="CCHE2"></td>
+                <td colspan="1"><input type="checkbox" id="CCHE3"></td>
+                <td colspan="1"><input type="checkbox" id="CCHE4"></td>
+                <td colspan="1"><input type="checkbox" id="CCHE5"></td>
+                <td colspan="1"><input type="text" id="CCHETOTAL" placeholder="Total" style="border:white; text-align: center;"></td>
+
+            </tr>
+
+            <tr>
+                <td colspan="1">Hace reportes y seguimiento de planes remediales</td>
+                <td colspan="1"> 5</td>
+                <td colspan="1"><input type="checkbox" id="HRSPR1"></td>
+                <td colspan="1"><input type="checkbox" id="HRSPR2"></td>
+                <td colspan="1"><input type="checkbox" id="HRSPR3"></td>
+                <td colspan="1"><input type="checkbox" id="HRSPR4"></td>
+                <td colspan="1"><input type="checkbox" id="HRSPR5"></td>
+                <td colspan="1"><input type="text" id="HRSPRTOTAL" placeholder="Total" style="border:white; text-align: center;"></td>
+
+
+            </tr>
+
+            <tr>
+                <td colspan="1">Verifica estudios socioeconomicos</td>
+                <td colspan="1"> 5</td>
+                <td colspan="1"><input type="checkbox" id="VEE1"></td>
+                <td colspan="1"><input type="checkbox" id="VEE2"></td>
+                <td colspan="1"><input type="checkbox" id="VEE3"></td>
+                <td colspan="1"><input type="checkbox" id="VEE4"></td>
+                <td colspan="1"><input type="checkbox" id="VEE5"></td>
+                <td colspan="1"><input type="text" id="VEETOTAL" placeholder="Total" style="border:white; text-align: center;"></td>
+
+
+            </tr>
+
+            <tr>
+                <td colspan="1">Coordina y aplica charlas a la poblacion menor de edad y familias</td>
+                <td colspan="1"> 5</td>
+                <td colspan="1"><input type="checkbox" id="CACPMYF1"></td>
+                <td colspan="1"><input type="checkbox" id="CACPMYF2"></td>
+                <td colspan="1"><input type="checkbox" id="CACPMYF3"></td>
+                <td colspan="1"><input type="checkbox" id="CACPMYF4"></td>
+                <td colspan="1"><input type="checkbox" id="CACPMYF5"></td>
+                <td colspan="1"><input type="text" id="CACPMYFTOTAL" placeholder="Total" style="border:white; text-align: center;"></td>
+
+
+            </tr>
+
+            <tr>
+                <td colspan="1">
+                    Elaboración del plan anual de capacitaciones tanto a los padres como a la
+                    persona
+                </td>
+                <td colspan="1"> 5</td>
+                <td colspan="1"><input type="checkbox" id="EPACPYP1"></td>
+                <td colspan="1"><input type="checkbox" id="EPACPYP2"></td>
+                <td colspan="1"><input type="checkbox" id="EPACPYP3"></td>
+                <td colspan="1"><input type="checkbox" id="EPACPYP4"></td>
+                <td colspan="1"><input type="checkbox" id="EPACPYP5"></td>
+                <td colspan="1"><input type="text" id="EPACPYPTOTAL" placeholder="Total" style="border:white; text-align: center;"></td>
+
+
+            </tr>
+
+            <tr>
+                <td rowspan="3" style="color: white; background-color: lightblue;">Operacional</td>
+                <td colspan="1">Supervisa y prepara expedientes de las PME</td>
+                <td colspan="1"> 5</td>
+                <td colspan="1"><input type="checkbox" id="SPEPME1"></td>
+                <td colspan="1"><input type="checkbox" id="SPEPME2"></td>
+                <td colspan="1"><input type="checkbox" id="SPEPME3"></td>
+                <td colspan="1"><input type="checkbox" id="SPEPME4"></td>
+                <td colspan="1"><input type="checkbox" id="SPEPME5"></td>
+                <td colspan="1"><input type="text" id="SPEPMETOTAL" placeholder="Total" style="border:white; text-align: center;"></td>
+
+
+
+            </tr>
+
+            <tr>
+                <td colspan="1">Participa en las capacitaciones</td>
+                <td colspan="1"> 5</td>
+                <td colspan="1"><input type="checkbox" id="PEC1"></td>
+                <td colspan="1"><input type="checkbox" id="PEC2"></td>
+                <td colspan="1"><input type="checkbox" id="PEC3"></td>
+                <td colspan="1"><input type="checkbox" id="PEC4"></td>
+                <td colspan="1"><input type="checkbox" id="PEC5"></td>
+                <td colspan="1"><input type="text" id="PECTOTAL" placeholder="Total" style="border:white; text-align: center;"></td>
+
+
+            </tr>
+
+            <tr>
+                <td colspan="1">Participa en procesos de matrícula</td>
+                <td colspan="1"> 5</td>
+                <td colspan="1"><input type="checkbox" id="PEPM1"></td>
+                <td colspan="1"><input type="checkbox" id="PEPM2"></td>
+                <td colspan="1"><input type="checkbox" id="PEPM3"></td>
+                <td colspan="1"><input type="checkbox" id="PEPM4"></td>
+                <td colspan="1"><input type="checkbox" id="PEPM5"></td>
+                <td colspan="1"><input type="text" id="PEPMTOTAL" placeholder="Total" style="border:white; text-align: center;"></td>
+
+
+
+            </tr>
+
+            <tr>
+                <td rowspan="8" style="color: white; background-color: yellow;">Profesionalismo</td>
+                <td colspan="1"> Disponibilidad</td>
+                <td colspan="1"> 5</td>
+                <td colspan="1"><input type="checkbox" id="DISP1"></td>
+                <td colspan="1"><input type="checkbox" id="DISP2"></td>
+                <td colspan="1"><input type="checkbox" id="DISP3"></td>
+                <td colspan="1"><input type="checkbox" id="DISP4"></td>
+                <td colspan="1"><input type="checkbox" id="DISP5"></td>
+                <td colspan="1"><input type="text" id="DISPTOTAL" placeholder="Total" style="border:white; text-align: center;"></td>
+
+
+            </tr>
+
+            <tr>
+                <td colspan="1">Puntualidad</td>
+                <td colspan="1"> 5</td>
+                <td colspan="1"><input type="checkbox" id="PNTL1"></td>
+                <td colspan="1"><input type="checkbox" id="PNTL2"></td>
+                <td colspan="1"><input type="checkbox" id="PNTL3"></td>
+                <td colspan="1"><input type="checkbox" id="PNTL4"></td>
+                <td colspan="1"><input type="checkbox" id="PNTL5"></td>
+                <td colspan="1"><input type="text" id="PNTLTOTAL" placeholder="Total" style="border:white; text-align: center;"></td>
+
+
+            </tr>
+
+            <tr>
+                <td colspan="1">Fortalece los valores de la institución</td>
+                <td colspan="1"> 5</td>
+                <td colspan="1"><input type="checkbox" id="FVI1"></td>
+                <td colspan="1"><input type="checkbox" id="FVI2"></td>
+                <td colspan="1"><input type="checkbox" id="FVI3"></td>
+                <td colspan="1"><input type="checkbox" id="FVI4"></td>
+                <td colspan="1"><input type="checkbox" id="FVI5"></td>
+                <td colspan="1"><input type="text" id="FVITOTAL" placeholder="Total" style="border:white; text-align: center;"></td>
+
+            </tr>
+
+            <tr>
+                <td colspan="1">Cumple con los protocolos institucionales</td>
+                <td colspan="1"> 5</td>
+                <td colspan="1"><input type="checkbox" id="CPI1"></td>
+                <td colspan="1"><input type="checkbox" id="CPI2"></td>
+                <td colspan="1"><input type="checkbox" id="CPI3"></td>
+                <td colspan="1"><input type="checkbox" id="CPI4"></td>
+                <td colspan="1"><input type="checkbox" id="CPI5"></td>
+                <td colspan="1"><input type="text" id="CPITOTAL" placeholder="Total" style="border:white; text-align: center;"></td>
+
+
+            </tr>
+
+            <tr>
+                <td colspan="1">Realiza seciones de trabajo con niños y padres de familia</td>
+                <td colspan="1"> 5</td>
+                <td colspan="1"><input type="checkbox" id="RSTNPF1"></td>
+                <td colspan="1"><input type="checkbox" id="RSTNPF2"></td>
+                <td colspan="1"><input type="checkbox" id="RSTNPF3"></td>
+                <td colspan="1"><input type="checkbox" id="RSTNPF4"></td>
+                <td colspan="1"><input type="checkbox" id="RSTNPF5"></td>
+                <td colspan="1"><input type="text" id="RSTNPFTOTAL" placeholder="Total" style="border:white; text-align: center;"></td>
+
+
+
+            </tr>
+
+            <tr>
+                <td colspan="1">Colabora con el control e implementación de métodos dicsiplinarios.</td>
+                <td colspan="1"> 5</td>
+                <td colspan="1"><input type="checkbox" id="CCIMD1"></td>
+                <td colspan="1"><input type="checkbox" id="CCIMD2"></td>
+                <td colspan="1"><input type="checkbox" id="CCIMD3"></td>
+                <td colspan="1"><input type="checkbox" id="CCIMD4"></td>
+                <td colspan="1"><input type="checkbox" id="CCIMD5"></td>
+                <td colspan="1"><input type="text" id="CCIMDTOTAL" placeholder="Total" style="border:white; text-align: center;"></td>
+
+
+            </tr>
+
+            <tr>
+                <td colspan="1">Elaboración de denuncias del PANI</td>
+                <td colspan="1"> 5</td>
+                <td colspan="1"><input type="checkbox" id="EDP1"></td>
+                <td colspan="1"><input type="checkbox" id="EDP2"></td>
+                <td colspan="1"><input type="checkbox" id="EDP3"></td>
+                <td colspan="1"><input type="checkbox" id="EDP4"></td>
+                <td colspan="1"><input type="checkbox" id="EDP5"></td>
+                <td colspan="1"><input type="text" id="EDPTOTAL" placeholder="Total" style="border:white; text-align: center;"></td>
+
+
+            </tr>
+
+            <tr>
+                <td colspan="1">Implementación del plan de trabajo del PANI</td>
+                <td colspan="1"> 5</td>
+                <td colspan="1"><input type="checkbox" id="IPTP1"></td>
+                <td colspan="1"><input type="checkbox" id="IPTP2"></td>
+                <td colspan="1"><input type="checkbox" id="IPTP3"></td>
+                <td colspan="1"><input type="checkbox" id="IPTP4"></td>
+                <td colspan="1"><input type="checkbox" id="IPTP5"></td>
+                <td colspan="1"><input type="text" id="IPTPTOTAL" placeholder="Total" style="border:white; text-align: center;"></td>
+
+
+
+            </tr>
+
+            <tr>
+                <td rowspan="1" style="color: white; background-color: salmon;">Liderazgo</td>
+                <td colspan="1"> Trabajo colaborativo</td>
+                <td colspan="1"> 5</td>
+                <td colspan="1"><input type="checkbox" id="TC1"></td>
+                <td colspan="1"><input type="checkbox" id="TC2"></td>
+                <td colspan="1"><input type="checkbox" id="TC3"></td>
+                <td colspan="1"><input type="checkbox" id="TC4"></td>
+                <td colspan="1"><input type="checkbox" id="TC5"></td>
+                <td colspan="1"><input type="text" id="TCTOTAL" placeholder="Total" style="border:white; text-align: center;"></td>
+
+
+            </tr>
+
+            <tr>
+                <td rowspan="3" style="color: white; background-color: grey;">Ejecución</td>
+                <td colspan="1"> Colabora con los simulacros de emergencia programados </td>
+                <td colspan="1"> 5</td>
+                <td colspan="1"><input type="checkbox" id="CSEP1"></td>
+                <td colspan="1"><input type="checkbox" id="CSEP2"></td>
+                <td colspan="1"><input type="checkbox" id="CSEP3"></td>
+                <td colspan="1"><input type="checkbox" id="CSEP4"></td>
+                <td colspan="1"><input type="checkbox" id="CSEP5"></td>
+                <td colspan="1"><input type="text" id="CSEPTOTAL" placeholder="Total" style="border:white; text-align: center;"></td>
+
+
+            </tr>
+            <tr>
+                <td colspan="1">Aplica examenes de idoneidad mental a los funcionarios</td>
+                <td colspan="1"> 5</td>
+                <td colspan="1"><input type="checkbox" id="AEOMF1"></td>
+                <td colspan="1"><input type="checkbox" id="AEOMF2"></td>
+                <td colspan="1"><input type="checkbox" id="AEOMF3"></td>
+                <td colspan="1"><input type="checkbox" id="AEOMF4"></td>
+                <td colspan="1"><input type="checkbox" id="AEOMF5"></td>
+                <td colspan="1"><input type="text" id="AEOMFTOTAL" placeholder="Total" style="border:white; text-align: center;"></td>
+
+
+            </tr>
+            <tr>
+                <td colspan="1">Coordina la academia de crianza</td>
+                <td colspan="1"> 5</td>
+                <td colspan="1"><input type="checkbox" id="CAC1"></td>
+                <td colspan="1"><input type="checkbox" id="CAC2"></td>
+                <td colspan="1"><input type="checkbox" id="CAC3"></td>
+                <td colspan="1"><input type="checkbox" id="CAC4"></td>
+                <td colspan="1"><input type="checkbox" id="CAC5"></td>
+                <td colspan="1"><input type="text" id="CACTOTAL" placeholder="Total" style="border:white; text-align: center;"></td>
+
+
+            </tr>
+            <tr>
+                <td colspan="5"></td>
+                <td colspan="3"> Total </td>
+                <td colspan="1">
+                    <input type="text" id="TotalGenPsico" style="border:white; text-align: center;"
+                           placeholder="Total General">
+                </td>
+             
+
+            </tr>
+
+
+        </table>
+        <br>
+
+
+    </form>
+</div>
+<div>
+
+
+
+</div>
+
+
+
+
+
+<!-- Optional JavaScript; choose one of the two! -->
+<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
+</script>
+
+
+<script>
+
+
+    config = {
+        dateFormat: "d-m-y",
+    }
+
+    flatpickr("input[type=datetime-local]", config);
+
+
+
+    async function generatePDF() {
+
+
+        //Downloading
+        var downloading = document.getElementById("whatToPrint");
+        var doc = new jsPDF('p', 'pt');
+
+        await html2canvas(downloading, {
+            allowTaint: true,
+            useCORS: true,
+            width: 2350
+        }).then((canvas) => {
+            //Canvas (convert to PNG)
+            doc.addImage(canvas.toDataURL("image/png"), 'PNG', 15, 15, 1320, 800);
+        })
+
+        doc.save("Psicologia.pdf");
+
+        //End of downloading
+
+
+
+    }
+
+
+</script>
+
