@@ -11,15 +11,21 @@ namespace testautenticacion.Models
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class USUARIOS
+    using System.ComponentModel.DataAnnotations;
+
+    public partial class Usuarios
     {
         public int idUsuario { get; set; }
         public string Nombres { get; set; }
         public string Correo { get; set; }
+        [Required]
+        [StringLength(18, ErrorMessage = "Debe tener 8 caracteres y un caracter especial", MinimumLength = 8)]
+        [RegularExpression(@"^((?=.*[a-z])(?=.*[A-Z])(?=.*\d)).+$")]
+        [DataType(DataType.Password)]
+        [Display(Name = "Clave")]
         public string Clave { get; set; }
         public Nullable<int> IdRol { get; set; }
     
-        public virtual ROL ROL { get; set; }
+        public virtual Rol Rol { get; set; }
     }
 }

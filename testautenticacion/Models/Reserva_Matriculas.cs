@@ -14,19 +14,19 @@ namespace testautenticacion.Models
     
     public partial class Reserva_Matriculas
     {
-        public int ID_RESERVA { get; set; }
-        public string NOMBRETUTOR { get; set; }
-        public string CEDULATUTOR { get; set; }
-        public string CORREOTUTOR { get; set; }
-        public int NUM_TEL { get; set; }
-        public string NOMBREALUMNO { get; set; }
-        public Nullable<System.DateTime> FECHA_NACIMIENTO { get; set; }
-        public Nullable<int> EDAD { get; set; }
-        public string SEXO { get; set; }
-        public string NACIONALIDAD { get; set; }
-        public string PROVINCIA { get; set; }
-        public string DIRECCIONDETALLADA { get; set; }
-        public System.DateTime FECHA_CITA { get; set; }
-        public string HORA_CITA { get; set; }
+        public int Id_Reserva { get; set; }
+        public string Nombre_Tutor { get; set; }
+        public string Cedula_Tutor { get; set; }
+        public string Correo_Tutor { get; set; }
+        public int Num_Tel { get; set; }
+        public string Nombre_Alumno { get; set; }
+        public Nullable<System.DateTime> Fecha_Nacimiento { get; set; }
+        public Nullable<int> Edad { get; set; }
+        public string Sexo { get; set; }
+        public string Nacinalidad { get; set; }
+        public string Provincia { get; set; }
+        public string Direccion_Detallada { get; set; }
+        public System.DateTime Fecha_Cita { get; set; }
+        public string Hora_Cita { get; set; }
     }
 }

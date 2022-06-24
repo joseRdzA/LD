@@ -14,14 +14,14 @@ namespace testautenticacion.Models
     
     public partial class Estudiantes
     {
-        public int IDESTUDIANTE { get; set; }
-        public string NOMBRECOMPLETO { get; set; }
-        public System.DateTime FECHA_NACIMIENTO { get; set; }
-        public string RESPONSABLE { get; set; }
-        public string ID_NIVEL { get; set; }
-        public Nullable<int> ASISTENCIA { get; set; }
-        public string AUSENCIA { get; set; }
-        public Nullable<int> TELEFONO { get; set; }
+        public int Id_Estudiante { get; set; }
+        public string Nombre_Completo { get; set; }
+        public System.DateTime Fecha_Nacimiento { get; set; }
+        public string Responsable { get; set; }
+        public string Id_Nivel { get; set; }
+        public Nullable<int> Asistencia { get; set; }
+        public string Ausencia { get; set; }
+        public Nullable<int> Telefono { get; set; }
     
         public virtual Niveles Niveles { get; set; }
     }

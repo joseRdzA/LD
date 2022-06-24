@@ -1,0 +1,101 @@
+﻿@model testautenticacion.Models.InventarioComputo
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Activos Computacionales</h2>
+
+<p>
+    @Html.ActionLink("Agregar Nuevo Activo", "Create")
+</p>
+
+@using (Html.BeginForm("ConsultarDatos", "Activos_Computacion", FormMethod.Post))
+{
+    @Html.TextBoxFor(Model => Model.Descripcion)
+    <input type="submit" value="Filtrar">
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Código")
+        </th>
+        <th>
+            @Html.DisplayName("Descripción")
+        </th>
+        <th>
+            @Html.DisplayName("Marca")
+        </th>
+        <th>
+            @Html.DisplayName("Serie")
+        </th>
+        <th>
+            @Html.DisplayName("Fecha Compra")
+        </th>
+        <th>
+            @Html.DisplayName("Fecha Salida")
+        </th>
+        <th>
+            @Html.DisplayName("Vida Útil(meses)")
+        </th>
+        <th>
+            @Html.DisplayName("Costo Adquisitivo")
+        </th>
+        <th>
+            @Html.DisplayName("Deprec Mes")
+        </th>
+        <th>
+            @Html.DisplayName("Deprec Acum")
+        </th>
+        <th>
+            @Html.DisplayName("Valor Libros")
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.DatosPC)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Codigo_Activo_Computo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Marca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Serie)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha_Copmra)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha_Salida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vida_Util_Meses)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Costo_Adquisitivo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Deprec_Mes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Deprec_Acum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Valor_Libros)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.Id_Computacion }) |
+                @Html.ActionLink("Detalles", "Details", new { id = item.Id_Computacion }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.Id_Computacion })
+            </td>
+        </tr>
+    }
+
+</table>

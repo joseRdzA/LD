@@ -10,112 +10,112 @@ using testautenticacion.Models;
 
 namespace testautenticacion.Controllers
 {
-    public class USUARIOSController : Controller
+    public class UsuariosController : Controller
     {
-        private AADFLDEntities3 db = new AADFLDEntities3();
+        private AADFLDEntities db = new AADFLDEntities();
 
-        // GET: USUARIOS
+        // GET: Usuarios
         public ActionResult Index()
         {
-            var uSUARIOS = db.USUARIOS.Include(u => u.ROL);
-            return View(uSUARIOS.ToList());
+            var usuarios = db.Usuarios.Include(u => u.Rol);
+            return View(usuarios.ToList());
         }
 
-        // GET: USUARIOS/Details/5
+        // GET: Usuarios/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            USUARIOS uSUARIOS = db.USUARIOS.Find(id);
-            if (uSUARIOS == null)
+            Usuarios usuarios = db.Usuarios.Find(id);
+            if (usuarios == null)
             {
                 return HttpNotFound();
             }
-            return View(uSUARIOS);
+            return View(usuarios);
         }
 
-        // GET: USUARIOS/Create
+        // GET: Usuarios/Create
         public ActionResult Create()
         {
-            ViewBag.IdRol = new SelectList(db.ROL, "IdRol", "Descripcion");
+            ViewBag.IdRol = new SelectList(db.Rol, "IdRol", "Descripcion");
             return View();
         }
 
-        // POST: USUARIOS/Create
+        // POST: Usuarios/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "idUsuario,Nombres,Correo,Clave,IdRol")] USUARIOS uSUARIOS)
+        public ActionResult Create([Bind(Include = "idUsuario,Nombres,Correo,Clave,IdRol")] Usuarios usuarios)
         {
             if (ModelState.IsValid)
             {
-                db.USUARIOS.Add(uSUARIOS);
+                db.Usuarios.Add(usuarios);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.IdRol = new SelectList(db.ROL, "IdRol", "Descripcion", uSUARIOS.IdRol);
-            return View(uSUARIOS);
+            ViewBag.IdRol = new SelectList(db.Rol, "IdRol", "Descripcion", usuarios.IdRol);
+            return View(usuarios);
         }
 
-        // GET: USUARIOS/Edit/5
+        // GET: Usuarios/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            USUARIOS uSUARIOS = db.USUARIOS.Find(id);
-            if (uSUARIOS == null)
+            Usuarios usuarios = db.Usuarios.Find(id);
+            if (usuarios == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.IdRol = new SelectList(db.ROL, "IdRol", "Descripcion", uSUARIOS.IdRol);
-            return View(uSUARIOS);
+            ViewBag.IdRol = new SelectList(db.Rol, "IdRol", "Descripcion", usuarios.IdRol);
+            return View(usuarios);
         }
 
-        // POST: USUARIOS/Edit/5
+        // POST: Usuarios/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "idUsuario,Nombres,Correo,Clave,IdRol")] USUARIOS uSUARIOS)
+        public ActionResult Edit([Bind(Include = "idUsuario,Nombres,Correo,Clave,IdRol")] Usuarios usuarios)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(uSUARIOS).State = EntityState.Modified;
+                db.Entry(usuarios).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.IdRol = new SelectList(db.ROL, "IdRol", "Descripcion", uSUARIOS.IdRol);
-            return View(uSUARIOS);
+            ViewBag.IdRol = new SelectList(db.Rol, "IdRol", "Descripcion", usuarios.IdRol);
+            return View(usuarios);
         }
 
-        // GET: USUARIOS/Delete/5
+        // GET: Usuarios/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            USUARIOS uSUARIOS = db.USUARIOS.Find(id);
-            if (uSUARIOS == null)
+            Usuarios usuarios = db.Usuarios.Find(id);
+            if (usuarios == null)
             {
                 return HttpNotFound();
             }
-            return View(uSUARIOS);
+            return View(usuarios);
         }
 
-        // POST: USUARIOS/Delete/5
+        // POST: Usuarios/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            USUARIOS uSUARIOS = db.USUARIOS.Find(id);
-            db.USUARIOS.Remove(uSUARIOS);
+            Usuarios usuarios = db.Usuarios.Find(id);
+            db.Usuarios.Remove(usuarios);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -20,8 +20,8 @@ namespace testautenticacion.Models
             this.Funcionario = new HashSet<Funcionario>();
         }
     
-        public string ID_CARGO { get; set; }
-        public string NOMBRE_CARGO { get; set; }
+        public string Id_Cargo { get; set; }
+        public string Nombre_Cargo { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Funcionario> Funcionario { get; set; }

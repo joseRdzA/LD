@@ -1,4 +1,4 @@
-﻿@model IEnumerable<testautenticacion.Models.USUARIOS>
+﻿@model IEnumerable<testautenticacion.Models.Usuarios>
 
 @{
     ViewBag.Title = "Index";
@@ -18,11 +18,12 @@
         <th>
             @Html.DisplayNameFor(model => model.Correo)
         </th>
+   
         <th>
             @Html.DisplayNameFor(model => model.Clave)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ROL.Descripcion)
+            @Html.DisplayNameFor(model => model.Rol.Descripcion)
         </th>
         <th></th>
     </tr>
@@ -39,7 +40,7 @@
             @Html.DisplayFor(modelItem => item.Clave)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ROL.Descripcion)
+            @Html.DisplayFor(modelItem => item.Rol.Descripcion)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.idUsuario }) |

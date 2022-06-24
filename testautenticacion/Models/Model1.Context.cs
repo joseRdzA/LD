@@ -13,10 +13,10 @@ namespace testautenticacion.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class AADFLDEntities3 : DbContext
+    public partial class AADFLDEntities : DbContext
     {
-        public AADFLDEntities3()
-            : base("name=AADFLDEntities3")
+        public AADFLDEntities()
+            : base("name=AADFLDEntities")
         {
         }
     
@@ -25,17 +25,17 @@ namespace testautenticacion.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<ACTIVOS_LUZ_DIVINA_COMPUTO> ACTIVOS_LUZ_DIVINA_COMPUTO { get; set; }
-        public virtual DbSet<ACTIVOS_LUZ_DIVINA_ELECTRICOS> ACTIVOS_LUZ_DIVINA_ELECTRICOS { get; set; }
-        public virtual DbSet<ACTIVOS_LUZ_DIVINA_RECREATIVOS> ACTIVOS_LUZ_DIVINA_RECREATIVOS { get; set; }
+        public virtual DbSet<Activos_Computacion> Activos_Computacion { get; set; }
+        public virtual DbSet<Activos_Electricos> Activos_Electricos { get; set; }
+        public virtual DbSet<Activos_Recreativos> Activos_Recreativos { get; set; }
         public virtual DbSet<Cargos> Cargos { get; set; }
         public virtual DbSet<Estudiantes> Estudiantes { get; set; }
         public virtual DbSet<Funcionario> Funcionario { get; set; }
-        public virtual DbSet<INVENTARIO_COCINA> INVENTARIO_COCINA { get; set; }
+        public virtual DbSet<Inventario_Cocina> Inventario_Cocina { get; set; }
         public virtual DbSet<Niveles> Niveles { get; set; }
         public virtual DbSet<Reserva_Matriculas> Reserva_Matriculas { get; set; }
-        public virtual DbSet<ROL> ROL { get; set; }
+        public virtual DbSet<Rol> Rol { get; set; }
         public virtual DbSet<Servicio_Comunales> Servicio_Comunales { get; set; }
-        public virtual DbSet<USUARIOS> USUARIOS { get; set; }
+        public virtual DbSet<Usuarios> Usuarios { get; set; }
     }
 }

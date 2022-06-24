@@ -8,128 +8,125 @@ using System.Web;
 using System.Web.Mvc;
 using testautenticacion.Models;
 
-
 namespace testautenticacion.Controllers
 {
-    public class Inventario_CocinaController : Controller
+    public class Activos_ElectricosController : Controller
     {
         private AADFLDEntities db = new AADFLDEntities();
 
-        // GET: Inventario_Cocina
+        // GET: Activos_Electricos
         public ActionResult Index()
         {
-            Inventario inv = new Inventario();
-            inv.Datos = db.Inventario_Cocina.ToList();
+            InventarioElectrico inv = new InventarioElectrico();
+            inv.DatosElec = db.Activos_Electricos.ToList();
 
             return View(inv);
         }
 
         [HttpPost]
-        public ActionResult ConsultarDatos(Inventario obj)
+        public ActionResult ConsultarDatos(InventarioElectrico obj)
         {
-            Inventario inv = new Inventario();
+            InventarioElectrico inv = new InventarioElectrico();
 
-            if(!string.IsNullOrEmpty(obj.Nombre))
-                inv.Datos = db.Inventario_Cocina.Where(x => x.Producto.Contains(obj.Nombre)).ToList();
+            if (!string.IsNullOrEmpty(obj.Descripcion))
+                inv.DatosElec = db.Activos_Electricos.Where(x => x.Descripcion.Contains(obj.Descripcion)).ToList();
             else
-                inv.Datos = db.Inventario_Cocina.ToList();
+                inv.DatosElec = db.Activos_Electricos.ToList();
 
             return View("Index", inv);
         }
 
-        
-
-        // GET: Inventario_Cocina/Details/5
+        // GET: Activos_Electricos/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Inventario_Cocina inventario_Cocina = db.Inventario_Cocina.Find(id);
-            if (inventario_Cocina == null)
+            Activos_Electricos activos_Electricos = db.Activos_Electricos.Find(id);
+            if (activos_Electricos == null)
             {
                 return HttpNotFound();
             }
-            return View(inventario_Cocina);
+            return View(activos_Electricos);
         }
 
-        // GET: Inventario_Cocina/Create
+        // GET: Activos_Electricos/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Inventario_Cocina/Create
+        // POST: Activos_Electricos/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id_Cocina,Codigo_Producto,Producto,Medida,Existencia_Inicial,Entradas,Salidas,Existencias")] Inventario_Cocina inventario_Cocina)
+        public ActionResult Create([Bind(Include = "Id_Electrico,Codigo_Activo_Electrico,Descripcion,Marca,Serie,Fecha_Compra,Fecha_Salida,Vida_Util_Meses,Costo_Adquisitivo,Deprec_Mes,Deprec_Acum,Valor_Libros")] Activos_Electricos activos_Electricos)
         {
             if (ModelState.IsValid)
             {
-                db.Inventario_Cocina.Add(inventario_Cocina);
+                db.Activos_Electricos.Add(activos_Electricos);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(inventario_Cocina);
+            return View(activos_Electricos);
         }
 
-        // GET: Inventario_Cocina/Edit/5
+        // GET: Activos_Electricos/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Inventario_Cocina inventario_Cocina = db.Inventario_Cocina.Find(id);
-            if (inventario_Cocina == null)
+            Activos_Electricos activos_Electricos = db.Activos_Electricos.Find(id);
+            if (activos_Electricos == null)
             {
                 return HttpNotFound();
             }
-            return View(inventario_Cocina);
+            return View(activos_Electricos);
         }
 
-        // POST: Inventario_Cocina/Edit/5
+        // POST: Activos_Electricos/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id_Cocina,Codigo_Producto,Producto,Medida,Existencia_Inicial,Entradas,Salidas,Existencias")] Inventario_Cocina inventario_Cocina)
+        public ActionResult Edit([Bind(Include = "Id_Electrico,Codigo_Activo_Electrico,Descripcion,Marca,Serie,Fecha_Compra,Fecha_Salida,Vida_Util_Meses,Costo_Adquisitivo,Deprec_Mes,Deprec_Acum,Valor_Libros")] Activos_Electricos activos_Electricos)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(inventario_Cocina).State = EntityState.Modified;
+                db.Entry(activos_Electricos).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(inventario_Cocina);
+            return View(activos_Electricos);
         }
 
-        // GET: Inventario_Cocina/Delete/5
+        // GET: Activos_Electricos/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Inventario_Cocina inventario_Cocina = db.Inventario_Cocina.Find(id);
-            if (inventario_Cocina == null)
+            Activos_Electricos activos_Electricos = db.Activos_Electricos.Find(id);
+            if (activos_Electricos == null)
             {
                 return HttpNotFound();
             }
-            return View(inventario_Cocina);
+            return View(activos_Electricos);
         }
 
-        // POST: Inventario_Cocina/Delete/5
+        // POST: Activos_Electricos/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Inventario_Cocina inventario_Cocina = db.Inventario_Cocina.Find(id);
-            db.Inventario_Cocina.Remove(inventario_Cocina);
+            Activos_Electricos activos_Electricos = db.Activos_Electricos.Find(id);
+            db.Activos_Electricos.Remove(activos_Electricos);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

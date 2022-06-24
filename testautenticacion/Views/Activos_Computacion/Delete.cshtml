@@ -1,0 +1,113 @@
+﻿@model testautenticacion.Models.Activos_Computacion
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Eliminar</h2>
+
+<h3>¿Desea Eliminar Este Activo?</h3>
+<div>
+    <h4>Activos Computación</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Codigo_Activo_Computo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Codigo_Activo_Computo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Marca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Marca)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Serie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Serie)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha_Copmra)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_Copmra)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha_Salida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_Salida)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vida_Util_Meses)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vida_Util_Meses)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Costo_Adquisitivo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Costo_Adquisitivo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Deprec_Mes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Deprec_Mes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Deprec_Acum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Deprec_Acum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor_Libros)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valor_Libros)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Regresar a la Lista", "Index")
+        </div>
+    }
+</div>

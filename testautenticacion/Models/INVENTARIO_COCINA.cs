@@ -11,15 +11,19 @@ namespace testautenticacion.Models
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class INVENTARIO_COCINA
+    using System.ComponentModel.DataAnnotations;
+
+    public partial class Inventario_Cocina
     {
-        public string CODIGO_COCINA { get; set; }
-        public string PRODUCTO { get; set; }
-        public string MEDIDA { get; set; }
-        public string EXISTENCIA_INICIAL { get; set; }
-        public int ENTRADAS { get; set; }
-        public int SALIDAS { get; set; }
-        public int EXISTENCIAS { get; set; }
+        public int Id_Cocina { get; set; }
+        [Display(Name="Código del Producto")]
+        public string Codigo_Producto { get; set; }
+        public string Producto { get; set; }
+        public string Medida { get; set; }
+        [Display(Name = "Existencia Inicial")]
+        public string Existencia_Inicial { get; set; }
+        public int Entradas { get; set; }
+        public int Salidas { get; set; }
+        public int Existencias { get; set; }
     }
 }

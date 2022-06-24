@@ -20,8 +20,8 @@ namespace testautenticacion.Models
             this.Estudiantes = new HashSet<Estudiantes>();
         }
     
-        public string ID_NIVEL { get; set; }
-        public string NOMBRE_NIVEL { get; set; }
+        public string Id_Nivel { get; set; }
+        public string Nombre_Nivel { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Estudiantes> Estudiantes { get; set; }

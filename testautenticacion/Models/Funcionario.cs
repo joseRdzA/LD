@@ -14,11 +14,11 @@ namespace testautenticacion.Models
     
     public partial class Funcionario
     {
-        public int ID_FUNCIONARIO { get; set; }
-        public string NOMBRECOMPLETO { get; set; }
-        public Nullable<int> NUM_TEL { get; set; }
-        public string CORREO_ELECTRONICO { get; set; }
-        public string ID_CARGO { get; set; }
+        public int Id_Funcionario { get; set; }
+        public string Nombre_Completo { get; set; }
+        public Nullable<int> Num_Tel { get; set; }
+        public string Correo_Electronico { get; set; }
+        public string Id_Cargo { get; set; }
     
         public virtual Cargos Cargos { get; set; }
     }

@@ -1,64 +1,80 @@
-﻿@model IEnumerable<testautenticacion.Models.INVENTARIO_COCINA>
+﻿
+@model testautenticacion.Models.Inventario
 
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Inventario de Cocina</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Agregar Producto", "Create")
 </p>
+
+@using (Html.BeginForm("ConsultarDatos", "Inventario_Cocina", FormMethod.Post))
+{
+@Html.TextBoxFor(Model => Model.Nombre)
+<input type="submit" value="Filtrar">
+}
+
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.PRODUCTO)
+            @Html.DisplayName("Código")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.MEDIDA)
+            @Html.DisplayName("Producto")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.EXISTENCIA_INICIAL)
+            @Html.DisplayName("Medida")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ENTRADAS)
+            @Html.DisplayName("Existencia Inicial")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.SALIDAS)
+            @Html.DisplayName("Entradas")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.EXISTENCIAS)
+            @Html.DisplayName("Salidas")
+        </th>
+        <th>
+            @Html.DisplayName("Existencias")
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.PRODUCTO)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MEDIDA)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EXISTENCIA_INICIAL)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ENTRADAS)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SALIDAS)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EXISTENCIAS)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CODIGO_COCINA }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CODIGO_COCINA }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CODIGO_COCINA })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model.Datos)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Codigo_Producto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Producto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Medida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Existencia_Inicial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Entradas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Salidas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Existencias)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.Id_Cocina }) |
+                @Html.ActionLink("Detalles", "Details", new { id = item.Id_Cocina }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.Id_Cocina })
+            </td>
+        </tr>
+    }
 
 </table>
+

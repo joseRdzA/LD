@@ -14,11 +14,11 @@ namespace testautenticacion.Models
     
     public partial class Servicio_Comunales
     {
-        public int ID_SERVICIO_COMUNAL { get; set; }
-        public string NOMBRE_SERVICIO { get; set; }
-        public string NOMBRE_PERSONA { get; set; }
-        public string EMAIL { get; set; }
-        public Nullable<int> NUMTEL { get; set; }
-        public string MENSAJE { get; set; }
+        public int Id_Servicio_Comunal { get; set; }
+        public string Nombre_Servicio { get; set; }
+        public string Nombre_Persona { get; set; }
+        public string Email { get; set; }
+        public Nullable<int> Num_Tel { get; set; }
+        public string Mensaje { get; set; }
     }
 }

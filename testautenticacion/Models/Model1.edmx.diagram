@@ -4,22 +4,22 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="634ca610d0954da9a63ab7697d3b73cd" Name="Diagram1">
-        <EntityTypeShape EntityType="AADFLDModel.ACTIVOS_LUZ_DIVINA_COMPUTO" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AADFLDModel.ACTIVOS_LUZ_DIVINA_ELECTRICOS" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AADFLDModel.ACTIVOS_LUZ_DIVINA_RECREATIVOS" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+      <Diagram DiagramId="eb218fd4a606416e951f37a978d47128" Name="Diagram1">
+        <EntityTypeShape EntityType="AADFLDModel.Activos_Computacion" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.Activos_Electricos" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.Activos_Recreativos" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="AADFLDModel.Cargos" Width="1.5" PointX="5.75" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="AADFLDModel.Estudiantes" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
         <EntityTypeShape EntityType="AADFLDModel.Funcionario" Width="1.5" PointX="8" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="AADFLDModel.INVENTARIO_COCINA" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.Inventario_Cocina" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="AADFLDModel.Niveles" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="AADFLDModel.Reserva_Matriculas" Width="1.5" PointX="4.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AADFLDModel.ROL" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="AADFLDModel.Servicio_Comunales" Width="1.5" PointX="6.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AADFLDModel.USUARIOS" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.Reserva_Matriculas" Width="1.5" PointX="9.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.Rol" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.Servicio_Comunales" Width="1.5" PointX="4.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.Usuarios" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
         <AssociationConnector Association="AADFLDModel.fk_cargos" ManuallyRouted="false" />
-        <AssociationConnector Association="AADFLDModel.fk_NIVELES" ManuallyRouted="false" />
-        <AssociationConnector Association="AADFLDModel.FK__USUARIOS__IdRol__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.fk_Niveles" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__Usuarios__IdRol__1273C1CD" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

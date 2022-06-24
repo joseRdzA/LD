@@ -130,26 +130,26 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccesoController.cs" />
-    <Compile Include="Controllers\ACTIVOS_LUZ_DIVINA_COMPUTOController.cs" />
-    <Compile Include="Controllers\ACTIVOS_LUZ_DIVINA_ELECTRICOSController.cs" />
-    <Compile Include="Controllers\ACTIVOS_LUZ_DIVINA_RECREATIVOSController.cs" />
+    <Compile Include="Controllers\Activos_ComputacionController.cs" />
+    <Compile Include="Controllers\Activos_ElectricosController.cs" />
+    <Compile Include="Controllers\Activos_RecreativosController.cs" />
     <Compile Include="Controllers\EvaluacionesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InventariosController.cs" />
-    <Compile Include="Controllers\INVENTARIO_COCINAController.cs" />
-    <Compile Include="Controllers\USUARIOSController.cs" />
+    <Compile Include="Controllers\Inventario_CocinaController.cs" />
+    <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Controllers\VistaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Logica\LO_Usuario.cs" />
-    <Compile Include="Models\ACTIVOS_LUZ_DIVINA_COMPUTO.cs">
+    <Compile Include="Models\Activos_Computacion.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\ACTIVOS_LUZ_DIVINA_ELECTRICOS.cs">
+    <Compile Include="Models\Activos_Electricos.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\ACTIVOS_LUZ_DIVINA_RECREATIVOS.cs">
+    <Compile Include="Models\Activos_Recreativos.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Cargos.cs">
@@ -161,7 +161,11 @@
     <Compile Include="Models\Funcionario.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\INVENTARIO_COCINA.cs">
+    <Compile Include="Models\Inventario.cs" />
+    <Compile Include="Models\InventarioComputo.cs" />
+    <Compile Include="Models\InventarioElectrico.cs" />
+    <Compile Include="Models\InventarioRecreativo.cs" />
+    <Compile Include="Models\Inventario_Cocina.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Model1.Context.cs">
@@ -185,14 +189,14 @@
     <Compile Include="Models\Reserva_Matriculas.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\ROL.cs">
+    <Compile Include="Models\Rol.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Rol1.cs" />
     <Compile Include="Models\Servicio_Comunales.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\USUARIOS.cs">
+    <Compile Include="Models\Usuarios.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Usuarios1.cs" />
@@ -324,26 +328,6 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Acceso\Index.cshtml" />
     <Content Include="Views\Home\SinPermiso.cshtml" />
-    <Content Include="Views\ACTIVOS_LUZ_DIVINA_COMPUTO\Create.cshtml" />
-    <Content Include="Views\ACTIVOS_LUZ_DIVINA_COMPUTO\Delete.cshtml" />
-    <Content Include="Views\ACTIVOS_LUZ_DIVINA_COMPUTO\Details.cshtml" />
-    <Content Include="Views\ACTIVOS_LUZ_DIVINA_COMPUTO\Edit.cshtml" />
-    <Content Include="Views\ACTIVOS_LUZ_DIVINA_COMPUTO\Index.cshtml" />
-    <Content Include="Views\ACTIVOS_LUZ_DIVINA_ELECTRICOS\Create.cshtml" />
-    <Content Include="Views\ACTIVOS_LUZ_DIVINA_ELECTRICOS\Delete.cshtml" />
-    <Content Include="Views\ACTIVOS_LUZ_DIVINA_ELECTRICOS\Details.cshtml" />
-    <Content Include="Views\ACTIVOS_LUZ_DIVINA_ELECTRICOS\Edit.cshtml" />
-    <Content Include="Views\ACTIVOS_LUZ_DIVINA_ELECTRICOS\Index.cshtml" />
-    <Content Include="Views\ACTIVOS_LUZ_DIVINA_RECREATIVOS\Create.cshtml" />
-    <Content Include="Views\ACTIVOS_LUZ_DIVINA_RECREATIVOS\Delete.cshtml" />
-    <Content Include="Views\ACTIVOS_LUZ_DIVINA_RECREATIVOS\Details.cshtml" />
-    <Content Include="Views\ACTIVOS_LUZ_DIVINA_RECREATIVOS\Edit.cshtml" />
-    <Content Include="Views\ACTIVOS_LUZ_DIVINA_RECREATIVOS\Index.cshtml" />
-    <Content Include="Views\INVENTARIO_COCINA\Create.cshtml" />
-    <Content Include="Views\INVENTARIO_COCINA\Delete.cshtml" />
-    <Content Include="Views\INVENTARIO_COCINA\Details.cshtml" />
-    <Content Include="Views\INVENTARIO_COCINA\Edit.cshtml" />
-    <Content Include="Views\INVENTARIO_COCINA\Index.cshtml" />
     <Content Include="Views\Inventarios\Inventarios.cshtml" />
     <Content Include="Views\Evaluaciones\EvaluacionPsicologia.cshtml" />
     <Content Include="Views\Evaluaciones\EvaluacionDocente.cshtml" />
@@ -437,11 +421,31 @@
     <Content Include="Views\Vista\TCU.cshtml" />
     <Content Include="Views\Vista\Matricula.cshtml" />
     <Content Include="Views\Vista\Donaciones.cshtml" />
-    <Content Include="Views\USUARIOS\Create.cshtml" />
-    <Content Include="Views\USUARIOS\Delete.cshtml" />
-    <Content Include="Views\USUARIOS\Details.cshtml" />
-    <Content Include="Views\USUARIOS\Edit.cshtml" />
-    <Content Include="Views\USUARIOS\Index.cshtml" />
+    <Content Include="Views\Usuarios\Create.cshtml" />
+    <Content Include="Views\Usuarios\Delete.cshtml" />
+    <Content Include="Views\Usuarios\Details.cshtml" />
+    <Content Include="Views\Usuarios\Edit.cshtml" />
+    <Content Include="Views\Usuarios\Index.cshtml" />
+    <Content Include="Views\Activos_Computacion\Create.cshtml" />
+    <Content Include="Views\Activos_Computacion\Delete.cshtml" />
+    <Content Include="Views\Activos_Computacion\Details.cshtml" />
+    <Content Include="Views\Activos_Computacion\Edit.cshtml" />
+    <Content Include="Views\Activos_Computacion\Index.cshtml" />
+    <Content Include="Views\Activos_Electricos\Create.cshtml" />
+    <Content Include="Views\Activos_Electricos\Delete.cshtml" />
+    <Content Include="Views\Activos_Electricos\Details.cshtml" />
+    <Content Include="Views\Activos_Electricos\Edit.cshtml" />
+    <Content Include="Views\Activos_Electricos\Index.cshtml" />
+    <Content Include="Views\Activos_Recreativos\Create.cshtml" />
+    <Content Include="Views\Activos_Recreativos\Delete.cshtml" />
+    <Content Include="Views\Activos_Recreativos\Details.cshtml" />
+    <Content Include="Views\Activos_Recreativos\Edit.cshtml" />
+    <Content Include="Views\Activos_Recreativos\Index.cshtml" />
+    <Content Include="Views\Inventario_Cocina\Create.cshtml" />
+    <Content Include="Views\Inventario_Cocina\Delete.cshtml" />
+    <Content Include="Views\Inventario_Cocina\Details.cshtml" />
+    <Content Include="Views\Inventario_Cocina\Edit.cshtml" />
+    <Content Include="Views\Inventario_Cocina\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
