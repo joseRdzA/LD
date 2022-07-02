@@ -1,0 +1,63 @@
+﻿@model testautenticacion.Models.Inventario
+@{
+    Layout = null;
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<div>
+    <h1 style="text-align:center">Inventario de Cocina</h1>
+    <table class="table">
+        <tr>
+            <th scope="col">
+                @Html.DisplayName("Código")
+            </th>
+            <th scope="col">
+                @Html.DisplayName("Producto")
+            </th>
+            <th scope="col">
+                @Html.DisplayName("Medida")
+            </th>
+            <th scope="col">
+                @Html.DisplayName("Existencia Inicial")
+            </th>
+            <th scope="col">
+                @Html.DisplayName("Entradas")
+            </th>
+            <th scope="col">
+                @Html.DisplayName("Salidas")
+            </th>
+            <th scope="col">
+                @Html.DisplayName("Existencias")
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.Datos)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Codigo_Producto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Producto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Medida)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Existencia_Inicial)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Entradas)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Salidas)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Existencias)
+                </td>
+            </tr>
+        }
+
+    </table>
+
+</div>

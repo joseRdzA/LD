@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Rotativa;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -38,6 +39,29 @@ namespace testautenticacion.Controllers
             return View("Index", inv);
         }
 
+
+        [HttpPost]
+        public ActionResult OrdenarProductos()
+        {
+            InventarioRecreativo inv = new InventarioRecreativo();
+            inv.DatosRec = db.Activos_Recreativos.OrderBy(Descripcion => Descripcion.Descripcion).ToList();
+
+            return View("Index", inv);
+        }
+
+        //PDF 
+
+        public ActionResult Imprimir()
+        {
+            return new ActionAsPdf("ReporteRecreativos") { FileName = "ReporteRecreativos.pdf" };
+        }
+
+        public ActionResult ReporteRecreativos()
+        {
+            InventarioRecreativo inv = new InventarioRecreativo();
+            inv.DatosRec = db.Activos_Recreativos.ToList();
+            return View(inv);
+        }
         // GET: Activos_Recreativos/Details/5
         public ActionResult Details(int? id)
         {

@@ -1,0 +1,88 @@
+﻿@model testautenticacion.Models.InventarioElectrico
+@{
+    Layout = null;
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<div>
+    <h1 style="text-align:center">Inventario Activos Eléctricos</h1>
+
+    <table class="table">
+        <tr>
+            <th scope="col">
+                @Html.DisplayName("Código")
+            </th>
+            <th scope="col">
+                @Html.DisplayName("Descripción")
+            </th>
+            <th scope="col">
+                @Html.DisplayName("Marca")
+            </th>
+            <th scope="col">
+                @Html.DisplayName("Serie")
+            </th>
+            <th scope="col">
+                @Html.DisplayName("Fecha Compra")
+            </th>
+            <th scope="col">
+                @Html.DisplayName("Fecha Salida")
+            </th>
+            <th scope="col">
+                @Html.DisplayName("Vida Útil(Meses)")
+            </th>
+            <th scope="col">
+                @Html.DisplayName("Costa Adquisitivo")
+            </th>
+            <th scope="col">
+                @Html.DisplayName("Deprec Mes")
+            </th>
+            <th scope="col">
+                @Html.DisplayName("Deprec Acum")
+            </th>
+            <th scope="col">
+                @Html.DisplayName("Valor Libros")
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.DatosElec)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Codigo_Activo_Electrico)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descripcion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Marca)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Serie)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fecha_Compra)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fecha_Salida)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Vida_Util_Meses)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Costo_Adquisitivo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Deprec_Mes)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Deprec_Acum)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Valor_Libros)
+                </td>
+            </tr>
+        }
+
+    </table>
+
+</div>

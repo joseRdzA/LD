@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Rotativa;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -35,6 +36,29 @@ namespace testautenticacion.Controllers
                 inv.DatosPC = db.Activos_Computacion.ToList();
 
             return View("Index", inv);
+        }
+
+        [HttpPost]
+        public ActionResult OrdenarProductos()
+        {
+            InventarioComputo inv = new InventarioComputo();
+            inv.DatosPC = db.Activos_Computacion.OrderBy(Descripcion => Descripcion.Descripcion).ToList();
+
+            return View("Index", inv); //ojo con esto, la vista y el metodo... OJO CON EL INDEX 
+        }
+
+        //PDF 
+
+        public ActionResult Imprimir()
+        {
+            return new ActionAsPdf("ReporteComputacion") { FileName = "ReporteComputacion.pdf" };
+        }
+
+        public ActionResult ReporteComputacion()
+        {
+            InventarioComputo inv = new InventarioComputo();
+            inv.DatosPC = db.Activos_Computacion.ToList();
+            return View(inv);
         }
 
         // GET: Activos_Computacion/Details/5

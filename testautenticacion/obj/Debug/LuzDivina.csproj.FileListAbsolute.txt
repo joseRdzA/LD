@@ -1,0 +1,271 @@
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\obj\Debug\LuzDivina.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\obj\Debug\LuzDivina.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\obj\Debug\testautenticacion.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\obj\Debug\testautenticacion.pdb
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\testautenticacion.dll.config
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\testautenticacion.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\testautenticacion.pdb
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\csc.exe
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\csc.exe.config
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\csc.rsp
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\csi.exe
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\csi.exe.config
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\csi.rsp
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\System.AppContext.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\System.Console.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\System.IO.Compression.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\System.Net.Http.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\System.Net.Sockets.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\System.ValueTuple.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\System.Xml.XPath.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\vbc.exe
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\vbc.exe.config
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\vbc.rsp
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\VBCSCompiler.exe
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\Antlr3.Runtime.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\Newtonsoft.Json.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\System.Web.Helpers.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\System.Web.Mvc.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\System.Web.Optimization.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\System.Web.Razor.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\System.Web.WebPages.Deployment.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\System.Web.WebPages.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\System.Web.WebPages.Razor.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\WebGrease.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\System.Web.Helpers.xml
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\System.Web.Mvc.xml
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\System.Web.Optimization.xml
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\System.Web.Razor.xml
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\System.Web.WebPages.xml
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\System.Web.WebPages.Deployment.xml
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\System.Web.WebPages.Razor.xml
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\Newtonsoft.Json.xml
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\Antlr3.Runtime.pdb
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\es\System.Web.Helpers.resources.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\es\System.Web.Mvc.resources.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\es\System.Web.Optimization.resources.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\es\System.Web.Razor.resources.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\es\System.Web.WebPages.resources.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\obj\Debug\LuzDivina.csproj.CopyComplete
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\EntityFramework.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\EntityFramework.SqlServer.dll
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\EntityFramework.xml
+C:\Users\PC\Desktop\Proyecto final\testautenticacion\testautenticacion\bin\EntityFramework.SqlServer.xml
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\testautenticacion.dll.config
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\testautenticacion.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\testautenticacion.pdb
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\csc.exe
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\csc.exe.config
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\csc.rsp
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\csi.exe
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\csi.exe.config
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\csi.rsp
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\System.AppContext.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\System.Console.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\System.IO.Compression.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\System.Net.Http.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\System.Net.Sockets.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\System.ValueTuple.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\System.Xml.XPath.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\vbc.exe
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\vbc.exe.config
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\vbc.rsp
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\VBCSCompiler.exe
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\Antlr3.Runtime.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\EntityFramework.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\EntityFramework.SqlServer.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\Newtonsoft.Json.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\System.Web.Helpers.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\System.Web.Mvc.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\System.Web.Optimization.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\System.Web.Razor.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\System.Web.WebPages.Deployment.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\System.Web.WebPages.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\System.Web.WebPages.Razor.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\WebGrease.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\EntityFramework.xml
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\EntityFramework.SqlServer.xml
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\System.Web.Helpers.xml
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\System.Web.Mvc.xml
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\System.Web.Optimization.xml
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\System.Web.Razor.xml
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\System.Web.WebPages.xml
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\System.Web.WebPages.Deployment.xml
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\System.Web.WebPages.Razor.xml
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\Newtonsoft.Json.xml
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\Antlr3.Runtime.pdb
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\es\System.Web.Helpers.resources.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\es\System.Web.Mvc.resources.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\es\System.Web.Optimization.resources.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\es\System.Web.Razor.resources.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\es\System.Web.WebPages.resources.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\obj\Debug\LuzDivina.csproj.CoreCompileInputs.cache
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\obj\Debug\LuzDivina.csproj.CopyComplete
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\obj\Debug\testautenticacion.dll
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\obj\Debug\testautenticacion.pdb
+C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\obj\Debug\LuzDivina.csproj.AssemblyReference.cache
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\testautenticacion.dll.config
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\testautenticacion.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\testautenticacion.pdb
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\csc.exe
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\csc.exe.config
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\csc.rsp
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\csi.exe
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\csi.exe.config
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\csi.rsp
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\System.AppContext.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\System.Console.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\System.IO.Compression.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\System.Net.Http.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\System.Net.Sockets.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\System.ValueTuple.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\System.Xml.XPath.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\vbc.exe
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\vbc.exe.config
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\vbc.rsp
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\VBCSCompiler.exe
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\Antlr3.Runtime.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\EntityFramework.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\EntityFramework.SqlServer.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\Newtonsoft.Json.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\System.Web.Helpers.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\System.Web.Mvc.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\System.Web.Optimization.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\System.Web.Razor.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\System.Web.WebPages.Deployment.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\System.Web.WebPages.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\System.Web.WebPages.Razor.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\WebGrease.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\EntityFramework.xml
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\EntityFramework.SqlServer.xml
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\System.Web.Helpers.xml
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\System.Web.Mvc.xml
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\System.Web.Optimization.xml
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\System.Web.Razor.xml
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\System.Web.WebPages.xml
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\System.Web.WebPages.Deployment.xml
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\System.Web.WebPages.Razor.xml
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\Newtonsoft.Json.xml
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\Antlr3.Runtime.pdb
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\es\System.Web.Helpers.resources.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\es\System.Web.Mvc.resources.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\es\System.Web.Optimization.resources.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\es\System.Web.Razor.resources.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\es\System.Web.WebPages.resources.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\obj\Debug\LuzDivina.csproj.AssemblyReference.cache
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\obj\Debug\LuzDivina.csproj.CoreCompileInputs.cache
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\obj\Debug\LuzDivina.csproj.CopyComplete
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\obj\Debug\testautenticacion.dll
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\obj\Debug\testautenticacion.pdb
+C:\Users\user\Downloads\testautenticacion3\LuzDivina1\testautenticacion\bin\Rotativa.dll

@@ -11,20 +11,30 @@ namespace testautenticacion.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Activos_Electricos
     {
         public int Id_Electrico { get; set; }
+        [Display(Name="Código")]
         public string Codigo_Activo_Electrico { get; set; }
+        [Display(Name = "Descripción")]
         public string Descripcion { get; set; }
         public string Marca { get; set; }
         public string Serie { get; set; }
+        [Display(Name = "Fecha Compra")]
         public string Fecha_Compra { get; set; }
+        [Display(Name = "Fecha Salida")]
         public string Fecha_Salida { get; set; }
+        [Display(Name = "Vida Útil(Meses)")]
         public Nullable<int> Vida_Util_Meses { get; set; }
+        [Display(Name = "Costo Adquisitivo")]
         public Nullable<double> Costo_Adquisitivo { get; set; }
+        [Display(Name = "Deprec. Mes")]
         public Nullable<double> Deprec_Mes { get; set; }
+        [Display(Name = "Deprec. Acum")]
         public Nullable<double> Deprec_Acum { get; set; }
+        [Display(Name = "Valor Libros")]
         public Nullable<double> Valor_Libros { get; set; }
     }
 }

@@ -11,11 +11,34 @@
     @Html.ActionLink("Agregar Nuevo Activo Eléctrico", "Create")
 </p>
 
-@using (Html.BeginForm("ConsultarDatos", "Activos_Electricos", FormMethod.Post))
-{
-    @Html.TextBoxFor(Model => Model.Descripcion)
-    <input type="submit" value="Filtrar">
-}
+<div class="row">
+    <div class="col-md-4">
+        @using (Html.BeginForm("ConsultarDatos", "Activos_Electricos", FormMethod.Post))
+        {
+            @Html.TextBoxFor(Model => Model.Descripcion)
+            <input type="submit" class="btn btn-close-white btn-group-xs" value="Filtrar">
+        }
+
+    </div>
+    <div class="col-md-4">
+        @using (Html.BeginForm("Imprimir", "Activos_Electricos", FormMethod.Post))
+        {
+            <input type="submit" class="btn btn-close-white btn-group-xs" value="Generar PDF">
+        }
+
+    </div>
+
+    <div class="col-md-4">
+
+        @using (Html.BeginForm("OrdenarProductos", "Activos_Electricos", FormMethod.Post))
+        {
+            <input type="submit" class="btn btn-close-white btn-group-xs" value="Ordenar A-Z" style="float:right ">
+        }
+
+    </div>
+</div>
+<br />
+
 <table class="table">
     <tr>
         <th>

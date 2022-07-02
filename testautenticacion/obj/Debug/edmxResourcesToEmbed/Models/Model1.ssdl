@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AADFLDModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Activos_Computacion">
+    <Key>
+      <PropertyRef Name="Id_Computacion" />
+    </Key>
+    <Property Name="Id_Computacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Codigo_Activo_Computo" Type="varchar" MaxLength="30" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="30" />
+    <Property Name="Marca" Type="varchar" MaxLength="30" />
+    <Property Name="Serie" Type="varchar" MaxLength="50" />
+    <Property Name="Fecha_Copmra" Type="varchar" MaxLength="30" />
+    <Property Name="Fecha_Salida" Type="varchar" MaxLength="30" />
+    <Property Name="Vida_Util_Meses" Type="int" />
+    <Property Name="Costo_Adquisitivo" Type="float" />
+    <Property Name="Deprec_Mes" Type="float" />
+    <Property Name="Deprec_Acum" Type="float" />
+    <Property Name="Valor_Libros" Type="float" />
+  </EntityType>
+  <EntityType Name="Activos_Electricos">
+    <Key>
+      <PropertyRef Name="Id_Electrico" />
+    </Key>
+    <Property Name="Id_Electrico" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Codigo_Activo_Electrico" Type="varchar" MaxLength="30" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="30" />
+    <Property Name="Marca" Type="varchar" MaxLength="30" />
+    <Property Name="Serie" Type="varchar" MaxLength="50" />
+    <Property Name="Fecha_Compra" Type="varchar" MaxLength="30" />
+    <Property Name="Fecha_Salida" Type="varchar" MaxLength="30" />
+    <Property Name="Vida_Util_Meses" Type="int" />
+    <Property Name="Costo_Adquisitivo" Type="float" />
+    <Property Name="Deprec_Mes" Type="float" />
+    <Property Name="Deprec_Acum" Type="float" />
+    <Property Name="Valor_Libros" Type="float" />
+  </EntityType>
+  <EntityType Name="Activos_Recreativos">
+    <Key>
+      <PropertyRef Name="Id_Activo_Recreativo" />
+    </Key>
+    <Property Name="Id_Activo_Recreativo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Codigo_Activo_Recreativo" Type="varchar" MaxLength="30" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="30" />
+    <Property Name="Marca" Type="varchar" MaxLength="30" />
+    <Property Name="Serie" Type="varchar" MaxLength="50" />
+    <Property Name="Fecha_Compra" Type="varchar" MaxLength="30" />
+    <Property Name="Fecha_Salida" Type="varchar" MaxLength="30" />
+    <Property Name="Vida_Util_Meses" Type="int" />
+    <Property Name="Costo_Adquisitivo" Type="float" />
+    <Property Name="Deprec_Mes" Type="float" />
+    <Property Name="Deprec_Acum" Type="float" />
+    <Property Name="Valor_Libros" Type="float" />
+  </EntityType>
+  <EntityType Name="Cargos">
+    <Key>
+      <PropertyRef Name="Id_Cargo" />
+    </Key>
+    <Property Name="Id_Cargo" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Nombre_Cargo" Type="varchar" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Estudiantes">
+    <Key>
+      <PropertyRef Name="Id_Estudiante" />
+    </Key>
+    <Property Name="Id_Estudiante" Type="int" Nullable="false" />
+    <Property Name="Nombre_Completo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Fecha_Nacimiento" Type="date" Nullable="false" />
+    <Property Name="Responsable" Type="varchar" MaxLength="50" />
+    <Property Name="Id_Nivel" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Asistencia" Type="int" />
+    <Property Name="Ausencia" Type="varchar" MaxLength="800" />
+    <Property Name="Telefono" Type="int" />
+  </EntityType>
+  <EntityType Name="Funcionario">
+    <Key>
+      <PropertyRef Name="Id_Funcionario" />
+    </Key>
+    <Property Name="Id_Funcionario" Type="int" Nullable="false" />
+    <Property Name="Nombre_Completo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Num_Tel" Type="int" />
+    <Property Name="Correo_Electronico" Type="varchar" MaxLength="80" />
+    <Property Name="Id_Cargo" Type="varchar" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Inventario_Cocina">
+    <Key>
+      <PropertyRef Name="Id_Cocina" />
+    </Key>
+    <Property Name="Id_Cocina" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Codigo_Producto" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Producto" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Medida" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Existencia_Inicial" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Entradas" Type="int" Nullable="false" />
+    <Property Name="Salidas" Type="int" Nullable="false" />
+    <Property Name="Existencias" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Niveles">
+    <Key>
+      <PropertyRef Name="Id_Nivel" />
+    </Key>
+    <Property Name="Id_Nivel" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Nombre_Nivel" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Reserva_Matriculas">
+    <Key>
+      <PropertyRef Name="Id_Reserva" />
+    </Key>
+    <Property Name="Id_Reserva" Type="int" Nullable="false" />
+    <Property Name="Nombre_Tutor" Type="varchar" MaxLength="65" Nullable="false" />
+    <Property Name="Cedula_Tutor" Type="varchar" MaxLength="25" />
+    <Property Name="Correo_Tutor" Type="varchar" MaxLength="60" />
+    <Property Name="Num_Tel" Type="int" Nullable="false" />
+    <Property Name="Nombre_Alumno" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="Fecha_Nacimiento" Type="date" />
+    <Property Name="Edad" Type="int" />
+    <Property Name="Sexo" Type="varchar" MaxLength="9" />
+    <Property Name="Nacinalidad" Type="varchar" MaxLength="25" />
+    <Property Name="Provincia" Type="varchar" MaxLength="10" />
+    <Property Name="Direccion_Detallada" Type="varchar" MaxLength="200" />
+    <Property Name="Fecha_Cita" Type="date" Nullable="false" />
+    <Property Name="Hora_Cita" Type="varchar" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Rol">
+    <Key>
+      <PropertyRef Name="IdRol" />
+    </Key>
+    <Property Name="IdRol" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Servicio_Comunales">
+    <Key>
+      <PropertyRef Name="Id_Servicio_Comunal" />
+    </Key>
+    <Property Name="Id_Servicio_Comunal" Type="int" Nullable="false" />
+    <Property Name="Nombre_Servicio" Type="varchar" MaxLength="35" Nullable="false" />
+    <Property Name="Nombre_Persona" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="60" />
+    <Property Name="Num_Tel" Type="int" />
+    <Property Name="Mensaje" Type="varchar" MaxLength="400" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="idUsuario" />
+    </Key>
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+    <Property Name="Nombres" Type="varchar" MaxLength="50" />
+    <Property Name="Correo" Type="varchar" MaxLength="50" />
+    <Property Name="Clave" Type="varchar" MaxLength="50" />
+    <Property Name="IdRol" Type="int" />
+  </EntityType>
+  <Association Name="FK__Usuarios__IdRol__1273C1CD">
+    <End Role="Rol" Type="Self.Rol" Multiplicity="0..1" />
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rol">
+        <PropertyRef Name="IdRol" />
+      </Principal>
+      <Dependent Role="Usuarios">
+        <PropertyRef Name="IdRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_cargos">
+    <End Role="Cargos" Type="Self.Cargos" Multiplicity="1" />
+    <End Role="Funcionario" Type="Self.Funcionario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cargos">
+        <PropertyRef Name="Id_Cargo" />
+      </Principal>
+      <Dependent Role="Funcionario">
+        <PropertyRef Name="Id_Cargo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Niveles">
+    <End Role="Niveles" Type="Self.Niveles" Multiplicity="1" />
+    <End Role="Estudiantes" Type="Self.Estudiantes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Niveles">
+        <PropertyRef Name="Id_Nivel" />
+      </Principal>
+      <Dependent Role="Estudiantes">
+        <PropertyRef Name="Id_Nivel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AADFLDModelStoreContainer">
+    <EntitySet Name="Activos_Computacion" EntityType="Self.Activos_Computacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Activos_Electricos" EntityType="Self.Activos_Electricos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Activos_Recreativos" EntityType="Self.Activos_Recreativos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cargos" EntityType="Self.Cargos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Estudiantes" EntityType="Self.Estudiantes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Funcionario" EntityType="Self.Funcionario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Inventario_Cocina" EntityType="Self.Inventario_Cocina" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Niveles" EntityType="Self.Niveles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Reserva_Matriculas" EntityType="Self.Reserva_Matriculas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Rol" EntityType="Self.Rol" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Servicio_Comunales" EntityType="Self.Servicio_Comunales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Usuarios__IdRol__1273C1CD" Association="Self.FK__Usuarios__IdRol__1273C1CD">
+      <End Role="Rol" EntitySet="Rol" />
+      <End Role="Usuarios" EntitySet="Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="fk_cargos" Association="Self.fk_cargos">
+      <End Role="Cargos" EntitySet="Cargos" />
+      <End Role="Funcionario" EntitySet="Funcionario" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Niveles" Association="Self.fk_Niveles">
+      <End Role="Niveles" EntitySet="Niveles" />
+      <End Role="Estudiantes" EntitySet="Estudiantes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

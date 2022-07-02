@@ -1,5 +1,4 @@
-﻿
-@model testautenticacion.Models.Inventario
+﻿@model testautenticacion.Models.Inventario
 
 @{
     ViewBag.Title = "Index";
@@ -12,11 +11,32 @@
     @Html.ActionLink("Agregar Producto", "Create")
 </p>
 
-@using (Html.BeginForm("ConsultarDatos", "Inventario_Cocina", FormMethod.Post))
-{
-@Html.TextBoxFor(Model => Model.Nombre)
-<input type="submit" value="Filtrar">
-}
+<div class="row">
+    <div class="col-md-4">
+        @using (Html.BeginForm("ConsultarDatos", "Inventario_Cocina", FormMethod.Post))
+        {
+            @Html.TextBoxFor(Model => Model.Nombre)
+            <input type="submit" class="btn btn-close-white btn-group-xs" value="Filtrar">
+        }
+
+    </div>
+    <div class="col-md-4">
+        @using (Html.BeginForm("Imprimir", "Inventario_Cocina", FormMethod.Post))
+        {
+            <input type="submit" class="btn btn-close-white btn-group-xs" value="Generar PDF">
+        }
+
+    </div>
+
+    <div class="col-md-4">
+        @using (Html.BeginForm("OrdenarProductos", "Inventario_Cocina", FormMethod.Post))
+        {
+            <input type="submit" class="btn btn-close-white btn-group-xs" value="Ordenar A-Z">
+        }
+    </div>
+</div>
+<br />
+
 
 <table class="table">
     <tr>

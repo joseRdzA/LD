@@ -13,11 +13,6 @@ namespace testautenticacion.Models
         public string Nombres { get; set; }
         public string Correo { get; set; }
 
-
-      
-      
-       
-      
         [MaxLength(8)]
         [MinLength(8)]
         public string Clave { get; set; }

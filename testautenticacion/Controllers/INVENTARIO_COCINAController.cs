@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Rotativa;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -37,7 +38,30 @@ namespace testautenticacion.Controllers
             return View("Index", inv);
         }
 
-        
+
+      [HttpPost]
+       public ActionResult OrdenarProductos()
+        {
+            Inventario inv = new Inventario();
+            inv.Datos = db.Inventario_Cocina.OrderBy(Producto => Producto.Producto).ToList();
+
+            return View("Index",inv); //ojo con esto, la vista y el metodo... OJO CON EL INDEX 
+        }
+
+        //PDF 
+
+        public ActionResult Imprimir()
+        {
+            return new ActionAsPdf("ReporteCocina") { FileName = "ReporteCocina.pdf" };
+        }
+
+        public ActionResult ReporteCocina()
+        {
+            Inventario inv = new Inventario();
+            inv.Datos = db.Inventario_Cocina.ToList();
+            return View(inv);
+        }
+
 
         // GET: Inventario_Cocina/Details/5
         public ActionResult Details(int? id)
