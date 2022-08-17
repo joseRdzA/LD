@@ -4,22 +4,103 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="eb218fd4a606416e951f37a978d47128" Name="Diagram1">
-        <EntityTypeShape EntityType="AADFLDModel.Activos_Computacion" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AADFLDModel.Activos_Electricos" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AADFLDModel.Activos_Recreativos" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AADFLDModel.Cargos" Width="1.5" PointX="5.75" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="AADFLDModel.Estudiantes" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="AADFLDModel.Funcionario" Width="1.5" PointX="8" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="AADFLDModel.Inventario_Cocina" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AADFLDModel.Niveles" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="AADFLDModel.Reserva_Matriculas" Width="1.5" PointX="9.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AADFLDModel.Rol" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="AADFLDModel.Servicio_Comunales" Width="1.5" PointX="4.75" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AADFLDModel.Usuarios" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+      <Diagram DiagramId="49b7920f6ecd49dd8181555c2965644d" Name="Diagram1">
+        <EntityTypeShape EntityType="AADFLDModel.A_Materno" Width="1.5" PointX="3" PointY="22.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.Activos_Computacion" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.Activos_Electricos" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.Activos_Recreativos" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.Cargos" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.CasaCuna1" Width="1.5" PointX="6" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.CasaCuna2" Width="1.5" PointX="3" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.E_Asitente" Width="1.5" PointX="14" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.E_Auxiliar" Width="1.5" PointX="14" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.E_Chofer" Width="1.5" PointX="14" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.E_Cocina" Width="1.5" PointX="14" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.E_Directora" Width="1.5" PointX="14" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.E_Docente" Width="1.5" PointX="14" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.E_Miscelanea" Width="1.5" PointX="14" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.E_Psicologia" Width="1.5" PointX="14" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.E_Tipo" Width="1.5" PointX="11.75" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.E_Trabajador_Social" Width="1.5" PointX="14" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.Estado_Asistencia" Width="1.5" PointX="0.75" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.Estudiantes_List" Width="1.5" PointX="3" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.Funcionario" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.HogarEscuela1" Width="1.5" PointX="3" PointY="27.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.HogarEscuela2" Width="1.5" PointX="6" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.HogarEscuela3" Width="1.5" PointX="6" PointY="27.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.Inventario_Cocina" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.Kinder" Width="1.5" PointX="9" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.Materno" Width="1.5" PointX="9" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.Nivel_Estudiante" Width="1.5" PointX="0.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.PreKinder" Width="1.5" PointX="9" PointY="27.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.Rol" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.Tokens" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AADFLDModel.Usuarios" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="AADFLDModel.FK__A_Materno__Jueve__14270015" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__A_Materno__Lunes__114A936A" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__A_Materno__Marte__123EB7A3" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__A_Materno__Mierc__1332DBDC" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__A_Materno__Viern__151B244E" ManuallyRouted="false" />
         <AssociationConnector Association="AADFLDModel.fk_cargos" ManuallyRouted="false" />
-        <AssociationConnector Association="AADFLDModel.fk_Niveles" ManuallyRouted="false" />
-        <AssociationConnector Association="AADFLDModel.FK__Usuarios__IdRol__1273C1CD" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__CasaCuna1__Jueve__4D2A7347" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__CasaCuna1__Lunes__4A4E069C" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__CasaCuna1__Marte__4B422AD5" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__CasaCuna1__Mierc__4C364F0E" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__CasaCuna1__Nivel__4959E263" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__CasaCuna1__Viern__4E1E9780" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__CasaCuna2__Jueve__54CB950F" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__CasaCuna2__Lunes__51EF2864" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__CasaCuna2__Marte__52E34C9D" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__CasaCuna2__Mierc__53D770D6" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__CasaCuna2__Nivel__50FB042B" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__CasaCuna2__Viern__55BFB948" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__E_Asitente__Tipo__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__E_Auxiliar__Tipo__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__E_Chofer__Tipo__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__E_Cocina__Tipo__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__E_Director__Tipo__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__E_Docente__Tipo__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__E_Miscelan__Tipo__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__E_Psicolog__Tipo__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__E_Trabajad__Tipo__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__HogarEscu__Jueve__6BAEFA67" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__HogarEscu__Jueve__73501C2F" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__HogarEscu__Jueve__7AF13DF7" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__HogarEscu__Lunes__68D28DBC" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__HogarEscu__Lunes__7073AF84" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__HogarEscu__Lunes__7814D14C" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__HogarEscu__Marte__69C6B1F5" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__HogarEscu__Marte__7167D3BD" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__HogarEscu__Marte__7908F585" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__HogarEscu__Mierc__6ABAD62E" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__HogarEscu__Mierc__725BF7F6" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__HogarEscu__Mierc__79FD19BE" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__HogarEscu__Viern__6CA31EA0" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__HogarEscu__Viern__74444068" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__HogarEscu__Viern__7BE56230" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__Kinder__Jueves__640DD89F" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__Kinder__Lunes__61316BF4" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__Kinder__Martes__6225902D" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__Kinder__Miercole__6319B466" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__Kinder__Viernes__6501FCD8" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__Materno__Jueves__4589517F" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__Materno__Lunes__42ACE4D4" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__Materno__Martes__43A1090D" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__Materno__Miercol__44952D46" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__Materno__Viernes__467D75B8" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__PreKinder__Jueve__5C6CB6D7" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__PreKinder__Lunes__59904A2C" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__PreKinder__Marte__5A846E65" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__PreKinder__Mierc__5B78929E" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__PreKinder__Viern__5D60DB10" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__Estudiant__Nivel__71D1E811" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__HogarEscu__Nivel__67DE6983" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__HogarEscu__Nivel__6F7F8B4B" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__HogarEscu__Nivel__7720AD13" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__Kinder__Nivel__603D47BB" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__Materno__Nivel__41B8C09B" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__PreKinder__Nivel__589C25F3" ManuallyRouted="false" />
+        <AssociationConnector Association="AADFLDModel.FK__Usuarios__IdRol__0FEC5ADD" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

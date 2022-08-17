@@ -1,5 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="AADFLDModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="A_Materno">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Mes_Año" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Numero_Semana" Type="Int32" Nullable="false" />
+    <Property Name="Nivel" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombre_Estudiante" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lunes" Type="Int32" />
+    <Property Name="Martes" Type="Int32" />
+    <Property Name="Miercoles" Type="Int32" />
+    <Property Name="Jueves" Type="Int32" />
+    <Property Name="Viernes" Type="Int32" />
+    <NavigationProperty Name="Estado_Asistencia" Relationship="Self.FK__A_Materno__Jueve__14270015" FromRole="A_Materno" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Estado_Asistencia1" Relationship="Self.FK__A_Materno__Lunes__114A936A" FromRole="A_Materno" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Estado_Asistencia2" Relationship="Self.FK__A_Materno__Marte__123EB7A3" FromRole="A_Materno" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Estado_Asistencia3" Relationship="Self.FK__A_Materno__Mierc__1332DBDC" FromRole="A_Materno" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Estado_Asistencia4" Relationship="Self.FK__A_Materno__Viern__151B244E" FromRole="A_Materno" ToRole="Estado_Asistencia" />
+  </EntityType>
   <EntityType Name="Activos_Computacion">
     <Key>
       <PropertyRef Name="Id_Computacion" />
@@ -9,12 +29,9 @@
     <Property Name="Descripcion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
     <Property Name="Marca" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
     <Property Name="Serie" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Fecha_Copmra" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="Fecha_Salida" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="Vida_Util_Meses" Type="Int32" />
+    <Property Name="Fecha_Copmra" Type="DateTime" Precision="3" />
+    <Property Name="Fecha_Salida" Type="DateTime" Precision="3" />
     <Property Name="Costo_Adquisitivo" Type="Double" />
-    <Property Name="Deprec_Mes" Type="Double" />
-    <Property Name="Deprec_Acum" Type="Double" />
     <Property Name="Valor_Libros" Type="Double" />
   </EntityType>
   <EntityType Name="Activos_Electricos">
@@ -26,12 +43,9 @@
     <Property Name="Descripcion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
     <Property Name="Marca" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
     <Property Name="Serie" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Fecha_Compra" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="Fecha_Salida" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="Vida_Util_Meses" Type="Int32" />
+    <Property Name="Fecha_Compra" Type="DateTime" Precision="3" />
+    <Property Name="Fecha_Salida" Type="DateTime" Precision="3" />
     <Property Name="Costo_Adquisitivo" Type="Double" />
-    <Property Name="Deprec_Mes" Type="Double" />
-    <Property Name="Deprec_Acum" Type="Double" />
     <Property Name="Valor_Libros" Type="Double" />
   </EntityType>
   <EntityType Name="Activos_Recreativos">
@@ -43,12 +57,9 @@
     <Property Name="Descripcion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
     <Property Name="Marca" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
     <Property Name="Serie" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Fecha_Compra" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="Fecha_Salida" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="Vida_Util_Meses" Type="Int32" />
+    <Property Name="Fecha_Compra" Type="DateTime" Precision="3" />
+    <Property Name="Fecha_Salida" Type="DateTime" Precision="3" />
     <Property Name="Costo_Adquisitivo" Type="Double" />
-    <Property Name="Deprec_Mes" Type="Double" />
-    <Property Name="Deprec_Acum" Type="Double" />
     <Property Name="Valor_Libros" Type="Double" />
   </EntityType>
   <EntityType Name="Cargos">
@@ -59,19 +70,208 @@
     <Property Name="Nombre_Cargo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="Funcionario" Relationship="Self.fk_cargos" FromRole="Cargos" ToRole="Funcionario" />
   </EntityType>
-  <EntityType Name="Estudiantes">
+  <EntityType Name="CasaCuna1">
     <Key>
-      <PropertyRef Name="Id_Estudiante" />
+      <PropertyRef Name="ID" />
     </Key>
-    <Property Name="Id_Estudiante" Type="Int32" Nullable="false" />
-    <Property Name="Nombre_Completo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Fecha_Nacimiento" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="Responsable" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Id_Nivel" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Asistencia" Type="Int32" />
-    <Property Name="Ausencia" Type="String" MaxLength="800" FixedLength="false" Unicode="false" />
-    <Property Name="Telefono" Type="Int32" />
-    <NavigationProperty Name="Niveles" Relationship="Self.fk_Niveles" FromRole="Estudiantes" ToRole="Niveles" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AnoMes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Nombre_Estudiante" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Nivel" Type="Int32" Nullable="false" />
+    <Property Name="NumeroSemana" Type="Int32" />
+    <Property Name="Lunes" Type="Int32" Nullable="false" />
+    <Property Name="Martes" Type="Int32" Nullable="false" />
+    <Property Name="Miercoles" Type="Int32" Nullable="false" />
+    <Property Name="Jueves" Type="Int32" Nullable="false" />
+    <Property Name="Viernes" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Estado_Asistencia" Relationship="Self.FK__CasaCuna1__Jueve__4D2A7347" FromRole="CasaCuna1" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Estado_Asistencia1" Relationship="Self.FK__CasaCuna1__Lunes__4A4E069C" FromRole="CasaCuna1" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Estado_Asistencia2" Relationship="Self.FK__CasaCuna1__Marte__4B422AD5" FromRole="CasaCuna1" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Estado_Asistencia3" Relationship="Self.FK__CasaCuna1__Mierc__4C364F0E" FromRole="CasaCuna1" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Nivel_Estudiante" Relationship="Self.FK__CasaCuna1__Nivel__4959E263" FromRole="CasaCuna1" ToRole="Nivel_Estudiante" />
+    <NavigationProperty Name="Estado_Asistencia4" Relationship="Self.FK__CasaCuna1__Viern__4E1E9780" FromRole="CasaCuna1" ToRole="Estado_Asistencia" />
+  </EntityType>
+  <EntityType Name="CasaCuna2">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AnoMes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Nombre_Estudiante" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Nivel" Type="Int32" Nullable="false" />
+    <Property Name="NumeroSemana" Type="Int32" />
+    <Property Name="Lunes" Type="Int32" Nullable="false" />
+    <Property Name="Martes" Type="Int32" Nullable="false" />
+    <Property Name="Miercoles" Type="Int32" Nullable="false" />
+    <Property Name="Jueves" Type="Int32" Nullable="false" />
+    <Property Name="Viernes" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Estado_Asistencia" Relationship="Self.FK__CasaCuna2__Jueve__54CB950F" FromRole="CasaCuna2" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Estado_Asistencia1" Relationship="Self.FK__CasaCuna2__Lunes__51EF2864" FromRole="CasaCuna2" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Estado_Asistencia2" Relationship="Self.FK__CasaCuna2__Marte__52E34C9D" FromRole="CasaCuna2" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Estado_Asistencia3" Relationship="Self.FK__CasaCuna2__Mierc__53D770D6" FromRole="CasaCuna2" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Nivel_Estudiante" Relationship="Self.FK__CasaCuna2__Nivel__50FB042B" FromRole="CasaCuna2" ToRole="Nivel_Estudiante" />
+    <NavigationProperty Name="Estado_Asistencia4" Relationship="Self.FK__CasaCuna2__Viern__55BFB948" FromRole="CasaCuna2" ToRole="Estado_Asistencia" />
+  </EntityType>
+  <EntityType Name="E_Asitente">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Tipo" Type="Int32" />
+    <NavigationProperty Name="E_Tipo" Relationship="Self.FK__E_Asitente__Tipo__46E78A0C" FromRole="E_Asitente" ToRole="E_Tipo" />
+  </EntityType>
+  <EntityType Name="E_Auxiliar">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Tipo" Type="Int32" />
+    <NavigationProperty Name="E_Tipo" Relationship="Self.FK__E_Auxiliar__Tipo__49C3F6B7" FromRole="E_Auxiliar" ToRole="E_Tipo" />
+  </EntityType>
+  <EntityType Name="E_Chofer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Tipo" Type="Int32" />
+    <NavigationProperty Name="E_Tipo" Relationship="Self.FK__E_Chofer__Tipo__412EB0B6" FromRole="E_Chofer" ToRole="E_Tipo" />
+  </EntityType>
+  <EntityType Name="E_Cocina">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Tipo" Type="Int32" />
+    <NavigationProperty Name="E_Tipo" Relationship="Self.FK__E_Cocina__Tipo__38996AB5" FromRole="E_Cocina" ToRole="E_Tipo" />
+  </EntityType>
+  <EntityType Name="E_Directora">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Tipo" Type="Int32" />
+    <NavigationProperty Name="E_Tipo" Relationship="Self.FK__E_Director__Tipo__4CA06362" FromRole="E_Directora" ToRole="E_Tipo" />
+  </EntityType>
+  <EntityType Name="E_Docente">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Tipo" Type="Int32" />
+    <NavigationProperty Name="E_Tipo" Relationship="Self.FK__E_Docente__Tipo__3B75D760" FromRole="E_Docente" ToRole="E_Tipo" />
+  </EntityType>
+  <EntityType Name="E_Miscelanea">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Tipo" Type="Int32" />
+    <NavigationProperty Name="E_Tipo" Relationship="Self.FK__E_Miscelan__Tipo__440B1D61" FromRole="E_Miscelanea" ToRole="E_Tipo" />
+  </EntityType>
+  <EntityType Name="E_Psicologia">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Tipo" Type="Int32" />
+    <NavigationProperty Name="E_Tipo" Relationship="Self.FK__E_Psicolog__Tipo__3E52440B" FromRole="E_Psicologia" ToRole="E_Tipo" />
+  </EntityType>
+  <EntityType Name="E_Tipo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="E_Asitente" Relationship="Self.FK__E_Asitente__Tipo__46E78A0C" FromRole="E_Tipo" ToRole="E_Asitente" />
+    <NavigationProperty Name="E_Auxiliar" Relationship="Self.FK__E_Auxiliar__Tipo__49C3F6B7" FromRole="E_Tipo" ToRole="E_Auxiliar" />
+    <NavigationProperty Name="E_Chofer" Relationship="Self.FK__E_Chofer__Tipo__412EB0B6" FromRole="E_Tipo" ToRole="E_Chofer" />
+    <NavigationProperty Name="E_Cocina" Relationship="Self.FK__E_Cocina__Tipo__38996AB5" FromRole="E_Tipo" ToRole="E_Cocina" />
+    <NavigationProperty Name="E_Directora" Relationship="Self.FK__E_Director__Tipo__4CA06362" FromRole="E_Tipo" ToRole="E_Directora" />
+    <NavigationProperty Name="E_Docente" Relationship="Self.FK__E_Docente__Tipo__3B75D760" FromRole="E_Tipo" ToRole="E_Docente" />
+    <NavigationProperty Name="E_Miscelanea" Relationship="Self.FK__E_Miscelan__Tipo__440B1D61" FromRole="E_Tipo" ToRole="E_Miscelanea" />
+    <NavigationProperty Name="E_Psicologia" Relationship="Self.FK__E_Psicolog__Tipo__3E52440B" FromRole="E_Tipo" ToRole="E_Psicologia" />
+    <NavigationProperty Name="E_Trabajador_Social" Relationship="Self.FK__E_Trabajad__Tipo__4F7CD00D" FromRole="E_Tipo" ToRole="E_Trabajador_Social" />
+  </EntityType>
+  <EntityType Name="E_Trabajador_Social">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Tipo" Type="Int32" />
+    <NavigationProperty Name="E_Tipo" Relationship="Self.FK__E_Trabajad__Tipo__4F7CD00D" FromRole="E_Trabajador_Social" ToRole="E_Tipo" />
+  </EntityType>
+  <EntityType Name="Estado_Asistencia">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Estado" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="A_Materno" Relationship="Self.FK__A_Materno__Jueve__14270015" FromRole="Estado_Asistencia" ToRole="A_Materno" />
+    <NavigationProperty Name="A_Materno1" Relationship="Self.FK__A_Materno__Lunes__114A936A" FromRole="Estado_Asistencia" ToRole="A_Materno" />
+    <NavigationProperty Name="A_Materno2" Relationship="Self.FK__A_Materno__Marte__123EB7A3" FromRole="Estado_Asistencia" ToRole="A_Materno" />
+    <NavigationProperty Name="A_Materno3" Relationship="Self.FK__A_Materno__Mierc__1332DBDC" FromRole="Estado_Asistencia" ToRole="A_Materno" />
+    <NavigationProperty Name="A_Materno4" Relationship="Self.FK__A_Materno__Viern__151B244E" FromRole="Estado_Asistencia" ToRole="A_Materno" />
+    <NavigationProperty Name="CasaCuna1" Relationship="Self.FK__CasaCuna1__Jueve__4D2A7347" FromRole="Estado_Asistencia" ToRole="CasaCuna1" />
+    <NavigationProperty Name="CasaCuna11" Relationship="Self.FK__CasaCuna1__Lunes__4A4E069C" FromRole="Estado_Asistencia" ToRole="CasaCuna1" />
+    <NavigationProperty Name="CasaCuna12" Relationship="Self.FK__CasaCuna1__Marte__4B422AD5" FromRole="Estado_Asistencia" ToRole="CasaCuna1" />
+    <NavigationProperty Name="CasaCuna13" Relationship="Self.FK__CasaCuna1__Mierc__4C364F0E" FromRole="Estado_Asistencia" ToRole="CasaCuna1" />
+    <NavigationProperty Name="CasaCuna14" Relationship="Self.FK__CasaCuna1__Viern__4E1E9780" FromRole="Estado_Asistencia" ToRole="CasaCuna1" />
+    <NavigationProperty Name="CasaCuna2" Relationship="Self.FK__CasaCuna2__Jueve__54CB950F" FromRole="Estado_Asistencia" ToRole="CasaCuna2" />
+    <NavigationProperty Name="CasaCuna21" Relationship="Self.FK__CasaCuna2__Lunes__51EF2864" FromRole="Estado_Asistencia" ToRole="CasaCuna2" />
+    <NavigationProperty Name="CasaCuna22" Relationship="Self.FK__CasaCuna2__Marte__52E34C9D" FromRole="Estado_Asistencia" ToRole="CasaCuna2" />
+    <NavigationProperty Name="CasaCuna23" Relationship="Self.FK__CasaCuna2__Mierc__53D770D6" FromRole="Estado_Asistencia" ToRole="CasaCuna2" />
+    <NavigationProperty Name="CasaCuna24" Relationship="Self.FK__CasaCuna2__Viern__55BFB948" FromRole="Estado_Asistencia" ToRole="CasaCuna2" />
+    <NavigationProperty Name="HogarEscuela1" Relationship="Self.FK__HogarEscu__Jueve__6BAEFA67" FromRole="Estado_Asistencia" ToRole="HogarEscuela1" />
+    <NavigationProperty Name="HogarEscuela2" Relationship="Self.FK__HogarEscu__Jueve__73501C2F" FromRole="Estado_Asistencia" ToRole="HogarEscuela2" />
+    <NavigationProperty Name="HogarEscuela3" Relationship="Self.FK__HogarEscu__Jueve__7AF13DF7" FromRole="Estado_Asistencia" ToRole="HogarEscuela3" />
+    <NavigationProperty Name="HogarEscuela11" Relationship="Self.FK__HogarEscu__Lunes__68D28DBC" FromRole="Estado_Asistencia" ToRole="HogarEscuela1" />
+    <NavigationProperty Name="HogarEscuela21" Relationship="Self.FK__HogarEscu__Lunes__7073AF84" FromRole="Estado_Asistencia" ToRole="HogarEscuela2" />
+    <NavigationProperty Name="HogarEscuela31" Relationship="Self.FK__HogarEscu__Lunes__7814D14C" FromRole="Estado_Asistencia" ToRole="HogarEscuela3" />
+    <NavigationProperty Name="HogarEscuela12" Relationship="Self.FK__HogarEscu__Marte__69C6B1F5" FromRole="Estado_Asistencia" ToRole="HogarEscuela1" />
+    <NavigationProperty Name="HogarEscuela22" Relationship="Self.FK__HogarEscu__Marte__7167D3BD" FromRole="Estado_Asistencia" ToRole="HogarEscuela2" />
+    <NavigationProperty Name="HogarEscuela32" Relationship="Self.FK__HogarEscu__Marte__7908F585" FromRole="Estado_Asistencia" ToRole="HogarEscuela3" />
+    <NavigationProperty Name="HogarEscuela13" Relationship="Self.FK__HogarEscu__Mierc__6ABAD62E" FromRole="Estado_Asistencia" ToRole="HogarEscuela1" />
+    <NavigationProperty Name="HogarEscuela23" Relationship="Self.FK__HogarEscu__Mierc__725BF7F6" FromRole="Estado_Asistencia" ToRole="HogarEscuela2" />
+    <NavigationProperty Name="HogarEscuela33" Relationship="Self.FK__HogarEscu__Mierc__79FD19BE" FromRole="Estado_Asistencia" ToRole="HogarEscuela3" />
+    <NavigationProperty Name="HogarEscuela14" Relationship="Self.FK__HogarEscu__Viern__6CA31EA0" FromRole="Estado_Asistencia" ToRole="HogarEscuela1" />
+    <NavigationProperty Name="HogarEscuela24" Relationship="Self.FK__HogarEscu__Viern__74444068" FromRole="Estado_Asistencia" ToRole="HogarEscuela2" />
+    <NavigationProperty Name="HogarEscuela34" Relationship="Self.FK__HogarEscu__Viern__7BE56230" FromRole="Estado_Asistencia" ToRole="HogarEscuela3" />
+    <NavigationProperty Name="Kinder" Relationship="Self.FK__Kinder__Jueves__640DD89F" FromRole="Estado_Asistencia" ToRole="Kinder" />
+    <NavigationProperty Name="Kinder1" Relationship="Self.FK__Kinder__Lunes__61316BF4" FromRole="Estado_Asistencia" ToRole="Kinder" />
+    <NavigationProperty Name="Kinder2" Relationship="Self.FK__Kinder__Martes__6225902D" FromRole="Estado_Asistencia" ToRole="Kinder" />
+    <NavigationProperty Name="Kinder3" Relationship="Self.FK__Kinder__Miercole__6319B466" FromRole="Estado_Asistencia" ToRole="Kinder" />
+    <NavigationProperty Name="Kinder4" Relationship="Self.FK__Kinder__Viernes__6501FCD8" FromRole="Estado_Asistencia" ToRole="Kinder" />
+    <NavigationProperty Name="Materno" Relationship="Self.FK__Materno__Jueves__4589517F" FromRole="Estado_Asistencia" ToRole="Materno" />
+    <NavigationProperty Name="Materno1" Relationship="Self.FK__Materno__Lunes__42ACE4D4" FromRole="Estado_Asistencia" ToRole="Materno" />
+    <NavigationProperty Name="Materno2" Relationship="Self.FK__Materno__Martes__43A1090D" FromRole="Estado_Asistencia" ToRole="Materno" />
+    <NavigationProperty Name="Materno3" Relationship="Self.FK__Materno__Miercol__44952D46" FromRole="Estado_Asistencia" ToRole="Materno" />
+    <NavigationProperty Name="Materno4" Relationship="Self.FK__Materno__Viernes__467D75B8" FromRole="Estado_Asistencia" ToRole="Materno" />
+    <NavigationProperty Name="PreKinder" Relationship="Self.FK__PreKinder__Jueve__5C6CB6D7" FromRole="Estado_Asistencia" ToRole="PreKinder" />
+    <NavigationProperty Name="PreKinder1" Relationship="Self.FK__PreKinder__Lunes__59904A2C" FromRole="Estado_Asistencia" ToRole="PreKinder" />
+    <NavigationProperty Name="PreKinder2" Relationship="Self.FK__PreKinder__Marte__5A846E65" FromRole="Estado_Asistencia" ToRole="PreKinder" />
+    <NavigationProperty Name="PreKinder3" Relationship="Self.FK__PreKinder__Mierc__5B78929E" FromRole="Estado_Asistencia" ToRole="PreKinder" />
+    <NavigationProperty Name="PreKinder4" Relationship="Self.FK__PreKinder__Viern__5D60DB10" FromRole="Estado_Asistencia" ToRole="PreKinder" />
+  </EntityType>
+  <EntityType Name="Estudiantes_List">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre_Estudiante" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Cedula" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechaNacimiento" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Numero_Contacto" Type="Int32" />
+    <Property Name="Nivel" Type="Int32" />
+    <NavigationProperty Name="Nivel_Estudiante" Relationship="Self.FK__Estudiant__Nivel__71D1E811" FromRole="Estudiantes_List" ToRole="Nivel_Estudiante" />
   </EntityType>
   <EntityType Name="Funcionario">
     <Key>
@@ -84,6 +284,69 @@
     <Property Name="Id_Cargo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="Cargos" Relationship="Self.fk_cargos" FromRole="Funcionario" ToRole="Cargos" />
   </EntityType>
+  <EntityType Name="HogarEscuela1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AnoMes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Nombre_Estudiante" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Nivel" Type="Int32" Nullable="false" />
+    <Property Name="NumeroSemana" Type="Int32" />
+    <Property Name="Lunes" Type="Int32" Nullable="false" />
+    <Property Name="Martes" Type="Int32" Nullable="false" />
+    <Property Name="Miercoles" Type="Int32" Nullable="false" />
+    <Property Name="Jueves" Type="Int32" Nullable="false" />
+    <Property Name="Viernes" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Estado_Asistencia" Relationship="Self.FK__HogarEscu__Jueve__6BAEFA67" FromRole="HogarEscuela1" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Estado_Asistencia1" Relationship="Self.FK__HogarEscu__Lunes__68D28DBC" FromRole="HogarEscuela1" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Estado_Asistencia2" Relationship="Self.FK__HogarEscu__Marte__69C6B1F5" FromRole="HogarEscuela1" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Estado_Asistencia3" Relationship="Self.FK__HogarEscu__Mierc__6ABAD62E" FromRole="HogarEscuela1" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Estado_Asistencia4" Relationship="Self.FK__HogarEscu__Viern__6CA31EA0" FromRole="HogarEscuela1" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Nivel_Estudiante" Relationship="Self.FK__HogarEscu__Nivel__67DE6983" FromRole="HogarEscuela1" ToRole="Nivel_Estudiante" />
+  </EntityType>
+  <EntityType Name="HogarEscuela2">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AnoMes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Nombre_Estudiante" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Nivel" Type="Int32" Nullable="false" />
+    <Property Name="NumeroSemana" Type="Int32" />
+    <Property Name="Lunes" Type="Int32" Nullable="false" />
+    <Property Name="Martes" Type="Int32" Nullable="false" />
+    <Property Name="Miercoles" Type="Int32" Nullable="false" />
+    <Property Name="Jueves" Type="Int32" Nullable="false" />
+    <Property Name="Viernes" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Estado_Asistencia" Relationship="Self.FK__HogarEscu__Jueve__73501C2F" FromRole="HogarEscuela2" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Estado_Asistencia1" Relationship="Self.FK__HogarEscu__Lunes__7073AF84" FromRole="HogarEscuela2" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Estado_Asistencia2" Relationship="Self.FK__HogarEscu__Marte__7167D3BD" FromRole="HogarEscuela2" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Estado_Asistencia3" Relationship="Self.FK__HogarEscu__Mierc__725BF7F6" FromRole="HogarEscuela2" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Estado_Asistencia4" Relationship="Self.FK__HogarEscu__Viern__74444068" FromRole="HogarEscuela2" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Nivel_Estudiante" Relationship="Self.FK__HogarEscu__Nivel__6F7F8B4B" FromRole="HogarEscuela2" ToRole="Nivel_Estudiante" />
+  </EntityType>
+  <EntityType Name="HogarEscuela3">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AnoMes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Nombre_Estudiante" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Nivel" Type="Int32" Nullable="false" />
+    <Property Name="NumeroSemana" Type="Int32" />
+    <Property Name="Lunes" Type="Int32" Nullable="false" />
+    <Property Name="Martes" Type="Int32" Nullable="false" />
+    <Property Name="Miercoles" Type="Int32" Nullable="false" />
+    <Property Name="Jueves" Type="Int32" Nullable="false" />
+    <Property Name="Viernes" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Estado_Asistencia" Relationship="Self.FK__HogarEscu__Jueve__7AF13DF7" FromRole="HogarEscuela3" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Estado_Asistencia1" Relationship="Self.FK__HogarEscu__Lunes__7814D14C" FromRole="HogarEscuela3" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Estado_Asistencia2" Relationship="Self.FK__HogarEscu__Marte__7908F585" FromRole="HogarEscuela3" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Estado_Asistencia3" Relationship="Self.FK__HogarEscu__Mierc__79FD19BE" FromRole="HogarEscuela3" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Estado_Asistencia4" Relationship="Self.FK__HogarEscu__Viern__7BE56230" FromRole="HogarEscuela3" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Nivel_Estudiante" Relationship="Self.FK__HogarEscu__Nivel__7720AD13" FromRole="HogarEscuela3" ToRole="Nivel_Estudiante" />
+  </EntityType>
   <EntityType Name="Inventario_Cocina">
     <Key>
       <PropertyRef Name="Id_Cocina" />
@@ -92,37 +355,88 @@
     <Property Name="Codigo_Producto" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Producto" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Medida" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Existencia_Inicial" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Existencia_Inicial" Type="Int32" Nullable="false" />
     <Property Name="Entradas" Type="Int32" Nullable="false" />
     <Property Name="Salidas" Type="Int32" Nullable="false" />
-    <Property Name="Existencias" Type="Int32" Nullable="false" />
   </EntityType>
-  <EntityType Name="Niveles">
+  <EntityType Name="Kinder">
     <Key>
-      <PropertyRef Name="Id_Nivel" />
+      <PropertyRef Name="ID" />
     </Key>
-    <Property Name="Id_Nivel" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Nombre_Nivel" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="Estudiantes" Relationship="Self.fk_Niveles" FromRole="Niveles" ToRole="Estudiantes" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AnoMes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Nombre_Estudiante" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Nivel" Type="Int32" Nullable="false" />
+    <Property Name="NumeroSemana" Type="Int32" />
+    <Property Name="Lunes" Type="Int32" Nullable="false" />
+    <Property Name="Martes" Type="Int32" Nullable="false" />
+    <Property Name="Miercoles" Type="Int32" Nullable="false" />
+    <Property Name="Jueves" Type="Int32" Nullable="false" />
+    <Property Name="Viernes" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Estado_Asistencia" Relationship="Self.FK__Kinder__Jueves__640DD89F" FromRole="Kinder" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Estado_Asistencia1" Relationship="Self.FK__Kinder__Lunes__61316BF4" FromRole="Kinder" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Estado_Asistencia2" Relationship="Self.FK__Kinder__Martes__6225902D" FromRole="Kinder" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Estado_Asistencia3" Relationship="Self.FK__Kinder__Miercole__6319B466" FromRole="Kinder" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Estado_Asistencia4" Relationship="Self.FK__Kinder__Viernes__6501FCD8" FromRole="Kinder" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Nivel_Estudiante" Relationship="Self.FK__Kinder__Nivel__603D47BB" FromRole="Kinder" ToRole="Nivel_Estudiante" />
   </EntityType>
-  <EntityType Name="Reserva_Matriculas">
+  <EntityType Name="Materno">
     <Key>
-      <PropertyRef Name="Id_Reserva" />
+      <PropertyRef Name="ID" />
     </Key>
-    <Property Name="Id_Reserva" Type="Int32" Nullable="false" />
-    <Property Name="Nombre_Tutor" Type="String" MaxLength="65" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Cedula_Tutor" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
-    <Property Name="Correo_Tutor" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
-    <Property Name="Num_Tel" Type="Int32" Nullable="false" />
-    <Property Name="Nombre_Alumno" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Fecha_Nacimiento" Type="DateTime" Precision="0" />
-    <Property Name="Edad" Type="Int32" />
-    <Property Name="Sexo" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
-    <Property Name="Nacinalidad" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
-    <Property Name="Provincia" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-    <Property Name="Direccion_Detallada" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-    <Property Name="Fecha_Cita" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="Hora_Cita" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AnoMes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Nombre_Estudiante" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Nivel" Type="Int32" Nullable="false" />
+    <Property Name="NumeroSemana" Type="Int32" />
+    <Property Name="Lunes" Type="Int32" Nullable="false" />
+    <Property Name="Martes" Type="Int32" Nullable="false" />
+    <Property Name="Miercoles" Type="Int32" Nullable="false" />
+    <Property Name="Jueves" Type="Int32" Nullable="false" />
+    <Property Name="Viernes" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Estado_Asistencia" Relationship="Self.FK__Materno__Jueves__4589517F" FromRole="Materno" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Estado_Asistencia1" Relationship="Self.FK__Materno__Lunes__42ACE4D4" FromRole="Materno" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Estado_Asistencia2" Relationship="Self.FK__Materno__Martes__43A1090D" FromRole="Materno" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Estado_Asistencia3" Relationship="Self.FK__Materno__Miercol__44952D46" FromRole="Materno" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Estado_Asistencia4" Relationship="Self.FK__Materno__Viernes__467D75B8" FromRole="Materno" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Nivel_Estudiante" Relationship="Self.FK__Materno__Nivel__41B8C09B" FromRole="Materno" ToRole="Nivel_Estudiante" />
+  </EntityType>
+  <EntityType Name="Nivel_Estudiante">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nivel" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="CasaCuna1" Relationship="Self.FK__CasaCuna1__Nivel__4959E263" FromRole="Nivel_Estudiante" ToRole="CasaCuna1" />
+    <NavigationProperty Name="CasaCuna2" Relationship="Self.FK__CasaCuna2__Nivel__50FB042B" FromRole="Nivel_Estudiante" ToRole="CasaCuna2" />
+    <NavigationProperty Name="Estudiantes_List" Relationship="Self.FK__Estudiant__Nivel__71D1E811" FromRole="Nivel_Estudiante" ToRole="Estudiantes_List" />
+    <NavigationProperty Name="HogarEscuela1" Relationship="Self.FK__HogarEscu__Nivel__67DE6983" FromRole="Nivel_Estudiante" ToRole="HogarEscuela1" />
+    <NavigationProperty Name="HogarEscuela2" Relationship="Self.FK__HogarEscu__Nivel__6F7F8B4B" FromRole="Nivel_Estudiante" ToRole="HogarEscuela2" />
+    <NavigationProperty Name="HogarEscuela3" Relationship="Self.FK__HogarEscu__Nivel__7720AD13" FromRole="Nivel_Estudiante" ToRole="HogarEscuela3" />
+    <NavigationProperty Name="Kinder" Relationship="Self.FK__Kinder__Nivel__603D47BB" FromRole="Nivel_Estudiante" ToRole="Kinder" />
+    <NavigationProperty Name="Materno" Relationship="Self.FK__Materno__Nivel__41B8C09B" FromRole="Nivel_Estudiante" ToRole="Materno" />
+    <NavigationProperty Name="PreKinder" Relationship="Self.FK__PreKinder__Nivel__589C25F3" FromRole="Nivel_Estudiante" ToRole="PreKinder" />
+  </EntityType>
+  <EntityType Name="PreKinder">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AnoMes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Nombre_Estudiante" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Nivel" Type="Int32" Nullable="false" />
+    <Property Name="NumeroSemana" Type="Int32" />
+    <Property Name="Lunes" Type="Int32" Nullable="false" />
+    <Property Name="Martes" Type="Int32" Nullable="false" />
+    <Property Name="Miercoles" Type="Int32" Nullable="false" />
+    <Property Name="Jueves" Type="Int32" Nullable="false" />
+    <Property Name="Viernes" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Estado_Asistencia" Relationship="Self.FK__PreKinder__Jueve__5C6CB6D7" FromRole="PreKinder" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Estado_Asistencia1" Relationship="Self.FK__PreKinder__Lunes__59904A2C" FromRole="PreKinder" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Estado_Asistencia2" Relationship="Self.FK__PreKinder__Marte__5A846E65" FromRole="PreKinder" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Estado_Asistencia3" Relationship="Self.FK__PreKinder__Mierc__5B78929E" FromRole="PreKinder" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Estado_Asistencia4" Relationship="Self.FK__PreKinder__Viern__5D60DB10" FromRole="PreKinder" ToRole="Estado_Asistencia" />
+    <NavigationProperty Name="Nivel_Estudiante" Relationship="Self.FK__PreKinder__Nivel__589C25F3" FromRole="PreKinder" ToRole="Nivel_Estudiante" />
   </EntityType>
   <EntityType Name="Rol">
     <Key>
@@ -130,18 +444,16 @@
     </Key>
     <Property Name="IdRol" Type="Int32" Nullable="false" />
     <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="Usuarios" Relationship="Self.FK__Usuarios__IdRol__1273C1CD" FromRole="Rol" ToRole="Usuarios" />
+    <NavigationProperty Name="Usuarios" Relationship="Self.FK__Usuarios__IdRol__0FEC5ADD" FromRole="Rol" ToRole="Usuarios" />
   </EntityType>
-  <EntityType Name="Servicio_Comunales">
+  <EntityType Name="Tokens">
     <Key>
-      <PropertyRef Name="Id_Servicio_Comunal" />
+      <PropertyRef Name="idToken" />
     </Key>
-    <Property Name="Id_Servicio_Comunal" Type="Int32" Nullable="false" />
-    <Property Name="Nombre_Servicio" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Nombre_Persona" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Email" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
-    <Property Name="Num_Tel" Type="Int32" />
-    <Property Name="Mensaje" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="idToken" Type="Int32" Nullable="false" />
+    <Property Name="Token" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
   </EntityType>
   <EntityType Name="Usuarios">
     <Key>
@@ -151,9 +463,70 @@
     <Property Name="Nombres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Clave" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="IdRol" Type="Int32" />
-    <NavigationProperty Name="Rol" Relationship="Self.FK__Usuarios__IdRol__1273C1CD" FromRole="Usuarios" ToRole="Rol" />
+    <Property Name="Estado" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdRol" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Rol" Relationship="Self.FK__Usuarios__IdRol__0FEC5ADD" FromRole="Usuarios" ToRole="Rol" />
   </EntityType>
+  <Association Name="FK__A_Materno__Jueve__14270015">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="0..1" />
+    <End Role="A_Materno" Type="Self.A_Materno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="A_Materno">
+        <PropertyRef Name="Jueves" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__A_Materno__Lunes__114A936A">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="0..1" />
+    <End Role="A_Materno" Type="Self.A_Materno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="A_Materno">
+        <PropertyRef Name="Lunes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__A_Materno__Marte__123EB7A3">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="0..1" />
+    <End Role="A_Materno" Type="Self.A_Materno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="A_Materno">
+        <PropertyRef Name="Martes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__A_Materno__Mierc__1332DBDC">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="0..1" />
+    <End Role="A_Materno" Type="Self.A_Materno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="A_Materno">
+        <PropertyRef Name="Miercoles" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__A_Materno__Viern__151B244E">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="0..1" />
+    <End Role="A_Materno" Type="Self.A_Materno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="A_Materno">
+        <PropertyRef Name="Viernes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="fk_cargos">
     <End Role="Cargos" Type="Self.Cargos" Multiplicity="1" />
     <End Role="Funcionario" Type="Self.Funcionario" Multiplicity="*" />
@@ -166,20 +539,704 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="fk_Niveles">
-    <End Role="Niveles" Type="Self.Niveles" Multiplicity="1" />
-    <End Role="Estudiantes" Type="Self.Estudiantes" Multiplicity="*" />
+  <Association Name="FK__CasaCuna1__Jueve__4D2A7347">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="CasaCuna1" Type="Self.CasaCuna1" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Niveles">
-        <PropertyRef Name="Id_Nivel" />
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
       </Principal>
-      <Dependent Role="Estudiantes">
-        <PropertyRef Name="Id_Nivel" />
+      <Dependent Role="CasaCuna1">
+        <PropertyRef Name="Jueves" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Usuarios__IdRol__1273C1CD">
-    <End Role="Rol" Type="Self.Rol" Multiplicity="0..1" />
+  <Association Name="FK__CasaCuna1__Lunes__4A4E069C">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="CasaCuna1" Type="Self.CasaCuna1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CasaCuna1">
+        <PropertyRef Name="Lunes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CasaCuna1__Marte__4B422AD5">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="CasaCuna1" Type="Self.CasaCuna1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CasaCuna1">
+        <PropertyRef Name="Martes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CasaCuna1__Mierc__4C364F0E">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="CasaCuna1" Type="Self.CasaCuna1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CasaCuna1">
+        <PropertyRef Name="Miercoles" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CasaCuna1__Nivel__4959E263">
+    <End Role="Nivel_Estudiante" Type="Self.Nivel_Estudiante" Multiplicity="1" />
+    <End Role="CasaCuna1" Type="Self.CasaCuna1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nivel_Estudiante">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CasaCuna1">
+        <PropertyRef Name="Nivel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CasaCuna1__Viern__4E1E9780">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="CasaCuna1" Type="Self.CasaCuna1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CasaCuna1">
+        <PropertyRef Name="Viernes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CasaCuna2__Jueve__54CB950F">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="CasaCuna2" Type="Self.CasaCuna2" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CasaCuna2">
+        <PropertyRef Name="Jueves" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CasaCuna2__Lunes__51EF2864">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="CasaCuna2" Type="Self.CasaCuna2" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CasaCuna2">
+        <PropertyRef Name="Lunes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CasaCuna2__Marte__52E34C9D">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="CasaCuna2" Type="Self.CasaCuna2" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CasaCuna2">
+        <PropertyRef Name="Martes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CasaCuna2__Mierc__53D770D6">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="CasaCuna2" Type="Self.CasaCuna2" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CasaCuna2">
+        <PropertyRef Name="Miercoles" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CasaCuna2__Nivel__50FB042B">
+    <End Role="Nivel_Estudiante" Type="Self.Nivel_Estudiante" Multiplicity="1" />
+    <End Role="CasaCuna2" Type="Self.CasaCuna2" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nivel_Estudiante">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CasaCuna2">
+        <PropertyRef Name="Nivel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CasaCuna2__Viern__55BFB948">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="CasaCuna2" Type="Self.CasaCuna2" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CasaCuna2">
+        <PropertyRef Name="Viernes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__E_Asitente__Tipo__46E78A0C">
+    <End Role="E_Tipo" Type="Self.E_Tipo" Multiplicity="0..1" />
+    <End Role="E_Asitente" Type="Self.E_Asitente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="E_Tipo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="E_Asitente">
+        <PropertyRef Name="Tipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__E_Auxiliar__Tipo__49C3F6B7">
+    <End Role="E_Tipo" Type="Self.E_Tipo" Multiplicity="0..1" />
+    <End Role="E_Auxiliar" Type="Self.E_Auxiliar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="E_Tipo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="E_Auxiliar">
+        <PropertyRef Name="Tipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__E_Chofer__Tipo__412EB0B6">
+    <End Role="E_Tipo" Type="Self.E_Tipo" Multiplicity="0..1" />
+    <End Role="E_Chofer" Type="Self.E_Chofer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="E_Tipo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="E_Chofer">
+        <PropertyRef Name="Tipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__E_Cocina__Tipo__38996AB5">
+    <End Role="E_Tipo" Type="Self.E_Tipo" Multiplicity="0..1" />
+    <End Role="E_Cocina" Type="Self.E_Cocina" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="E_Tipo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="E_Cocina">
+        <PropertyRef Name="Tipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__E_Director__Tipo__4CA06362">
+    <End Role="E_Tipo" Type="Self.E_Tipo" Multiplicity="0..1" />
+    <End Role="E_Directora" Type="Self.E_Directora" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="E_Tipo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="E_Directora">
+        <PropertyRef Name="Tipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__E_Docente__Tipo__3B75D760">
+    <End Role="E_Tipo" Type="Self.E_Tipo" Multiplicity="0..1" />
+    <End Role="E_Docente" Type="Self.E_Docente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="E_Tipo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="E_Docente">
+        <PropertyRef Name="Tipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__E_Miscelan__Tipo__440B1D61">
+    <End Role="E_Tipo" Type="Self.E_Tipo" Multiplicity="0..1" />
+    <End Role="E_Miscelanea" Type="Self.E_Miscelanea" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="E_Tipo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="E_Miscelanea">
+        <PropertyRef Name="Tipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__E_Psicolog__Tipo__3E52440B">
+    <End Role="E_Tipo" Type="Self.E_Tipo" Multiplicity="0..1" />
+    <End Role="E_Psicologia" Type="Self.E_Psicologia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="E_Tipo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="E_Psicologia">
+        <PropertyRef Name="Tipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__E_Trabajad__Tipo__4F7CD00D">
+    <End Role="E_Tipo" Type="Self.E_Tipo" Multiplicity="0..1" />
+    <End Role="E_Trabajador_Social" Type="Self.E_Trabajador_Social" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="E_Tipo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="E_Trabajador_Social">
+        <PropertyRef Name="Tipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HogarEscu__Jueve__6BAEFA67">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="HogarEscuela1" Type="Self.HogarEscuela1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HogarEscuela1">
+        <PropertyRef Name="Jueves" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HogarEscu__Jueve__73501C2F">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="HogarEscuela2" Type="Self.HogarEscuela2" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HogarEscuela2">
+        <PropertyRef Name="Jueves" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HogarEscu__Jueve__7AF13DF7">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="HogarEscuela3" Type="Self.HogarEscuela3" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HogarEscuela3">
+        <PropertyRef Name="Jueves" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HogarEscu__Lunes__68D28DBC">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="HogarEscuela1" Type="Self.HogarEscuela1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HogarEscuela1">
+        <PropertyRef Name="Lunes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HogarEscu__Lunes__7073AF84">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="HogarEscuela2" Type="Self.HogarEscuela2" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HogarEscuela2">
+        <PropertyRef Name="Lunes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HogarEscu__Lunes__7814D14C">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="HogarEscuela3" Type="Self.HogarEscuela3" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HogarEscuela3">
+        <PropertyRef Name="Lunes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HogarEscu__Marte__69C6B1F5">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="HogarEscuela1" Type="Self.HogarEscuela1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HogarEscuela1">
+        <PropertyRef Name="Martes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HogarEscu__Marte__7167D3BD">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="HogarEscuela2" Type="Self.HogarEscuela2" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HogarEscuela2">
+        <PropertyRef Name="Martes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HogarEscu__Marte__7908F585">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="HogarEscuela3" Type="Self.HogarEscuela3" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HogarEscuela3">
+        <PropertyRef Name="Martes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HogarEscu__Mierc__6ABAD62E">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="HogarEscuela1" Type="Self.HogarEscuela1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HogarEscuela1">
+        <PropertyRef Name="Miercoles" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HogarEscu__Mierc__725BF7F6">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="HogarEscuela2" Type="Self.HogarEscuela2" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HogarEscuela2">
+        <PropertyRef Name="Miercoles" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HogarEscu__Mierc__79FD19BE">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="HogarEscuela3" Type="Self.HogarEscuela3" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HogarEscuela3">
+        <PropertyRef Name="Miercoles" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HogarEscu__Viern__6CA31EA0">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="HogarEscuela1" Type="Self.HogarEscuela1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HogarEscuela1">
+        <PropertyRef Name="Viernes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HogarEscu__Viern__74444068">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="HogarEscuela2" Type="Self.HogarEscuela2" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HogarEscuela2">
+        <PropertyRef Name="Viernes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HogarEscu__Viern__7BE56230">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="HogarEscuela3" Type="Self.HogarEscuela3" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HogarEscuela3">
+        <PropertyRef Name="Viernes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Kinder__Jueves__640DD89F">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="Kinder" Type="Self.Kinder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Kinder">
+        <PropertyRef Name="Jueves" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Kinder__Lunes__61316BF4">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="Kinder" Type="Self.Kinder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Kinder">
+        <PropertyRef Name="Lunes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Kinder__Martes__6225902D">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="Kinder" Type="Self.Kinder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Kinder">
+        <PropertyRef Name="Martes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Kinder__Miercole__6319B466">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="Kinder" Type="Self.Kinder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Kinder">
+        <PropertyRef Name="Miercoles" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Kinder__Viernes__6501FCD8">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="Kinder" Type="Self.Kinder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Kinder">
+        <PropertyRef Name="Viernes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Materno__Jueves__4589517F">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="Materno" Type="Self.Materno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Materno">
+        <PropertyRef Name="Jueves" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Materno__Lunes__42ACE4D4">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="Materno" Type="Self.Materno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Materno">
+        <PropertyRef Name="Lunes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Materno__Martes__43A1090D">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="Materno" Type="Self.Materno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Materno">
+        <PropertyRef Name="Martes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Materno__Miercol__44952D46">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="Materno" Type="Self.Materno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Materno">
+        <PropertyRef Name="Miercoles" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Materno__Viernes__467D75B8">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="Materno" Type="Self.Materno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Materno">
+        <PropertyRef Name="Viernes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PreKinder__Jueve__5C6CB6D7">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="PreKinder" Type="Self.PreKinder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PreKinder">
+        <PropertyRef Name="Jueves" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PreKinder__Lunes__59904A2C">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="PreKinder" Type="Self.PreKinder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PreKinder">
+        <PropertyRef Name="Lunes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PreKinder__Marte__5A846E65">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="PreKinder" Type="Self.PreKinder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PreKinder">
+        <PropertyRef Name="Martes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PreKinder__Mierc__5B78929E">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="PreKinder" Type="Self.PreKinder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PreKinder">
+        <PropertyRef Name="Miercoles" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PreKinder__Viern__5D60DB10">
+    <End Role="Estado_Asistencia" Type="Self.Estado_Asistencia" Multiplicity="1" />
+    <End Role="PreKinder" Type="Self.PreKinder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Asistencia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PreKinder">
+        <PropertyRef Name="Viernes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Estudiant__Nivel__71D1E811">
+    <End Role="Nivel_Estudiante" Type="Self.Nivel_Estudiante" Multiplicity="0..1" />
+    <End Role="Estudiantes_List" Type="Self.Estudiantes_List" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nivel_Estudiante">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Estudiantes_List">
+        <PropertyRef Name="Nivel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HogarEscu__Nivel__67DE6983">
+    <End Role="Nivel_Estudiante" Type="Self.Nivel_Estudiante" Multiplicity="1" />
+    <End Role="HogarEscuela1" Type="Self.HogarEscuela1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nivel_Estudiante">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HogarEscuela1">
+        <PropertyRef Name="Nivel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HogarEscu__Nivel__6F7F8B4B">
+    <End Role="Nivel_Estudiante" Type="Self.Nivel_Estudiante" Multiplicity="1" />
+    <End Role="HogarEscuela2" Type="Self.HogarEscuela2" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nivel_Estudiante">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HogarEscuela2">
+        <PropertyRef Name="Nivel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HogarEscu__Nivel__7720AD13">
+    <End Role="Nivel_Estudiante" Type="Self.Nivel_Estudiante" Multiplicity="1" />
+    <End Role="HogarEscuela3" Type="Self.HogarEscuela3" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nivel_Estudiante">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HogarEscuela3">
+        <PropertyRef Name="Nivel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Kinder__Nivel__603D47BB">
+    <End Role="Nivel_Estudiante" Type="Self.Nivel_Estudiante" Multiplicity="1" />
+    <End Role="Kinder" Type="Self.Kinder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nivel_Estudiante">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Kinder">
+        <PropertyRef Name="Nivel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Materno__Nivel__41B8C09B">
+    <End Role="Nivel_Estudiante" Type="Self.Nivel_Estudiante" Multiplicity="1" />
+    <End Role="Materno" Type="Self.Materno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nivel_Estudiante">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Materno">
+        <PropertyRef Name="Nivel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PreKinder__Nivel__589C25F3">
+    <End Role="Nivel_Estudiante" Type="Self.Nivel_Estudiante" Multiplicity="1" />
+    <End Role="PreKinder" Type="Self.PreKinder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nivel_Estudiante">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PreKinder">
+        <PropertyRef Name="Nivel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuarios__IdRol__0FEC5ADD">
+    <End Role="Rol" Type="Self.Rol" Multiplicity="1" />
     <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Rol">
@@ -191,27 +1248,294 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="AADFLDEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="A_Materno" EntityType="Self.A_Materno" />
     <EntitySet Name="Activos_Computacion" EntityType="Self.Activos_Computacion" />
     <EntitySet Name="Activos_Electricos" EntityType="Self.Activos_Electricos" />
     <EntitySet Name="Activos_Recreativos" EntityType="Self.Activos_Recreativos" />
     <EntitySet Name="Cargos" EntityType="Self.Cargos" />
-    <EntitySet Name="Estudiantes" EntityType="Self.Estudiantes" />
+    <EntitySet Name="CasaCuna1" EntityType="Self.CasaCuna1" />
+    <EntitySet Name="CasaCuna2" EntityType="Self.CasaCuna2" />
+    <EntitySet Name="E_Asitente" EntityType="Self.E_Asitente" />
+    <EntitySet Name="E_Auxiliar" EntityType="Self.E_Auxiliar" />
+    <EntitySet Name="E_Chofer" EntityType="Self.E_Chofer" />
+    <EntitySet Name="E_Cocina" EntityType="Self.E_Cocina" />
+    <EntitySet Name="E_Directora" EntityType="Self.E_Directora" />
+    <EntitySet Name="E_Docente" EntityType="Self.E_Docente" />
+    <EntitySet Name="E_Miscelanea" EntityType="Self.E_Miscelanea" />
+    <EntitySet Name="E_Psicologia" EntityType="Self.E_Psicologia" />
+    <EntitySet Name="E_Tipo" EntityType="Self.E_Tipo" />
+    <EntitySet Name="E_Trabajador_Social" EntityType="Self.E_Trabajador_Social" />
+    <EntitySet Name="Estado_Asistencia" EntityType="Self.Estado_Asistencia" />
+    <EntitySet Name="Estudiantes_List" EntityType="Self.Estudiantes_List" />
     <EntitySet Name="Funcionario" EntityType="Self.Funcionario" />
+    <EntitySet Name="HogarEscuela1" EntityType="Self.HogarEscuela1" />
+    <EntitySet Name="HogarEscuela2" EntityType="Self.HogarEscuela2" />
+    <EntitySet Name="HogarEscuela3" EntityType="Self.HogarEscuela3" />
     <EntitySet Name="Inventario_Cocina" EntityType="Self.Inventario_Cocina" />
-    <EntitySet Name="Niveles" EntityType="Self.Niveles" />
-    <EntitySet Name="Reserva_Matriculas" EntityType="Self.Reserva_Matriculas" />
+    <EntitySet Name="Kinder" EntityType="Self.Kinder" />
+    <EntitySet Name="Materno" EntityType="Self.Materno" />
+    <EntitySet Name="Nivel_Estudiante" EntityType="Self.Nivel_Estudiante" />
+    <EntitySet Name="PreKinder" EntityType="Self.PreKinder" />
     <EntitySet Name="Rol" EntityType="Self.Rol" />
-    <EntitySet Name="Servicio_Comunales" EntityType="Self.Servicio_Comunales" />
+    <EntitySet Name="Tokens" EntityType="Self.Tokens" />
     <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
+    <AssociationSet Name="FK__A_Materno__Jueve__14270015" Association="Self.FK__A_Materno__Jueve__14270015">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="A_Materno" EntitySet="A_Materno" />
+    </AssociationSet>
+    <AssociationSet Name="FK__A_Materno__Lunes__114A936A" Association="Self.FK__A_Materno__Lunes__114A936A">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="A_Materno" EntitySet="A_Materno" />
+    </AssociationSet>
+    <AssociationSet Name="FK__A_Materno__Marte__123EB7A3" Association="Self.FK__A_Materno__Marte__123EB7A3">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="A_Materno" EntitySet="A_Materno" />
+    </AssociationSet>
+    <AssociationSet Name="FK__A_Materno__Mierc__1332DBDC" Association="Self.FK__A_Materno__Mierc__1332DBDC">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="A_Materno" EntitySet="A_Materno" />
+    </AssociationSet>
+    <AssociationSet Name="FK__A_Materno__Viern__151B244E" Association="Self.FK__A_Materno__Viern__151B244E">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="A_Materno" EntitySet="A_Materno" />
+    </AssociationSet>
     <AssociationSet Name="fk_cargos" Association="Self.fk_cargos">
       <End Role="Cargos" EntitySet="Cargos" />
       <End Role="Funcionario" EntitySet="Funcionario" />
     </AssociationSet>
-    <AssociationSet Name="fk_Niveles" Association="Self.fk_Niveles">
-      <End Role="Niveles" EntitySet="Niveles" />
-      <End Role="Estudiantes" EntitySet="Estudiantes" />
+    <AssociationSet Name="FK__CasaCuna1__Jueve__4D2A7347" Association="Self.FK__CasaCuna1__Jueve__4D2A7347">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="CasaCuna1" EntitySet="CasaCuna1" />
     </AssociationSet>
-    <AssociationSet Name="FK__Usuarios__IdRol__1273C1CD" Association="Self.FK__Usuarios__IdRol__1273C1CD">
+    <AssociationSet Name="FK__CasaCuna1__Lunes__4A4E069C" Association="Self.FK__CasaCuna1__Lunes__4A4E069C">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="CasaCuna1" EntitySet="CasaCuna1" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CasaCuna1__Marte__4B422AD5" Association="Self.FK__CasaCuna1__Marte__4B422AD5">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="CasaCuna1" EntitySet="CasaCuna1" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CasaCuna1__Mierc__4C364F0E" Association="Self.FK__CasaCuna1__Mierc__4C364F0E">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="CasaCuna1" EntitySet="CasaCuna1" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CasaCuna1__Nivel__4959E263" Association="Self.FK__CasaCuna1__Nivel__4959E263">
+      <End Role="Nivel_Estudiante" EntitySet="Nivel_Estudiante" />
+      <End Role="CasaCuna1" EntitySet="CasaCuna1" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CasaCuna1__Viern__4E1E9780" Association="Self.FK__CasaCuna1__Viern__4E1E9780">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="CasaCuna1" EntitySet="CasaCuna1" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CasaCuna2__Jueve__54CB950F" Association="Self.FK__CasaCuna2__Jueve__54CB950F">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="CasaCuna2" EntitySet="CasaCuna2" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CasaCuna2__Lunes__51EF2864" Association="Self.FK__CasaCuna2__Lunes__51EF2864">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="CasaCuna2" EntitySet="CasaCuna2" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CasaCuna2__Marte__52E34C9D" Association="Self.FK__CasaCuna2__Marte__52E34C9D">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="CasaCuna2" EntitySet="CasaCuna2" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CasaCuna2__Mierc__53D770D6" Association="Self.FK__CasaCuna2__Mierc__53D770D6">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="CasaCuna2" EntitySet="CasaCuna2" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CasaCuna2__Nivel__50FB042B" Association="Self.FK__CasaCuna2__Nivel__50FB042B">
+      <End Role="Nivel_Estudiante" EntitySet="Nivel_Estudiante" />
+      <End Role="CasaCuna2" EntitySet="CasaCuna2" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CasaCuna2__Viern__55BFB948" Association="Self.FK__CasaCuna2__Viern__55BFB948">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="CasaCuna2" EntitySet="CasaCuna2" />
+    </AssociationSet>
+    <AssociationSet Name="FK__E_Asitente__Tipo__46E78A0C" Association="Self.FK__E_Asitente__Tipo__46E78A0C">
+      <End Role="E_Tipo" EntitySet="E_Tipo" />
+      <End Role="E_Asitente" EntitySet="E_Asitente" />
+    </AssociationSet>
+    <AssociationSet Name="FK__E_Auxiliar__Tipo__49C3F6B7" Association="Self.FK__E_Auxiliar__Tipo__49C3F6B7">
+      <End Role="E_Tipo" EntitySet="E_Tipo" />
+      <End Role="E_Auxiliar" EntitySet="E_Auxiliar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__E_Chofer__Tipo__412EB0B6" Association="Self.FK__E_Chofer__Tipo__412EB0B6">
+      <End Role="E_Tipo" EntitySet="E_Tipo" />
+      <End Role="E_Chofer" EntitySet="E_Chofer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__E_Cocina__Tipo__38996AB5" Association="Self.FK__E_Cocina__Tipo__38996AB5">
+      <End Role="E_Tipo" EntitySet="E_Tipo" />
+      <End Role="E_Cocina" EntitySet="E_Cocina" />
+    </AssociationSet>
+    <AssociationSet Name="FK__E_Director__Tipo__4CA06362" Association="Self.FK__E_Director__Tipo__4CA06362">
+      <End Role="E_Tipo" EntitySet="E_Tipo" />
+      <End Role="E_Directora" EntitySet="E_Directora" />
+    </AssociationSet>
+    <AssociationSet Name="FK__E_Docente__Tipo__3B75D760" Association="Self.FK__E_Docente__Tipo__3B75D760">
+      <End Role="E_Tipo" EntitySet="E_Tipo" />
+      <End Role="E_Docente" EntitySet="E_Docente" />
+    </AssociationSet>
+    <AssociationSet Name="FK__E_Miscelan__Tipo__440B1D61" Association="Self.FK__E_Miscelan__Tipo__440B1D61">
+      <End Role="E_Tipo" EntitySet="E_Tipo" />
+      <End Role="E_Miscelanea" EntitySet="E_Miscelanea" />
+    </AssociationSet>
+    <AssociationSet Name="FK__E_Psicolog__Tipo__3E52440B" Association="Self.FK__E_Psicolog__Tipo__3E52440B">
+      <End Role="E_Tipo" EntitySet="E_Tipo" />
+      <End Role="E_Psicologia" EntitySet="E_Psicologia" />
+    </AssociationSet>
+    <AssociationSet Name="FK__E_Trabajad__Tipo__4F7CD00D" Association="Self.FK__E_Trabajad__Tipo__4F7CD00D">
+      <End Role="E_Tipo" EntitySet="E_Tipo" />
+      <End Role="E_Trabajador_Social" EntitySet="E_Trabajador_Social" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HogarEscu__Jueve__6BAEFA67" Association="Self.FK__HogarEscu__Jueve__6BAEFA67">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="HogarEscuela1" EntitySet="HogarEscuela1" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HogarEscu__Jueve__73501C2F" Association="Self.FK__HogarEscu__Jueve__73501C2F">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="HogarEscuela2" EntitySet="HogarEscuela2" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HogarEscu__Jueve__7AF13DF7" Association="Self.FK__HogarEscu__Jueve__7AF13DF7">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="HogarEscuela3" EntitySet="HogarEscuela3" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HogarEscu__Lunes__68D28DBC" Association="Self.FK__HogarEscu__Lunes__68D28DBC">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="HogarEscuela1" EntitySet="HogarEscuela1" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HogarEscu__Lunes__7073AF84" Association="Self.FK__HogarEscu__Lunes__7073AF84">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="HogarEscuela2" EntitySet="HogarEscuela2" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HogarEscu__Lunes__7814D14C" Association="Self.FK__HogarEscu__Lunes__7814D14C">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="HogarEscuela3" EntitySet="HogarEscuela3" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HogarEscu__Marte__69C6B1F5" Association="Self.FK__HogarEscu__Marte__69C6B1F5">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="HogarEscuela1" EntitySet="HogarEscuela1" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HogarEscu__Marte__7167D3BD" Association="Self.FK__HogarEscu__Marte__7167D3BD">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="HogarEscuela2" EntitySet="HogarEscuela2" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HogarEscu__Marte__7908F585" Association="Self.FK__HogarEscu__Marte__7908F585">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="HogarEscuela3" EntitySet="HogarEscuela3" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HogarEscu__Mierc__6ABAD62E" Association="Self.FK__HogarEscu__Mierc__6ABAD62E">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="HogarEscuela1" EntitySet="HogarEscuela1" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HogarEscu__Mierc__725BF7F6" Association="Self.FK__HogarEscu__Mierc__725BF7F6">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="HogarEscuela2" EntitySet="HogarEscuela2" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HogarEscu__Mierc__79FD19BE" Association="Self.FK__HogarEscu__Mierc__79FD19BE">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="HogarEscuela3" EntitySet="HogarEscuela3" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HogarEscu__Viern__6CA31EA0" Association="Self.FK__HogarEscu__Viern__6CA31EA0">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="HogarEscuela1" EntitySet="HogarEscuela1" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HogarEscu__Viern__74444068" Association="Self.FK__HogarEscu__Viern__74444068">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="HogarEscuela2" EntitySet="HogarEscuela2" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HogarEscu__Viern__7BE56230" Association="Self.FK__HogarEscu__Viern__7BE56230">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="HogarEscuela3" EntitySet="HogarEscuela3" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Kinder__Jueves__640DD89F" Association="Self.FK__Kinder__Jueves__640DD89F">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="Kinder" EntitySet="Kinder" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Kinder__Lunes__61316BF4" Association="Self.FK__Kinder__Lunes__61316BF4">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="Kinder" EntitySet="Kinder" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Kinder__Martes__6225902D" Association="Self.FK__Kinder__Martes__6225902D">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="Kinder" EntitySet="Kinder" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Kinder__Miercole__6319B466" Association="Self.FK__Kinder__Miercole__6319B466">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="Kinder" EntitySet="Kinder" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Kinder__Viernes__6501FCD8" Association="Self.FK__Kinder__Viernes__6501FCD8">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="Kinder" EntitySet="Kinder" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Materno__Jueves__4589517F" Association="Self.FK__Materno__Jueves__4589517F">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="Materno" EntitySet="Materno" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Materno__Lunes__42ACE4D4" Association="Self.FK__Materno__Lunes__42ACE4D4">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="Materno" EntitySet="Materno" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Materno__Martes__43A1090D" Association="Self.FK__Materno__Martes__43A1090D">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="Materno" EntitySet="Materno" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Materno__Miercol__44952D46" Association="Self.FK__Materno__Miercol__44952D46">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="Materno" EntitySet="Materno" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Materno__Viernes__467D75B8" Association="Self.FK__Materno__Viernes__467D75B8">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="Materno" EntitySet="Materno" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PreKinder__Jueve__5C6CB6D7" Association="Self.FK__PreKinder__Jueve__5C6CB6D7">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="PreKinder" EntitySet="PreKinder" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PreKinder__Lunes__59904A2C" Association="Self.FK__PreKinder__Lunes__59904A2C">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="PreKinder" EntitySet="PreKinder" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PreKinder__Marte__5A846E65" Association="Self.FK__PreKinder__Marte__5A846E65">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="PreKinder" EntitySet="PreKinder" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PreKinder__Mierc__5B78929E" Association="Self.FK__PreKinder__Mierc__5B78929E">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="PreKinder" EntitySet="PreKinder" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PreKinder__Viern__5D60DB10" Association="Self.FK__PreKinder__Viern__5D60DB10">
+      <End Role="Estado_Asistencia" EntitySet="Estado_Asistencia" />
+      <End Role="PreKinder" EntitySet="PreKinder" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Estudiant__Nivel__71D1E811" Association="Self.FK__Estudiant__Nivel__71D1E811">
+      <End Role="Nivel_Estudiante" EntitySet="Nivel_Estudiante" />
+      <End Role="Estudiantes_List" EntitySet="Estudiantes_List" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HogarEscu__Nivel__67DE6983" Association="Self.FK__HogarEscu__Nivel__67DE6983">
+      <End Role="Nivel_Estudiante" EntitySet="Nivel_Estudiante" />
+      <End Role="HogarEscuela1" EntitySet="HogarEscuela1" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HogarEscu__Nivel__6F7F8B4B" Association="Self.FK__HogarEscu__Nivel__6F7F8B4B">
+      <End Role="Nivel_Estudiante" EntitySet="Nivel_Estudiante" />
+      <End Role="HogarEscuela2" EntitySet="HogarEscuela2" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HogarEscu__Nivel__7720AD13" Association="Self.FK__HogarEscu__Nivel__7720AD13">
+      <End Role="Nivel_Estudiante" EntitySet="Nivel_Estudiante" />
+      <End Role="HogarEscuela3" EntitySet="HogarEscuela3" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Kinder__Nivel__603D47BB" Association="Self.FK__Kinder__Nivel__603D47BB">
+      <End Role="Nivel_Estudiante" EntitySet="Nivel_Estudiante" />
+      <End Role="Kinder" EntitySet="Kinder" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Materno__Nivel__41B8C09B" Association="Self.FK__Materno__Nivel__41B8C09B">
+      <End Role="Nivel_Estudiante" EntitySet="Nivel_Estudiante" />
+      <End Role="Materno" EntitySet="Materno" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PreKinder__Nivel__589C25F3" Association="Self.FK__PreKinder__Nivel__589C25F3">
+      <End Role="Nivel_Estudiante" EntitySet="Nivel_Estudiante" />
+      <End Role="PreKinder" EntitySet="PreKinder" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuarios__IdRol__0FEC5ADD" Association="Self.FK__Usuarios__IdRol__0FEC5ADD">
       <End Role="Rol" EntitySet="Rol" />
       <End Role="Usuarios" EntitySet="Usuarios" />
     </AssociationSet>

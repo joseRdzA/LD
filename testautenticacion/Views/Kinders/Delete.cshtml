@@ -1,0 +1,100 @@
+﻿@model testautenticacion.Models.Kinder
+
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Eliminar Asitencia</h2>
+
+
+<div>
+    <h4>Kinder</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Mes y Año")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnoMes)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Nombre Estudiante")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre_Estudiante)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Numero de semana")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroSemana)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado_Asistencia.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado_Asistencia.Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado_Asistencia1.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado_Asistencia1.Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado_Asistencia2.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado_Asistencia2.Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado_Asistencia3.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado_Asistencia3.Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado_Asistencia4.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado_Asistencia4.Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nivel_Estudiante.Nivel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nivel_Estudiante.Nivel)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Atras", "Index")
+        </div>
+    }
+</div>
+

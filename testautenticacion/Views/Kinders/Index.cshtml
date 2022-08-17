@@ -1,0 +1,112 @@
+﻿@model testautenticacion.Models.KinderModelo
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Asistencia Kinder</h2>
+
+<p>
+    @Html.ActionLink("Crear Asistencia", "Create")
+</p>
+
+<div class="row">
+    <div class="col-md-4">
+        @using (Html.BeginForm("ConsultarDatos", "Kinders", FormMethod.Post))
+        {
+            @Html.TextBoxFor(Model => Model.AnoMes, new { placeholder = "00/0000", @class = "form-input" })
+
+            <input type="submit" class="btn btn-close-white btn-group-xs" value="Filtrar">
+        }
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+
+        @using (Html.BeginForm("Imprimir", "Kinders", FormMethod.Post))
+        {
+            <input placeholder="00/0000" type="text" name="PDF" />
+
+            <input type="submit" class="btn btn-close-white btn-group-xs" value="PDF">
+        }
+    </div>
+
+</div>
+<br />
+<table class="table table-hover table-striped table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayName("Mes y Año")
+        </th>
+        <th>
+            @Html.DisplayName("Nombre Estudiante")
+        </th>
+        <th>
+            @Html.DisplayName("Nivel")
+        </th>
+        <th>
+            @Html.DisplayName("Numero de la semana")
+        </th>
+        <th>
+            @Html.DisplayName("Lunes")
+        </th>
+        <th>
+            @Html.DisplayName("Martes")
+        </th>
+        <th>
+            @Html.DisplayName("Miercoles")
+        </th>
+        <th>
+            @Html.DisplayName("Jueves")
+        </th>
+        <th>
+            @Html.DisplayName("Viernes")
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.Datos)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnoMes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre_Estudiante)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nivel_Estudiante.Nivel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroSemana)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado_Asistencia1.Estado)
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado_Asistencia2.Estado)
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado_Asistencia3.Estado)
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado_Asistencia.Estado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado_Asistencia4.Estado)
+            </td>
+
+            <td>
+                @Html.ActionLink("Tomar asistencia", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Eliminar asistencia", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+</table>

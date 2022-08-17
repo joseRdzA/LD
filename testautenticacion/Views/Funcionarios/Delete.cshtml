@@ -1,0 +1,58 @@
+﻿@model testautenticacion.Models.Funcionario
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Eliminar Funcionario</h2>
+
+<h3>¿Desea eliminar al funcionario?</h3>
+<div>
+    <h4>Funcionario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Nombre Completo")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre_Completo)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Número de teléfono")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Num_Tel)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Correo Electrónico")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Correo_Electronico)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Nombre del cargo")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cargos.Nombre_Cargo)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Regresar a la lista", "Index")
+        </div>
+    }
+</div>

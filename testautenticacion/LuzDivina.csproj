@@ -53,6 +53,12 @@
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="Rotativa, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Rotativa.1.7.3\lib\net461\Rotativa.dll</HintPath>
     </Reference>
@@ -136,10 +142,36 @@
     <Compile Include="Controllers\Activos_ComputacionController.cs" />
     <Compile Include="Controllers\Activos_ElectricosController.cs" />
     <Compile Include="Controllers\Activos_RecreativosController.cs" />
-    <Compile Include="Controllers\EvaluacionesController.cs" />
+    <Compile Include="Controllers\AdminPlanillaCargosController.cs" />
+    <Compile Include="Controllers\AsistenciasController.cs" />
+    <Compile Include="Controllers\CargosController.cs" />
+    <Compile Include="Controllers\CasaCuna1Controller.cs" />
+    <Compile Include="Controllers\CasaCuna2Controller.cs" />
+    <Compile Include="Controllers\EstudiantesController.cs" />
+    <Compile Include="Controllers\Estudiantes_ListController.cs" />
+    <Compile Include="Controllers\E_AsitenteController.cs" />
+    <Compile Include="Controllers\E_AuxiliarController.cs" />
+    <Compile Include="Controllers\E_ChoferController.cs" />
+    <Compile Include="Controllers\E_CocinaController.cs" />
+    <Compile Include="Controllers\E_DirectoraController.cs" />
+    <Compile Include="Controllers\E_DocenteController.cs" />
+    <Compile Include="Controllers\E_MisceláneoController.cs" />
+    <Compile Include="Controllers\E_PsicologiaController.cs" />
+    <Compile Include="Controllers\E_TipoController.cs" />
+    <Compile Include="Controllers\E_Trabajador_SocialController.cs" />
+    <Compile Include="Controllers\FuncionariosController.cs" />
+    <Compile Include="Controllers\HogarEscuela1Controller.cs" />
+    <Compile Include="Controllers\HogarEscuela2Controller.cs" />
+    <Compile Include="Controllers\HogarEscuela3Controller.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InventariosController.cs" />
     <Compile Include="Controllers\Inventario_CocinaController.cs" />
+    <Compile Include="Controllers\KindersController.cs" />
+    <Compile Include="Controllers\MaternoController.cs" />
+    <Compile Include="Controllers\Nivel_EstudianteController.cs" />
+    <Compile Include="Controllers\PreKindersController.cs" />
+    <Compile Include="Controllers\Recuperacion_AccesosController.cs" />
+    <Compile Include="Controllers\Recuperar_PasswordController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Controllers\VistaController.cs" />
     <Compile Include="Global.asax.cs">
@@ -155,15 +187,72 @@
     <Compile Include="Models\Activos_Recreativos.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\A_Materno.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Cargos.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Estudiantes.cs">
+    <Compile Include="Models\CasaCuna1.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CasaCuna1Modelo.cs" />
+    <Compile Include="Models\CasaCuna2.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CasaCuna2Modelo.cs" />
+    <Compile Include="Models\Estado_Asistencia.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EstudiantesModelo.cs" />
+    <Compile Include="Models\Estudiantes_List.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\E_Asitente.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\E_Auxiliar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\E_Chofer.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\E_Cocina.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\E_Directora.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\E_Docente.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\E_Miscelanea.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\E_Psicologia.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\E_Tipo.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\E_Trabajador_Social.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Funcionario.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\HogarEscuela1.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HogarEscuela1Modelo.cs" />
+    <Compile Include="Models\HogarEscuela2.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HogarEscuela2Modelo.cs" />
+    <Compile Include="Models\HogarEscuela3.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HogarEscuela3Modelo.cs" />
     <Compile Include="Models\Inventario.cs" />
     <Compile Include="Models\InventarioComputo.cs" />
     <Compile Include="Models\InventarioElectrico.cs" />
@@ -171,6 +260,14 @@
     <Compile Include="Models\Inventario_Cocina.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Kinder.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\KinderModelo.cs" />
+    <Compile Include="Models\Materno.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MaternoModelo.cs" />
     <Compile Include="Models\Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -186,17 +283,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\Niveles.cs">
+    <Compile Include="Models\Nivel_Estudiante.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Reserva_Matriculas.cs">
+    <Compile Include="Models\PreKinder.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\PreKinderModelo.cs" />
     <Compile Include="Models\Rol.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Rol1.cs" />
-    <Compile Include="Models\Servicio_Comunales.cs">
+    <Compile Include="Models\Tokens.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Usuarios.cs">
@@ -211,6 +309,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\style.css" />
     <Content Include="favicon.ico" />
@@ -301,6 +400,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="img\SKYANGELS.webp" />
     <Content Include="lib\owlcarousel\LICENSE" />
+    <Content Include="App_Browsers\qt.browser" />
     <EntityDeploy Include="Models\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
@@ -308,13 +408,14 @@
     <Content Include="Models\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
-    <Content Include="App_Browsers\qt.browser" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\funciones.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -337,12 +438,6 @@
     <Content Include="Views\Acceso\Index.cshtml" />
     <Content Include="Views\Home\SinPermiso.cshtml" />
     <Content Include="Views\Inventarios\Inventarios.cshtml" />
-    <Content Include="Views\Evaluaciones\EvaluacionPsicologia.cshtml" />
-    <Content Include="Views\Evaluaciones\EvaluacionDocente.cshtml" />
-    <Content Include="Views\Evaluaciones\EvaluacionAsistente.cshtml" />
-    <Content Include="Views\Evaluaciones\EvaluacionChofer.cshtml" />
-    <Content Include="Views\Evaluaciones\EvaluacionMiselanea.cshtml" />
-    <Content Include="Views\Evaluaciones\EvaluacionCocina.cshtml" />
     <Content Include="scss\bootstrap.scss" />
     <Content Include="scss\bootstrap\scss\bootstrap-grid.scss" />
     <Content Include="scss\bootstrap\scss\bootstrap-reboot.scss" />
@@ -429,11 +524,6 @@
     <Content Include="Views\Vista\TCU.cshtml" />
     <Content Include="Views\Vista\Matricula.cshtml" />
     <Content Include="Views\Vista\Donaciones.cshtml" />
-    <Content Include="Views\Usuarios\Create.cshtml" />
-    <Content Include="Views\Usuarios\Delete.cshtml" />
-    <Content Include="Views\Usuarios\Details.cshtml" />
-    <Content Include="Views\Usuarios\Edit.cshtml" />
-    <Content Include="Views\Usuarios\Index.cshtml" />
     <Content Include="Views\Activos_Computacion\Create.cshtml" />
     <Content Include="Views\Activos_Computacion\Delete.cshtml" />
     <Content Include="Views\Activos_Computacion\Details.cshtml" />
@@ -458,6 +548,135 @@
     <Content Include="Views\Activos_Computacion\ReporteComputacion.cshtml" />
     <Content Include="Views\Activos_Electricos\ReporteElectricos.cshtml" />
     <Content Include="Views\Activos_Recreativos\ReporteRecreativos.cshtml" />
+    <Content Include="Views\Funcionarios\Create.cshtml" />
+    <Content Include="Views\Funcionarios\Delete.cshtml" />
+    <Content Include="Views\Funcionarios\Details.cshtml" />
+    <Content Include="Views\Funcionarios\Edit.cshtml" />
+    <Content Include="Views\Funcionarios\Index.cshtml" />
+    <Content Include="Views\Cargos\Create.cshtml" />
+    <Content Include="Views\Cargos\Delete.cshtml" />
+    <Content Include="Views\Cargos\Details.cshtml" />
+    <Content Include="Views\Cargos\Edit.cshtml" />
+    <Content Include="Views\Cargos\Index.cshtml" />
+    <Content Include="Views\AdminPlanillaCargos\Index.cshtml" />
+    <Content Include="Views\E_Tipo\Create.cshtml" />
+    <Content Include="Views\E_Tipo\Delete.cshtml" />
+    <Content Include="Views\E_Tipo\Details.cshtml" />
+    <Content Include="Views\E_Tipo\Edit.cshtml" />
+    <Content Include="Views\E_Tipo\Index.cshtml" />
+    <Content Include="Views\E_Psicologia\Create.cshtml" />
+    <Content Include="Views\E_Psicologia\Delete.cshtml" />
+    <Content Include="Views\E_Psicologia\Details.cshtml" />
+    <Content Include="Views\E_Psicologia\Edit.cshtml" />
+    <Content Include="Views\E_Psicologia\Index.cshtml" />
+    <Content Include="Views\E_Psicologia\EvaluacionPsicologia.cshtml" />
+    <Content Include="Views\E_Asitente\Create.cshtml" />
+    <Content Include="Views\E_Asitente\Delete.cshtml" />
+    <Content Include="Views\E_Asitente\Details.cshtml" />
+    <Content Include="Views\E_Asitente\Edit.cshtml" />
+    <Content Include="Views\E_Asitente\Index.cshtml" />
+    <Content Include="Views\E_Asitente\EvaluacionAsistente.cshtml" />
+    <Content Include="Views\E_Docente\Create.cshtml" />
+    <Content Include="Views\E_Docente\Delete.cshtml" />
+    <Content Include="Views\E_Docente\Details.cshtml" />
+    <Content Include="Views\E_Docente\Edit.cshtml" />
+    <Content Include="Views\E_Docente\Index.cshtml" />
+    <Content Include="Views\E_Docente\EvaluacionDocente.cshtml" />
+    <Content Include="Views\E_Chofer\Create.cshtml" />
+    <Content Include="Views\E_Chofer\Delete.cshtml" />
+    <Content Include="Views\E_Chofer\Details.cshtml" />
+    <Content Include="Views\E_Chofer\Edit.cshtml" />
+    <Content Include="Views\E_Chofer\Index.cshtml" />
+    <Content Include="Views\E_Chofer\EvaluacionChofer.cshtml" />
+    <Content Include="Views\E_Misceláneo\Create.cshtml" />
+    <Content Include="Views\E_Misceláneo\Delete.cshtml" />
+    <Content Include="Views\E_Misceláneo\Details.cshtml" />
+    <Content Include="Views\E_Misceláneo\Edit.cshtml" />
+    <Content Include="Views\E_Misceláneo\Index.cshtml" />
+    <Content Include="Views\E_Misceláneo\EvaluacionMisceláneo.cshtml" />
+    <Content Include="Views\E_Cocina\Create.cshtml" />
+    <Content Include="Views\E_Cocina\Delete.cshtml" />
+    <Content Include="Views\E_Cocina\Details.cshtml" />
+    <Content Include="Views\E_Cocina\Edit.cshtml" />
+    <Content Include="Views\E_Cocina\Index.cshtml" />
+    <Content Include="Views\E_Cocina\EvaluacionCocina.cshtml" />
+    <Content Include="Views\E_Auxiliar\Create.cshtml" />
+    <Content Include="Views\E_Auxiliar\Delete.cshtml" />
+    <Content Include="Views\E_Auxiliar\Details.cshtml" />
+    <Content Include="Views\E_Auxiliar\Edit.cshtml" />
+    <Content Include="Views\E_Auxiliar\Index.cshtml" />
+    <Content Include="Views\E_Auxiliar\EvaluacionAuxiliar.cshtml" />
+    <Content Include="Views\E_Directora\Create.cshtml" />
+    <Content Include="Views\E_Directora\Delete.cshtml" />
+    <Content Include="Views\E_Directora\Details.cshtml" />
+    <Content Include="Views\E_Directora\Edit.cshtml" />
+    <Content Include="Views\E_Directora\Index.cshtml" />
+    <Content Include="Views\E_Directora\EvaluacionDirectora.cshtml" />
+    <Content Include="Views\E_Trabajador_Social\Create.cshtml" />
+    <Content Include="Views\E_Trabajador_Social\Delete.cshtml" />
+    <Content Include="Views\E_Trabajador_Social\Details.cshtml" />
+    <Content Include="Views\E_Trabajador_Social\Edit.cshtml" />
+    <Content Include="Views\E_Trabajador_Social\Index.cshtml" />
+    <Content Include="Views\E_Trabajador_Social\EvaluacionTrabajador_Social.cshtml" />
+    <Content Include="Views\Recuperar_Password\index.cshtml" />
+    <Content Include="Views\Recuperacion_Accesos\index.cshtml" />
+    <Content Include="Views\Nivel_Estudiante\Create.cshtml" />
+    <Content Include="Views\Nivel_Estudiante\Delete.cshtml" />
+    <Content Include="Views\Nivel_Estudiante\Details.cshtml" />
+    <Content Include="Views\Nivel_Estudiante\Edit.cshtml" />
+    <Content Include="Views\Nivel_Estudiante\Index.cshtml" />
+    <Content Include="Views\Estudiantes_List\Create.cshtml" />
+    <Content Include="Views\Estudiantes_List\Delete.cshtml" />
+    <Content Include="Views\Estudiantes_List\Details.cshtml" />
+    <Content Include="Views\Estudiantes_List\Edit.cshtml" />
+    <Content Include="Views\Estudiantes\Index.cshtml" />
+    <Content Include="Views\Estudiantes\ReporteEstudiante.cshtml" />
+    <Content Include="Views\Usuarios\Create.cshtml" />
+    <Content Include="Views\Usuarios\Delete.cshtml" />
+    <Content Include="Views\Usuarios\Details.cshtml" />
+    <Content Include="Views\Usuarios\Edit.cshtml" />
+    <Content Include="Views\Usuarios\Index.cshtml" />
+    <Content Include="Views\Materno\Create.cshtml" />
+    <Content Include="Views\Materno\Delete.cshtml" />
+    <Content Include="Views\Materno\Edit.cshtml" />
+    <Content Include="Views\Materno\Index.cshtml" />
+    <Content Include="Views\Materno\ReporteMaterno.cshtml" />
+    <Content Include="Views\Kinders\Create.cshtml" />
+    <Content Include="Views\Kinders\Delete.cshtml" />
+    <Content Include="Views\Kinders\Edit.cshtml" />
+    <Content Include="Views\Kinders\Index.cshtml" />
+    <Content Include="Views\Kinders\ReporteKinder.cshtml" />
+    <Content Include="Views\PreKinders\Create.cshtml" />
+    <Content Include="Views\PreKinders\Delete.cshtml" />
+    <Content Include="Views\PreKinders\Edit.cshtml" />
+    <Content Include="Views\PreKinders\Index.cshtml" />
+    <Content Include="Views\PreKinders\ReportePreKinder.cshtml" />
+    <Content Include="Views\CasaCuna1\Create.cshtml" />
+    <Content Include="Views\CasaCuna1\Delete.cshtml" />
+    <Content Include="Views\CasaCuna1\Edit.cshtml" />
+    <Content Include="Views\CasaCuna1\Index.cshtml" />
+    <Content Include="Views\CasaCuna1\ReporteCasaCuna1.cshtml" />
+    <Content Include="Views\CasaCuna2\Create.cshtml" />
+    <Content Include="Views\CasaCuna2\Delete.cshtml" />
+    <Content Include="Views\CasaCuna2\Edit.cshtml" />
+    <Content Include="Views\CasaCuna2\Index.cshtml" />
+    <Content Include="Views\CasaCuna2\ReporteCasaCuna2.cshtml" />
+    <Content Include="Views\HogarEscuela1\Create.cshtml" />
+    <Content Include="Views\HogarEscuela1\Delete.cshtml" />
+    <Content Include="Views\HogarEscuela1\Edit.cshtml" />
+    <Content Include="Views\HogarEscuela1\Index.cshtml" />
+    <Content Include="Views\HogarEscuela2\Create.cshtml" />
+    <Content Include="Views\HogarEscuela2\Delete.cshtml" />
+    <Content Include="Views\HogarEscuela2\Edit.cshtml" />
+    <Content Include="Views\HogarEscuela2\Index.cshtml" />
+    <Content Include="Views\HogarEscuela3\Create.cshtml" />
+    <Content Include="Views\HogarEscuela3\Delete.cshtml" />
+    <Content Include="Views\HogarEscuela3\Edit.cshtml" />
+    <Content Include="Views\HogarEscuela3\Index.cshtml" />
+    <Content Include="Views\HogarEscuela3\ReporteHogarEscuela3.cshtml" />
+    <Content Include="Views\HogarEscuela2\ReporteHogarEscuela2.cshtml" />
+    <Content Include="Views\HogarEscuela1\ReporteHogarEscuela1.cshtml" />
+    <Content Include="Views\Asistencias\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

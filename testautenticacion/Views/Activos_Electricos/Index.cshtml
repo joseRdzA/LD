@@ -1,4 +1,6 @@
 ﻿@model testautenticacion.Models.InventarioElectrico
+@using PagedList
+@using PagedList.Mvc;
 
 @{
     ViewBag.Title = "Index";
@@ -65,12 +67,7 @@
         <th>
             @Html.DisplayName("Costa Adquisitivo")
         </th>
-        <th>
-            @Html.DisplayName("Deprec Mes")
-        </th>
-        <th>
-            @Html.DisplayName("Deprec Acum")
-        </th>
+       
         <th>
             @Html.DisplayName("Valor Libros")
         </th>
@@ -104,12 +101,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Costo_Adquisitivo)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Deprec_Mes)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Deprec_Acum)
-            </td>
+           
             <td>
                 @Html.DisplayFor(modelItem => item.Valor_Libros)
             </td>
@@ -122,3 +114,9 @@
     }
 
 </table>
+<br />
+
+    <div>
+        Página @(Model.DatosElec.PageCount < Model.DatosElec.PageNumber ? 0 : Model.DatosElec.PageNumber)
+        de @Model.DatosElec.PageCount   @Html.PagedListPager(Model.DatosElec, pageNumber => Url.Action("Index", new { pageNumber }))
+    </div>

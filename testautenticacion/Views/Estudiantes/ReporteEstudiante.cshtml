@@ -1,0 +1,49 @@
+﻿@model testautenticacion.Models.EstudiantesModelo
+@{
+    Layout = null;
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Nombre Estudiante")
+        </th>
+        <th>
+            @Html.DisplayName("Cédula")
+        </th>
+        <th>
+            @Html.DisplayName("Fecha de Nacimiento")
+        </th>
+        <th>
+            @Html.DisplayName("Numero Contacto")
+        </th>
+        <th>
+            @Html.DisplayName("Nivel")
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.Estudiantes_List1)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre_Estudiante)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cedula)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fechaNacimiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numero_Contacto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nivel_Estudiante.Nivel)
+            </td>
+
+        </tr>
+    }
+
+</table>

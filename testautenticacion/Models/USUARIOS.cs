@@ -15,17 +15,23 @@ namespace testautenticacion.Models
 
     public partial class Usuarios
     {
+        [Range(1, 999999999, ErrorMessage = "La cédula consta de 9 digitos")]
         public int idUsuario { get; set; }
         public string Nombres { get; set; }
+        [DataType(DataType.EmailAddress)]
+        [EmailAddress]
         public string Correo { get; set; }
-        [Required]
-        [StringLength(18, ErrorMessage = "Debe tener 8 caracteres y un caracter especial", MinimumLength = 8)]
+
+        [StringLength(18, ErrorMessage = "La clave debe contar con una Mayuscula, número y caracter especial. 8 dígitos máximo", MinimumLength = 8)]
         [RegularExpression(@"^((?=.*[a-z])(?=.*[A-Z])(?=.*\d)).+$")]
         [DataType(DataType.Password)]
         [Display(Name = "Clave")]
+
         public string Clave { get; set; }
-        public Nullable<int> IdRol { get; set; }
-    
+        public string Estado { get; set; }
+        public int IdRol { get; set; }
+
         public virtual Rol Rol { get; set; }
     }
 }
+

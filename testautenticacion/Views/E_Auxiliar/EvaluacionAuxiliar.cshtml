@@ -1,0 +1,181 @@
+﻿@model IEnumerable<testautenticacion.Models.E_Auxiliar>
+
+@{
+    ViewBag.Title = "EvaluacionAuxiliar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+
+    <h1>Evaluacion Auxiliar</h1>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.debug.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+</head>
+
+<br />
+
+
+
+<div class="col-md-6 col-md-offset-1">
+
+    <a href="javascript:generatePDF()" id="downloadButton"><input type="button" style="float: right; margin-right: 90px;" class="btn btn-danger" name="Descargar PDF" value="PDF"></a>
+
+    <input type="button" style="float: right; margin-right: 90px;" class="btn btn-success" id="Calculo" value="Calcular" onclick="Calcular()">
+
+    <a href="javascript:location.reload()"><input type="button" style="float: right; margin-right: 90px;" class="btn btn-primary" name="Nuevo" value="Nuevo"></a>
+
+
+</div>
+<br />
+<br />
+<br />
+
+<div id="whatToPrint" style="font-size: large; text-shadow: 1px 0px 0px black, 0px 1px 0px black, -1px 0px 0px black, 0px -1px 0px black; width: 500px;">
+    <form>
+        <table class="table table-bordered">
+            <tr>
+                <td colspan="2"> <img src="~/images/Imagen1.png" width="100" height="100"></td>
+                <td colspan="5" style="font-size: large; color: white; background-color: rgb(17, 164, 17); ">
+                    Evaluación del Desemepeno Luz Divina
+                </td>
+                <td colspan="2">
+                    <input type="text" style="border:white;" placeholder="Fecha del documento">
+                    <form>
+                        <input class="form-control" type="datetime-local" placeholder="Selecione la fecha">
+                    </form>
+                </td>
+
+            </tr>
+            <tr>
+                <td colspan="1">Nombre Completo:</td>
+                <td colspan="8"><textarea class="form-control input-lg" type="text" style="border: white; resize: none; overflow: hidden;"></textarea></td>
+
+            </tr>
+            <tr>
+                <td colspan="1"></td>
+                <td colspan="2"></td>
+                <td colspan="1">5</td>
+                <td colspan="1">4</td>
+                <td colspan="1">3</td>
+                <td colspan="1">2</td>
+                <td colspan="1">1</td>
+                <td colspan="1"></td>
+            </tr>
+            <tr>
+                <td colspan="1">Area de Evaluación:</td>
+                <td colspan="">Auxiliar</td>
+                <td colspan="1">Puntos a otorgar</td>
+                <td colspan="1">Excelente</td>
+                <td colspan="1">Muy bueno</td>
+                <td colspan="1">Bueno</td>
+                <td colspan="1">Regular</td>
+                <td colspan="1">Malo</td>
+                <td colspan="1">Total</td>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    <td style=" background-color: lightgray;">
+                        @Html.DisplayFor(modelItem => item.E_Tipo.Nombre)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nombre)
+                    </td>
+                    <td>
+                        5
+                    </td>
+                    <td colspan="1"><input type="checkbox" id="5" style="border:white;"></td>
+                    <td colspan="1"><input type="checkbox" id="4" style="border:white;"></td>
+                    <td colspan="1"><input type="checkbox" id="3" style="border:white;"></td>
+                    <td colspan="1"><input type="checkbox" id="2" style="border:white;"></td>
+                    <td colspan="1"><input type="checkbox" id="1" style="border:white;"></td>
+
+
+                </tr>
+            }
+            <tr>
+                <td colspan="5"></td>
+                <td colspan="3"> Total </td>
+                <td colspan="1"><input type="text" id="TotalGen" style="border:white; text-align: center;" placeholder="Total General"></td>
+
+            </tr>
+
+        </table>
+
+    </form>
+</div>
+
+<script>
+
+                        config = {
+                            dateFormat: "d-m-y",
+                        }
+
+                        flatpickr("input[type=datetime-local]", config);
+
+                        document.getElementById('Calculo').onclick = function () {
+
+                            var SumaCampos = document.querySelectorAll('[id^="5"]');
+                            SumaCampos = SumaCampos.length * 5;
+
+                            var checkboxes5 = document.querySelectorAll('[id^="5"]:checked');
+                            checkboxes5 = checkboxes5.length * 5;
+
+                            var checkboxes4 = document.querySelectorAll('[id^="4"]:checked');
+                            checkboxes4 = checkboxes4.length * 4;
+
+                            var checkboxes3 = document.querySelectorAll('[id^="3"]:checked');
+                            checkboxes3 = checkboxes3.length * 3;
+
+                            var checkboxes2 = document.querySelectorAll('[id^="2"]:checked');
+                            checkboxes2 = checkboxes2.length * 2;
+
+                            var checkboxes1 = document.querySelectorAll('[id^="1"]:checked');
+                            checkboxes1 = checkboxes1.length * 1;
+
+                            var totalchecked = checkboxes5 + checkboxes4 + checkboxes3 + checkboxes2 + checkboxes1;
+
+                            totalchecked = (totalchecked / SumaCampos) * 100
+
+                            totalchecked = Math.floor(totalchecked);
+
+                            document.getElementById('TotalGen').value = totalchecked;
+                        }
+
+                        async function generatePDF() {
+
+
+                            //Downloading
+                            var downloading = document.getElementById("whatToPrint");
+                            var doc = new jsPDF('p', 'pt');
+
+                            await html2canvas(downloading, {
+                                allowTaint: true,
+                                useCORS: true,
+                                width: 2350
+                            }).then((canvas) => {
+                                //Canvas (convert to PNG)
+                                doc.addImage(canvas.toDataURL("image/png"), 'PNG', 15, 15, 1320, 800);
+                            })
+
+                            doc.save("Auxiliar.pdf");
+
+                            //End of downloading
+
+
+
+                        }
+
+
+
+</script>

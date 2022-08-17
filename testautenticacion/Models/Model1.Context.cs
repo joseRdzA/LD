@@ -25,17 +25,36 @@ namespace testautenticacion.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<A_Materno> A_Materno { get; set; }
         public virtual DbSet<Activos_Computacion> Activos_Computacion { get; set; }
         public virtual DbSet<Activos_Electricos> Activos_Electricos { get; set; }
         public virtual DbSet<Activos_Recreativos> Activos_Recreativos { get; set; }
         public virtual DbSet<Cargos> Cargos { get; set; }
-        public virtual DbSet<Estudiantes> Estudiantes { get; set; }
+        public virtual DbSet<CasaCuna1> CasaCuna1 { get; set; }
+        public virtual DbSet<CasaCuna2> CasaCuna2 { get; set; }
+        public virtual DbSet<E_Asitente> E_Asitente { get; set; }
+        public virtual DbSet<E_Auxiliar> E_Auxiliar { get; set; }
+        public virtual DbSet<E_Chofer> E_Chofer { get; set; }
+        public virtual DbSet<E_Cocina> E_Cocina { get; set; }
+        public virtual DbSet<E_Directora> E_Directora { get; set; }
+        public virtual DbSet<E_Docente> E_Docente { get; set; }
+        public virtual DbSet<E_Miscelanea> E_Miscelanea { get; set; }
+        public virtual DbSet<E_Psicologia> E_Psicologia { get; set; }
+        public virtual DbSet<E_Tipo> E_Tipo { get; set; }
+        public virtual DbSet<E_Trabajador_Social> E_Trabajador_Social { get; set; }
+        public virtual DbSet<Estado_Asistencia> Estado_Asistencia { get; set; }
+        public virtual DbSet<Estudiantes_List> Estudiantes_List { get; set; }
         public virtual DbSet<Funcionario> Funcionario { get; set; }
+        public virtual DbSet<HogarEscuela1> HogarEscuela1 { get; set; }
+        public virtual DbSet<HogarEscuela2> HogarEscuela2 { get; set; }
+        public virtual DbSet<HogarEscuela3> HogarEscuela3 { get; set; }
         public virtual DbSet<Inventario_Cocina> Inventario_Cocina { get; set; }
-        public virtual DbSet<Niveles> Niveles { get; set; }
-        public virtual DbSet<Reserva_Matriculas> Reserva_Matriculas { get; set; }
+        public virtual DbSet<Kinder> Kinder { get; set; }
+        public virtual DbSet<Materno> Materno { get; set; }
+        public virtual DbSet<Nivel_Estudiante> Nivel_Estudiante { get; set; }
+        public virtual DbSet<PreKinder> PreKinder { get; set; }
         public virtual DbSet<Rol> Rol { get; set; }
-        public virtual DbSet<Servicio_Comunales> Servicio_Comunales { get; set; }
+        public virtual DbSet<Tokens> Tokens { get; set; }
         public virtual DbSet<Usuarios> Usuarios { get; set; }
     }
 }

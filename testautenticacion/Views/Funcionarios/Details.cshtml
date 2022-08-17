@@ -1,0 +1,52 @@
+﻿@model testautenticacion.Models.Funcionario
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles del funcionario</h2>
+
+
+<div>
+    <h4>Funcionario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Nombre completo")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre_Completo)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Número de teléfono")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Num_Tel)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Correo electrónico")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Correo_Electronico)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Nombre del cargo")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cargos.Nombre_Cargo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id_Funcionario }) |
+    @Html.ActionLink("Regresar a la lista", "Index")
+</p>

@@ -7,6 +7,7 @@ using System.Web.Security;
 using testautenticacion.Permisos;
 using testautenticacion.Models;
 
+
 namespace testautenticacion.Controllers
 {
     [Authorize]

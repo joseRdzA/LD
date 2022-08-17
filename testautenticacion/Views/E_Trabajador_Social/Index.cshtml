@@ -1,0 +1,42 @@
+﻿@model IEnumerable<testautenticacion.Models.E_Trabajador_Social>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Mantenimineto de preguntas Trabajador Social</h2>
+
+<p>
+    @Html.ActionLink("Crear Nueva", "Create")
+</p>
+<table class="table table-hover table-striped table-bordered">
+    <tr>
+        <th>
+            Pregunta
+        </th>
+        <th>
+
+            Categoria
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.E_Tipo.Nombre)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Detalle", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+</table>

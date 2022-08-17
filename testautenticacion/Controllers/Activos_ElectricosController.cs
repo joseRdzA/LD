@@ -8,39 +8,47 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using testautenticacion.Models;
+using PagedList;
+using PagedList.Mvc;
 
 namespace testautenticacion.Controllers
 {
+    [Authorize]
     public class Activos_ElectricosController : Controller
     {
         private AADFLDEntities db = new AADFLDEntities();
 
         // GET: Activos_Electricos
-        public ActionResult Index()
+        public ActionResult Index(int? pageNumber)
         {
+            pageNumber = pageNumber ?? 1;
             InventarioElectrico inv = new InventarioElectrico();
-            inv.DatosElec = db.Activos_Electricos.ToList();
+            inv.DatosElec = db.Activos_Electricos.ToList().ToPagedList((int)pageNumber, 5); 
 
             return View(inv);
         }
 
         [HttpPost]
-        public ActionResult ConsultarDatos(InventarioElectrico obj)
+        public ActionResult ConsultarDatos(InventarioElectrico obj, int? pageNumber)
         {
+            pageNumber = pageNumber ?? 1;
             InventarioElectrico inv = new InventarioElectrico();
 
-            if (!string.IsNullOrEmpty(obj.Descripcion))
-                inv.DatosElec = db.Activos_Electricos.Where(x => x.Descripcion.Contains(obj.Descripcion)).ToList();
-            else
-                inv.DatosElec = db.Activos_Electricos.ToList();
+            if (!string.IsNullOrEmpty(obj.Descripcion)) { 
+                inv.DatosElec = db.Activos_Electricos.Where(x => x.Descripcion.Contains(obj.Descripcion)).ToList().ToPagedList((int)pageNumber, 5); 
+            }
+            else { 
+                inv.DatosElec = db.Activos_Electricos.ToList().ToPagedList((int)pageNumber, 5);
+            }
 
             return View("Index", inv);
         }
         [HttpPost]
-        public ActionResult OrdenarProductos()
+        public ActionResult OrdenarProductos(int? pageNumber)
         {
+            pageNumber = pageNumber ?? 1;
             InventarioElectrico inv = new InventarioElectrico();
-            inv.DatosElec = db.Activos_Electricos.OrderBy(Descripcion => Descripcion.Descripcion).ToList();
+            inv.DatosElec = db.Activos_Electricos.OrderBy(Descripcion => Descripcion.Descripcion).ToList().ToPagedList((int)pageNumber, 5); 
 
             return View("Index", inv); //ojo con esto, la vista y el metodo... OJO CON EL INDEX 
         }
@@ -54,7 +62,7 @@ namespace testautenticacion.Controllers
         public ActionResult ReporteElectricos()
         {
             InventarioElectrico inv = new InventarioElectrico();
-            inv.DatosElec = db.Activos_Electricos.ToList();
+            inv.DatosList = db.Activos_Electricos.ToList();
             return View(inv);
         }
 

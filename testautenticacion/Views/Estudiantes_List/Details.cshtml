@@ -1,0 +1,67 @@
+﻿@model testautenticacion.Models.Estudiantes_List
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Información del Alumno</h2>
+
+<div>
+    <h4>Lista Estudiantil </h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Nombre del Estudiante")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre_Estudiante)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cedula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cedula)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Fecha de Nacimiento")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaNacimiento)
+        </dd>
+        <dt>
+            @Html.DisplayName("Edad")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Número de Contacto")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Numero_Contacto)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Nivel")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nivel_Estudiante.Nivel)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", "Estudiantes_List", new { id = Model.ID }, null)
+
+<p><a href="/Estudiantes/Index">Regresar a la Lista</a></p>
+</p>

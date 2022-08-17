@@ -48,7 +48,7 @@ namespace testautenticacion.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "idUsuario,Nombres,Correo,Clave,IdRol")] Usuarios usuarios)
+        public ActionResult Create([Bind(Include = "idUsuario,Nombres,Correo,Clave,Estado,IdRol")] Usuarios usuarios)
         {
             if (ModelState.IsValid)
             {
@@ -82,7 +82,7 @@ namespace testautenticacion.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "idUsuario,Nombres,Correo,Clave,IdRol")] Usuarios usuarios)
+        public ActionResult Edit([Bind(Include = "idUsuario,Nombres,Correo,Clave,Estado,IdRol")] Usuarios usuarios)
         {
             if (ModelState.IsValid)
             {

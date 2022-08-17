@@ -33,12 +33,7 @@
             <th scope="col">
                 @Html.DisplayName("Costo Adquisitivo")
             </th>
-            <th scope="col">
-                @Html.DisplayName("Deprec Mes")
-            </th>
-            <th scope="col">
-                @Html.DisplayName("Deprec Acum")
-            </th>
+           
             <th scope="col">
                 @Html.DisplayName("Valor Libros")
             </th>
@@ -46,7 +41,7 @@
         </tr>
 
 
-        @foreach (var item in Model.DatosPC)
+        @foreach (var item in Model.DatosList)
         {
             <tr>
                 <td>
@@ -73,12 +68,7 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Costo_Adquisitivo)
                 </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Deprec_Mes)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Deprec_Acum)
-                </td>
+               
                 <td>
                     @Html.DisplayFor(modelItem => item.Valor_Libros)
                 </td>

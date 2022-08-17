@@ -1,6 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="AADFLDModelStoreContainer" CdmEntityContainer="AADFLDEntities">
+    <EntitySetMapping Name="A_Materno">
+      <EntityTypeMapping TypeName="AADFLDModel.A_Materno">
+        <MappingFragment StoreEntitySet="A_Materno">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Mes_Año" ColumnName="Mes_Año" />
+          <ScalarProperty Name="Numero_Semana" ColumnName="Numero_Semana" />
+          <ScalarProperty Name="Nivel" ColumnName="Nivel" />
+          <ScalarProperty Name="Nombre_Estudiante" ColumnName="Nombre_Estudiante" />
+          <ScalarProperty Name="Lunes" ColumnName="Lunes" />
+          <ScalarProperty Name="Martes" ColumnName="Martes" />
+          <ScalarProperty Name="Miercoles" ColumnName="Miercoles" />
+          <ScalarProperty Name="Jueves" ColumnName="Jueves" />
+          <ScalarProperty Name="Viernes" ColumnName="Viernes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Activos_Computacion">
       <EntityTypeMapping TypeName="AADFLDModel.Activos_Computacion">
         <MappingFragment StoreEntitySet="Activos_Computacion">
@@ -11,10 +27,7 @@
           <ScalarProperty Name="Serie" ColumnName="Serie" />
           <ScalarProperty Name="Fecha_Copmra" ColumnName="Fecha_Copmra" />
           <ScalarProperty Name="Fecha_Salida" ColumnName="Fecha_Salida" />
-          <ScalarProperty Name="Vida_Util_Meses" ColumnName="Vida_Util_Meses" />
           <ScalarProperty Name="Costo_Adquisitivo" ColumnName="Costo_Adquisitivo" />
-          <ScalarProperty Name="Deprec_Mes" ColumnName="Deprec_Mes" />
-          <ScalarProperty Name="Deprec_Acum" ColumnName="Deprec_Acum" />
           <ScalarProperty Name="Valor_Libros" ColumnName="Valor_Libros" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -29,10 +42,7 @@
           <ScalarProperty Name="Serie" ColumnName="Serie" />
           <ScalarProperty Name="Fecha_Compra" ColumnName="Fecha_Compra" />
           <ScalarProperty Name="Fecha_Salida" ColumnName="Fecha_Salida" />
-          <ScalarProperty Name="Vida_Util_Meses" ColumnName="Vida_Util_Meses" />
           <ScalarProperty Name="Costo_Adquisitivo" ColumnName="Costo_Adquisitivo" />
-          <ScalarProperty Name="Deprec_Mes" ColumnName="Deprec_Mes" />
-          <ScalarProperty Name="Deprec_Acum" ColumnName="Deprec_Acum" />
           <ScalarProperty Name="Valor_Libros" ColumnName="Valor_Libros" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -47,10 +57,7 @@
           <ScalarProperty Name="Serie" ColumnName="Serie" />
           <ScalarProperty Name="Fecha_Compra" ColumnName="Fecha_Compra" />
           <ScalarProperty Name="Fecha_Salida" ColumnName="Fecha_Salida" />
-          <ScalarProperty Name="Vida_Util_Meses" ColumnName="Vida_Util_Meses" />
           <ScalarProperty Name="Costo_Adquisitivo" ColumnName="Costo_Adquisitivo" />
-          <ScalarProperty Name="Deprec_Mes" ColumnName="Deprec_Mes" />
-          <ScalarProperty Name="Deprec_Acum" ColumnName="Deprec_Acum" />
           <ScalarProperty Name="Valor_Libros" ColumnName="Valor_Libros" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -63,17 +70,144 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Estudiantes">
-      <EntityTypeMapping TypeName="AADFLDModel.Estudiantes">
-        <MappingFragment StoreEntitySet="Estudiantes">
-          <ScalarProperty Name="Id_Estudiante" ColumnName="Id_Estudiante" />
-          <ScalarProperty Name="Nombre_Completo" ColumnName="Nombre_Completo" />
-          <ScalarProperty Name="Fecha_Nacimiento" ColumnName="Fecha_Nacimiento" />
-          <ScalarProperty Name="Responsable" ColumnName="Responsable" />
-          <ScalarProperty Name="Id_Nivel" ColumnName="Id_Nivel" />
-          <ScalarProperty Name="Asistencia" ColumnName="Asistencia" />
-          <ScalarProperty Name="Ausencia" ColumnName="Ausencia" />
-          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+    <EntitySetMapping Name="CasaCuna1">
+      <EntityTypeMapping TypeName="AADFLDModel.CasaCuna1">
+        <MappingFragment StoreEntitySet="CasaCuna1">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AnoMes" ColumnName="AnoMes" />
+          <ScalarProperty Name="Nombre_Estudiante" ColumnName="Nombre_Estudiante" />
+          <ScalarProperty Name="Nivel" ColumnName="Nivel" />
+          <ScalarProperty Name="NumeroSemana" ColumnName="NumeroSemana" />
+          <ScalarProperty Name="Lunes" ColumnName="Lunes" />
+          <ScalarProperty Name="Martes" ColumnName="Martes" />
+          <ScalarProperty Name="Miercoles" ColumnName="Miercoles" />
+          <ScalarProperty Name="Jueves" ColumnName="Jueves" />
+          <ScalarProperty Name="Viernes" ColumnName="Viernes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CasaCuna2">
+      <EntityTypeMapping TypeName="AADFLDModel.CasaCuna2">
+        <MappingFragment StoreEntitySet="CasaCuna2">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AnoMes" ColumnName="AnoMes" />
+          <ScalarProperty Name="Nombre_Estudiante" ColumnName="Nombre_Estudiante" />
+          <ScalarProperty Name="Nivel" ColumnName="Nivel" />
+          <ScalarProperty Name="NumeroSemana" ColumnName="NumeroSemana" />
+          <ScalarProperty Name="Lunes" ColumnName="Lunes" />
+          <ScalarProperty Name="Martes" ColumnName="Martes" />
+          <ScalarProperty Name="Miercoles" ColumnName="Miercoles" />
+          <ScalarProperty Name="Jueves" ColumnName="Jueves" />
+          <ScalarProperty Name="Viernes" ColumnName="Viernes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="E_Asitente">
+      <EntityTypeMapping TypeName="AADFLDModel.E_Asitente">
+        <MappingFragment StoreEntitySet="E_Asitente">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="E_Auxiliar">
+      <EntityTypeMapping TypeName="AADFLDModel.E_Auxiliar">
+        <MappingFragment StoreEntitySet="E_Auxiliar">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="E_Chofer">
+      <EntityTypeMapping TypeName="AADFLDModel.E_Chofer">
+        <MappingFragment StoreEntitySet="E_Chofer">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="E_Cocina">
+      <EntityTypeMapping TypeName="AADFLDModel.E_Cocina">
+        <MappingFragment StoreEntitySet="E_Cocina">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="E_Directora">
+      <EntityTypeMapping TypeName="AADFLDModel.E_Directora">
+        <MappingFragment StoreEntitySet="E_Directora">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="E_Docente">
+      <EntityTypeMapping TypeName="AADFLDModel.E_Docente">
+        <MappingFragment StoreEntitySet="E_Docente">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="E_Miscelanea">
+      <EntityTypeMapping TypeName="AADFLDModel.E_Miscelanea">
+        <MappingFragment StoreEntitySet="E_Miscelanea">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="E_Psicologia">
+      <EntityTypeMapping TypeName="AADFLDModel.E_Psicologia">
+        <MappingFragment StoreEntitySet="E_Psicologia">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="E_Tipo">
+      <EntityTypeMapping TypeName="AADFLDModel.E_Tipo">
+        <MappingFragment StoreEntitySet="E_Tipo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="E_Trabajador_Social">
+      <EntityTypeMapping TypeName="AADFLDModel.E_Trabajador_Social">
+        <MappingFragment StoreEntitySet="E_Trabajador_Social">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Estado_Asistencia">
+      <EntityTypeMapping TypeName="AADFLDModel.Estado_Asistencia">
+        <MappingFragment StoreEntitySet="Estado_Asistencia">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Estudiantes_List">
+      <EntityTypeMapping TypeName="AADFLDModel.Estudiantes_List">
+        <MappingFragment StoreEntitySet="Estudiantes_List">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre_Estudiante" ColumnName="Nombre_Estudiante" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+          <ScalarProperty Name="Numero_Contacto" ColumnName="Numero_Contacto" />
+          <ScalarProperty Name="Nivel" ColumnName="Nivel" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -88,6 +222,54 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="HogarEscuela1">
+      <EntityTypeMapping TypeName="AADFLDModel.HogarEscuela1">
+        <MappingFragment StoreEntitySet="HogarEscuela1">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AnoMes" ColumnName="AnoMes" />
+          <ScalarProperty Name="Nombre_Estudiante" ColumnName="Nombre_Estudiante" />
+          <ScalarProperty Name="Nivel" ColumnName="Nivel" />
+          <ScalarProperty Name="NumeroSemana" ColumnName="NumeroSemana" />
+          <ScalarProperty Name="Lunes" ColumnName="Lunes" />
+          <ScalarProperty Name="Martes" ColumnName="Martes" />
+          <ScalarProperty Name="Miercoles" ColumnName="Miercoles" />
+          <ScalarProperty Name="Jueves" ColumnName="Jueves" />
+          <ScalarProperty Name="Viernes" ColumnName="Viernes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HogarEscuela2">
+      <EntityTypeMapping TypeName="AADFLDModel.HogarEscuela2">
+        <MappingFragment StoreEntitySet="HogarEscuela2">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AnoMes" ColumnName="AnoMes" />
+          <ScalarProperty Name="Nombre_Estudiante" ColumnName="Nombre_Estudiante" />
+          <ScalarProperty Name="Nivel" ColumnName="Nivel" />
+          <ScalarProperty Name="NumeroSemana" ColumnName="NumeroSemana" />
+          <ScalarProperty Name="Lunes" ColumnName="Lunes" />
+          <ScalarProperty Name="Martes" ColumnName="Martes" />
+          <ScalarProperty Name="Miercoles" ColumnName="Miercoles" />
+          <ScalarProperty Name="Jueves" ColumnName="Jueves" />
+          <ScalarProperty Name="Viernes" ColumnName="Viernes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HogarEscuela3">
+      <EntityTypeMapping TypeName="AADFLDModel.HogarEscuela3">
+        <MappingFragment StoreEntitySet="HogarEscuela3">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AnoMes" ColumnName="AnoMes" />
+          <ScalarProperty Name="Nombre_Estudiante" ColumnName="Nombre_Estudiante" />
+          <ScalarProperty Name="Nivel" ColumnName="Nivel" />
+          <ScalarProperty Name="NumeroSemana" ColumnName="NumeroSemana" />
+          <ScalarProperty Name="Lunes" ColumnName="Lunes" />
+          <ScalarProperty Name="Martes" ColumnName="Martes" />
+          <ScalarProperty Name="Miercoles" ColumnName="Miercoles" />
+          <ScalarProperty Name="Jueves" ColumnName="Jueves" />
+          <ScalarProperty Name="Viernes" ColumnName="Viernes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Inventario_Cocina">
       <EntityTypeMapping TypeName="AADFLDModel.Inventario_Cocina">
         <MappingFragment StoreEntitySet="Inventario_Cocina">
@@ -98,35 +280,62 @@
           <ScalarProperty Name="Existencia_Inicial" ColumnName="Existencia_Inicial" />
           <ScalarProperty Name="Entradas" ColumnName="Entradas" />
           <ScalarProperty Name="Salidas" ColumnName="Salidas" />
-          <ScalarProperty Name="Existencias" ColumnName="Existencias" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Niveles">
-      <EntityTypeMapping TypeName="AADFLDModel.Niveles">
-        <MappingFragment StoreEntitySet="Niveles">
-          <ScalarProperty Name="Id_Nivel" ColumnName="Id_Nivel" />
-          <ScalarProperty Name="Nombre_Nivel" ColumnName="Nombre_Nivel" />
+    <EntitySetMapping Name="Kinder">
+      <EntityTypeMapping TypeName="AADFLDModel.Kinder">
+        <MappingFragment StoreEntitySet="Kinder">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AnoMes" ColumnName="AnoMes" />
+          <ScalarProperty Name="Nombre_Estudiante" ColumnName="Nombre_Estudiante" />
+          <ScalarProperty Name="Nivel" ColumnName="Nivel" />
+          <ScalarProperty Name="NumeroSemana" ColumnName="NumeroSemana" />
+          <ScalarProperty Name="Lunes" ColumnName="Lunes" />
+          <ScalarProperty Name="Martes" ColumnName="Martes" />
+          <ScalarProperty Name="Miercoles" ColumnName="Miercoles" />
+          <ScalarProperty Name="Jueves" ColumnName="Jueves" />
+          <ScalarProperty Name="Viernes" ColumnName="Viernes" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Reserva_Matriculas">
-      <EntityTypeMapping TypeName="AADFLDModel.Reserva_Matriculas">
-        <MappingFragment StoreEntitySet="Reserva_Matriculas">
-          <ScalarProperty Name="Id_Reserva" ColumnName="Id_Reserva" />
-          <ScalarProperty Name="Nombre_Tutor" ColumnName="Nombre_Tutor" />
-          <ScalarProperty Name="Cedula_Tutor" ColumnName="Cedula_Tutor" />
-          <ScalarProperty Name="Correo_Tutor" ColumnName="Correo_Tutor" />
-          <ScalarProperty Name="Num_Tel" ColumnName="Num_Tel" />
-          <ScalarProperty Name="Nombre_Alumno" ColumnName="Nombre_Alumno" />
-          <ScalarProperty Name="Fecha_Nacimiento" ColumnName="Fecha_Nacimiento" />
-          <ScalarProperty Name="Edad" ColumnName="Edad" />
-          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
-          <ScalarProperty Name="Nacinalidad" ColumnName="Nacinalidad" />
-          <ScalarProperty Name="Provincia" ColumnName="Provincia" />
-          <ScalarProperty Name="Direccion_Detallada" ColumnName="Direccion_Detallada" />
-          <ScalarProperty Name="Fecha_Cita" ColumnName="Fecha_Cita" />
-          <ScalarProperty Name="Hora_Cita" ColumnName="Hora_Cita" />
+    <EntitySetMapping Name="Materno">
+      <EntityTypeMapping TypeName="AADFLDModel.Materno">
+        <MappingFragment StoreEntitySet="Materno">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AnoMes" ColumnName="AnoMes" />
+          <ScalarProperty Name="Nombre_Estudiante" ColumnName="Nombre_Estudiante" />
+          <ScalarProperty Name="Nivel" ColumnName="Nivel" />
+          <ScalarProperty Name="NumeroSemana" ColumnName="NumeroSemana" />
+          <ScalarProperty Name="Lunes" ColumnName="Lunes" />
+          <ScalarProperty Name="Martes" ColumnName="Martes" />
+          <ScalarProperty Name="Miercoles" ColumnName="Miercoles" />
+          <ScalarProperty Name="Jueves" ColumnName="Jueves" />
+          <ScalarProperty Name="Viernes" ColumnName="Viernes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Nivel_Estudiante">
+      <EntityTypeMapping TypeName="AADFLDModel.Nivel_Estudiante">
+        <MappingFragment StoreEntitySet="Nivel_Estudiante">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nivel" ColumnName="Nivel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PreKinder">
+      <EntityTypeMapping TypeName="AADFLDModel.PreKinder">
+        <MappingFragment StoreEntitySet="PreKinder">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AnoMes" ColumnName="AnoMes" />
+          <ScalarProperty Name="Nombre_Estudiante" ColumnName="Nombre_Estudiante" />
+          <ScalarProperty Name="Nivel" ColumnName="Nivel" />
+          <ScalarProperty Name="NumeroSemana" ColumnName="NumeroSemana" />
+          <ScalarProperty Name="Lunes" ColumnName="Lunes" />
+          <ScalarProperty Name="Martes" ColumnName="Martes" />
+          <ScalarProperty Name="Miercoles" ColumnName="Miercoles" />
+          <ScalarProperty Name="Jueves" ColumnName="Jueves" />
+          <ScalarProperty Name="Viernes" ColumnName="Viernes" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -138,15 +347,13 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Servicio_Comunales">
-      <EntityTypeMapping TypeName="AADFLDModel.Servicio_Comunales">
-        <MappingFragment StoreEntitySet="Servicio_Comunales">
-          <ScalarProperty Name="Id_Servicio_Comunal" ColumnName="Id_Servicio_Comunal" />
-          <ScalarProperty Name="Nombre_Servicio" ColumnName="Nombre_Servicio" />
-          <ScalarProperty Name="Nombre_Persona" ColumnName="Nombre_Persona" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="Num_Tel" ColumnName="Num_Tel" />
-          <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+    <EntitySetMapping Name="Tokens">
+      <EntityTypeMapping TypeName="AADFLDModel.Tokens">
+        <MappingFragment StoreEntitySet="Tokens">
+          <ScalarProperty Name="idToken" ColumnName="idToken" />
+          <ScalarProperty Name="Token" ColumnName="Token" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -157,6 +364,7 @@
           <ScalarProperty Name="Nombres" ColumnName="Nombres" />
           <ScalarProperty Name="Correo" ColumnName="Correo" />
           <ScalarProperty Name="Clave" ColumnName="Clave" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
           <ScalarProperty Name="IdRol" ColumnName="IdRol" />
         </MappingFragment>
       </EntityTypeMapping>

@@ -1,0 +1,61 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+
+<!DOCTYPE html>
+
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    @Styles.Render("~/Content/css")
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="row">
+
+
+            <div class=" jumbotron col-sm-4 col-sm-offset-4" style="background-color:mediumturquoise">
+                <div class="row">
+                    <img src="~/images/Imagen1.png" style="width:100px; height:100px; align-content:center; margin-left:39%" class="col-sm-4 col-sm-offset-4" />
+                    <h1 style="text-align: center; color: white" class="active">Recuperar Clave</h1>
+                </div>
+                <form action="@Url.Action("Recuperar","Recuperar_Password")" class="bg-primary" style="padding:10px;background-color:mediumturquoise" method="post">
+                    <input type="hidden" name="contador" value="0" />
+                    <div class="form-group">
+                        <br />
+                        <label style="color: white">Correo:</label>
+                        <input class="form-control" type="email" name="correo" />
+
+                        <br />
+                        <button type="submit" class="form-control btn btn-lg" style="background-color:forestgreen; color:white">Enviar</button>
+
+                    </div>
+
+                </form>
+
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>
+

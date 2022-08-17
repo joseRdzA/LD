@@ -8,42 +8,54 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using testautenticacion.Models;
+using PagedList;
+using PagedList.Mvc;
+
+
 
 
 namespace testautenticacion.Controllers
 {
+    [Authorize]
     public class Inventario_CocinaController : Controller
     {
         private AADFLDEntities db = new AADFLDEntities();
 
         // GET: Inventario_Cocina
-        public ActionResult Index()
+        public ActionResult Index(int? pageNumber)
         {
+            pageNumber = pageNumber ?? 1;
             Inventario inv = new Inventario();
-            inv.Datos = db.Inventario_Cocina.ToList();
+           inv.Datos = db.Inventario_Cocina.ToList().ToPagedList((int)pageNumber,5); //ojo con esto en las funciones
 
             return View(inv);
         }
-
+        
         [HttpPost]
-        public ActionResult ConsultarDatos(Inventario obj)
+        public ActionResult ConsultarDatos(Inventario obj, int? pageNumber)
         {
+            pageNumber = pageNumber ?? 1;
             Inventario inv = new Inventario();
 
-            if(!string.IsNullOrEmpty(obj.Nombre))
-                inv.Datos = db.Inventario_Cocina.Where(x => x.Producto.Contains(obj.Nombre)).ToList();
+            if (!string.IsNullOrEmpty(obj.Nombre))
+            {
+                inv.Datos = db.Inventario_Cocina.Where(x => x.Producto.Contains(obj.Nombre)).ToList().ToPagedList((int)pageNumber, 5);
+            }
             else
-                inv.Datos = db.Inventario_Cocina.ToList();
+            {
+                inv.Datos = db.Inventario_Cocina.ToList().ToPagedList((int)pageNumber, 5);
+            }
 
             return View("Index", inv);
         }
 
 
       [HttpPost]
-       public ActionResult OrdenarProductos()
+       public ActionResult OrdenarProductos(int? pageNumber)
         {
+            pageNumber = pageNumber ?? 1;
             Inventario inv = new Inventario();
-            inv.Datos = db.Inventario_Cocina.OrderBy(Producto => Producto.Producto).ToList();
+            inv.Datos = db.Inventario_Cocina.OrderBy(Producto => Producto.Producto).ToList().ToPagedList((int)pageNumber, 5);
 
             return View("Index",inv); //ojo con esto, la vista y el metodo... OJO CON EL INDEX 
         }
@@ -58,10 +70,10 @@ namespace testautenticacion.Controllers
         public ActionResult ReporteCocina()
         {
             Inventario inv = new Inventario();
-            inv.Datos = db.Inventario_Cocina.ToList();
+            inv.DatosList = db.Inventario_Cocina.ToList(); 
             return View(inv);
         }
-
+       
 
         // GET: Inventario_Cocina/Details/5
         public ActionResult Details(int? id)

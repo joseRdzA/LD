@@ -49,7 +49,7 @@
 
 </head>
 <body>
-  
+
     <!-- Topbar Start -->
     <div class="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
         <div class="row gx-0 d-none d-lg-flex">
@@ -87,26 +87,24 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <!-- <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="#page-top" class="nav-item nav-link active">Misión</a>
-                <a href="#sobre" class="nav-item nav-link">Sobre nosotros</a>
-                <a href="#vision" class="nav-item nav-link">Visión</a>
-                <a href="#servicio" class="nav-item nav-link">Servicios</a>
-                <a href="#contacto" class="nav-item nav-link">Contacto</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Otros</a>
-                    <div class="dropdown-menu rounded-0 rounded-bottom m-0">
-                        <a href="img/login" class="dropdown-item">Login</a>
-                        <a href="img/register" class="dropdown-item">Registrarse</a>
-                        <a href="img/tcu/ServicioComunal.html" class="dropdown-item">Servicio TCU</a>
-                        <a href="img/matricula/matricula.html" class="dropdown-item">Matricula</a>
+             <div class="navbar-nav ms-auto p-4 p-lg-0">
+    <a href="/Vista/Index" class="nav-item nav-link">Inicio</a>
+    <a href="/Vista/TCU" class="nav-item nav-link">TCU</a>
+    <a href="/Vista/Donaciones" class="nav-item nav-link">Donaciones</a>
+    <a href="/Vista/Matricula" class="nav-item nav-link">Matrícula</a>
+    <div class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Otros</a>
+        <div class="dropdown-menu rounded-0 rounded-bottom m-0">
+            <a href="/Acceso/Index" class="dropdown-item">Login</a>
+            <a href="/Vista/Donaciones" class="dropdown-item">Donaciones</a>
+            <a href="/Vista/Matricula" class="dropdown-item">Matricula</a>
 
-                    </div> -->
+        </div> 
         </div>
 
         </div>
         <div>
-        <a    class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block" @Html.ActionLink("Volver", "Index", "Vista")
+            <a class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block" @Html.ActionLink("Volver", "Index", "Vista")
         </div>
     </nav>
     <!-- Navbar End -->
@@ -116,14 +114,14 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <p class="d-inline-block border rounded-pill py-1 px-4">TCU</p>
-                    <h1 class="mb-4">Haga una cita para visitar nuestro centro</h1>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                    <h1 class="mb-4">Agende una cita para visitar nuestro centro</h1>
+                    <p class="mb-4">Realice su trabajo comunal con nuestra institución, toda ayuda es bien recibida y más allá de la administración, los niños estarán agradecidos.Llene el formulario para contactarle prontamente. </p>
                     <div class="bg-light rounded d-flex align-items-center p-5 mb-4">
                         <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
-                            <i class="fa fa-phone-alt text-primary"></i>
+                            <i class="fa fa-phone text-primary"></i>
                         </div>
                         <div class="ms-4">
-                            <p class="mb-2">Llámanos ahora</p>
+                            <p class="mb-2">Llámenos ahora</p>
                             <h5 class="mb-0">+506 2260 6139</h5>
                         </div>
                     </div>
@@ -132,54 +130,66 @@
                             <i class="fa fa-envelope-open text-primary"></i>
                         </div>
                         <div class="ms-4">
-                            <p class="mb-2">Envíenos un correo ahora</p>
+                            <p class="mb-2">Envi­enos un correo ahora</p>
                             <h5 class="mb-0">asofeluzdivina@gmail.com</h5>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="bg-light rounded h-100 d-flex align-items-center p-5">
-                        <form>
+                        <form method="post" enctype="multipart/form-data">
                             <div class="row g-3">
 
                                 <div class="col-12 col-sm-6">
                                     <label for="exampleFormControlInput14">Nombre</label>
 
-                                    <input type="text" class="form-control border-0" placeholder="Escriba su nombre" style="height: 55px;">
+                                    <input type="text" name="Nombre" class="form-control border-0" placeholder="Escriba su nombre" style="height: 55px;" required>
                                 </div>
                                 <div class="col-12 col-sm-6">
                                     <label for="exampleFormControlInput14">Correo</label>
 
-                                    <input type="email" class="form-control border-0" placeholder="Escriba su correo" style="height: 55px;">
+                                    <input type="email" name="Correo" class="form-control border-0" placeholder="Escriba su correo" style="height: 55px;" required>
                                 </div>
                                 <div class="col-12 col-sm-6">
 
-                                    <label for="exampleFormControlInput14">Teléfono</label>
-                                    <input type="text" class="form-control border-0" placeholder="Escriba su teléfono" style="height: 55px;">
+                                    <label for="exampleFormControlInput14">Telefono</label>
+                                    <input type="number" name="Num" class="form-control border-0" placeholder="Escriba su telefono" style="height: 55px;" required>
                                 </div>
+                                <!-- <div class="col-12 col-sm-6">
 
+            <label for="exampleFormControlInput14">Grado Académico</label>
+            <input type="text" name="Grado" class="form-control border-0" placeholder="Escriba su grado académico" style="height: 55px;" required>
+        </div>
+           -->
                                 <div class="col-12 col-sm-6">
 
-                                    <label for="exampleFormControlInput14">Grado académico</label>
-                                    <select class="form-select border-0" style="height: 55px;">
+                                    <label for="Grado">Grado academico</label>
+                                    <select class="form-select border-0" name="Grado" id="Grado" style="height: 55px;" required>
                                         <option selected>Seleccionar</option>
-                                        <option value="1">Colegio Bachillerato</option>
-                                        <option value="2">Bachillerato Universitario</option>
-                                        <option value="3">Práctica Profesional</option>
+                                        <option value="Colegio Bachillerato">Colegio Bachillerato</option>
+                                        <option value="Bachillerato Universitario">Bachillerato Universitario</option>
+                                        <option value="Practica Profesional">Practica Profesional</option>
                                     </select>
                                     <br>
                                 </div>
 
                                 <div class="col-12">
-                                    <textarea class="form-control border-0" rows="5" placeholder="Describe your problem"></textarea>
+                                    <textarea class="form-control border-0" name="Msj" rows="5" placeholder="Dejenos un mensaje." required></textarea>
                                 </div>
                                 <div class="col-12">
                                     <button class="btn btn-primary w-100 py-3" type="submit">Enviar</button>
                                 </div>
+                                <h4 style="color:blue">
+                                    @ViewBag.Msj
+                                </h4>
+                                <br />
+                                <h4 style="color:red">
+                                    @ViewBag.Error
+                                </h4>
+
+
                             </div>
-                        </form>
-                    </div>
-                </div>
+</div>
             </div>
         </div>
     </div>

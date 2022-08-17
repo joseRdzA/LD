@@ -1,0 +1,27 @@
+﻿@model testautenticacion.Models.Cargos
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Cargos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Nombre del Cargo")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre_Cargo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id_Cargo }) |
+    @Html.ActionLink("Regresar a la lista", "Index")
+</p>

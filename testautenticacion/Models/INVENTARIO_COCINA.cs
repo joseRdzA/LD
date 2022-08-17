@@ -6,24 +6,28 @@
 //     Los cambios manuales en este archivo se sobrescribirán si se regenera el código.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
 namespace testautenticacion.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
     public partial class Inventario_Cocina
     {
         public int Id_Cocina { get; set; }
-        [Display(Name="Código del Producto")]
         public string Codigo_Producto { get; set; }
         public string Producto { get; set; }
         public string Medida { get; set; }
-        [Display(Name = "Existencia Inicial")]
-        public string Existencia_Inicial { get; set; }
+        public int Existencia_Inicial { get; set; }
         public int Entradas { get; set; }
         public int Salidas { get; set; }
-        public int Existencias { get; set; }
+        // public int Existencias { get; set; }
+        public int Existencias
+        {
+            get
+            {
+                //  DateTime now = DateTime.Today;
+                int Existencias = Existencia_Inicial + Entradas - Salidas;
+                return Existencias;
+            }
+        }
     }
 }

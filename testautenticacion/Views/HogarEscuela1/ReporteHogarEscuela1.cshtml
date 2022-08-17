@@ -1,0 +1,79 @@
+﻿@model  testautenticacion.Models.HogarEscuela1Modelo
+@{
+    Layout = null;
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<div>
+    <h1 style="text-align:center">Asistencia Hogar Escuela 1</h1>
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th scope="col">
+                @Html.DisplayName("Mes y Año")
+            </th>
+            <th scope="col">
+                @Html.DisplayName("Nombre Estudiante")
+            </th>
+            <th scope="col">
+                @Html.DisplayName("Numero de la semana")
+            </th>
+            <th scope="col">
+                @Html.DisplayName("Lunes")
+            </th>
+            <th scope="col">
+                @Html.DisplayName("Martes")
+            </th>
+            <th scope="col">
+                @Html.DisplayName("Miercoles")
+            </th>
+            <th scope="col">
+                @Html.DisplayName("Jueves")
+            </th>
+            <th scope="col">
+                @Html.DisplayName("Viernes")
+            </th>
+            <th scope="col">
+                @Html.DisplayName("Nivel")
+            </th>
+
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.HogarEscuela1_List)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AnoMes)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre_Estudiante)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumeroSemana)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Estado_Asistencia1.Estado)
+
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Estado_Asistencia2.Estado)
+
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Estado_Asistencia3.Estado)
+
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Estado_Asistencia.Estado)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Estado_Asistencia4.Estado)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nivel_Estudiante.Nivel)
+                </td>
+
+            </tr>
+        }
+
+    </table>
+</div>

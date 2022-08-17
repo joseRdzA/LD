@@ -5,22 +5,22 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Usuarios</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Agregar Usuario", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Nombres)
+            @Html.DisplayName("Nombre Completo")
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Correo)
         </th>
-   
+       
         <th>
-            @Html.DisplayNameFor(model => model.Clave)
+            @Html.DisplayNameFor(model => model.Estado)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Rol.Descripcion)
@@ -37,15 +37,15 @@
             @Html.DisplayFor(modelItem => item.Correo)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Clave)
+            @Html.DisplayFor(modelItem => item.Estado)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Rol.Descripcion)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.idUsuario }) |
-            @Html.ActionLink("Details", "Details", new { id=item.idUsuario }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.idUsuario })
+            @Html.ActionLink("Editar", "Edit", new { id=item.idUsuario }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.idUsuario }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.idUsuario })
         </td>
     </tr>
 }

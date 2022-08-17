@@ -16,8 +16,6 @@ namespace testautenticacion.Models
         [MaxLength(8)]
         [MinLength(8)]
         public string Clave { get; set; }
-     
-
 
         public Rol1 IdRol { get; set; }
 

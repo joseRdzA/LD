@@ -16,26 +16,24 @@ namespace testautenticacion.Models
     public partial class Activos_Computacion
     {
         public int Id_Computacion { get; set; }
-        [Display(Name="Código")]
         public string Codigo_Activo_Computo { get; set; }
-        [Display(Name = "Descripción")]
         public string Descripcion { get; set; }
         public string Marca { get; set; }
         public string Serie { get; set; }
-        [Display(Name = "Fecha Compra")]
-        public string Fecha_Copmra { get; set; }
-        [Display(Name = "Fecha Salida")]
-        public string Fecha_Salida { get; set; }
+        [DisplayFormat(DataFormatString = "{0:d}")]
 
-        [Display(Name = "Vida Útil (Mes)")]
-        public Nullable<int> Vida_Util_Meses { get; set; }
-        [Display(Name = "Costo Adquisitivo")]
+        public System.DateTime Fecha_Copmra { get; set; }
+        [DisplayFormat(DataFormatString = "{0:d}")]
+
+        public System.DateTime Fecha_Salida { get; set; }
+        public int Vida_Util_Meses
+        {
+            get
+            {
+                return Math.Abs((Fecha_Copmra.Month - Fecha_Salida.Month) + 12 * (Fecha_Salida.Year - Fecha_Copmra.Year));
+            }
+        }
         public Nullable<double> Costo_Adquisitivo { get; set; }
-        [Display(Name = "Deprec. Mes")]
-        public Nullable<double> Deprec_Mes { get; set; }
-        [Display(Name = "Deprec. Acum")]
-        public Nullable<double> Deprec_Acum { get; set; }
-        [Display(Name = "Valor Libros")]
         public Nullable<double> Valor_Libros { get; set; }
     }
 }

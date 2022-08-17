@@ -1,4 +1,4 @@
-﻿// La generación de código T4 está habilitada para el modelo 'C:\Users\user\OneDrive\Escritorio\testautenticacion2\testautenticacion\Models\Model1.edmx'. 
+﻿// La generación de código T4 está habilitada para el modelo 'C:\Users\user\OneDrive\Escritorio\Sp\Sprint 4 final\LDSprint4\LuzDivina_Final\testautenticacion\Models\Model1.edmx'. 
 // Para habilitar la generación de código heredada, cambie el valor de la propiedad del diseñador 'Estrategia de generación de código'
 // por 'ObjectContext heredado'. Esta propiedad está disponible en la ventana Propiedades cuando se abre
 // el modelo en el diseñador.

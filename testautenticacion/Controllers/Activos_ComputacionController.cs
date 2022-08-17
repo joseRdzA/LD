@@ -8,41 +8,51 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using testautenticacion.Models;
+using PagedList;
+using PagedList.Mvc;
 
 namespace testautenticacion.Controllers
 {
+    [Authorize]
     public class Activos_ComputacionController : Controller
     {
         private AADFLDEntities db = new AADFLDEntities();
 
         // GET: Activos_Computacion
-        public ActionResult Index()
+        public ActionResult Index(int? pageNumber)
         {
+            pageNumber = pageNumber ?? 1;
             InventarioComputo inv = new InventarioComputo();
-            inv.DatosPC = db.Activos_Computacion.ToList();
+            inv.DatosPC = db.Activos_Computacion.ToList().ToPagedList((int)pageNumber, 5); 
 
             return View(inv);
         }
 
 
         [HttpPost]
-        public ActionResult ConsultarDatos(InventarioComputo obj)
+        public ActionResult ConsultarDatos(InventarioComputo obj, int? pageNumber)
         {
+            pageNumber = pageNumber ?? 1;
             InventarioComputo inv = new InventarioComputo();
 
             if (!string.IsNullOrEmpty(obj.Descripcion))
-                inv.DatosPC = db.Activos_Computacion.Where(x => x.Descripcion.Contains(obj.Descripcion)).ToList();
+            {
+                inv.DatosPC = db.Activos_Computacion.Where(x => x.Descripcion.Contains(obj.Descripcion)).ToList().ToPagedList((int)pageNumber, 5);
+            }
             else
-                inv.DatosPC = db.Activos_Computacion.ToList();
+            {
+                inv.DatosPC = db.Activos_Computacion.ToList().ToPagedList((int)pageNumber, 5);
+            }
 
             return View("Index", inv);
         }
 
         [HttpPost]
-        public ActionResult OrdenarProductos()
+        public ActionResult OrdenarProductos(int? pageNumber)
         {
+            pageNumber = pageNumber ?? 1;
             InventarioComputo inv = new InventarioComputo();
-            inv.DatosPC = db.Activos_Computacion.OrderBy(Descripcion => Descripcion.Descripcion).ToList();
+            inv.DatosPC = db.Activos_Computacion.OrderBy(Descripcion => Descripcion.Descripcion).ToList().ToPagedList((int)pageNumber, 5);
 
             return View("Index", inv); //ojo con esto, la vista y el metodo... OJO CON EL INDEX 
         }
@@ -57,7 +67,7 @@ namespace testautenticacion.Controllers
         public ActionResult ReporteComputacion()
         {
             InventarioComputo inv = new InventarioComputo();
-            inv.DatosPC = db.Activos_Computacion.ToList();
+            inv.DatosList = db.Activos_Computacion.ToList();
             return View(inv);
         }
 

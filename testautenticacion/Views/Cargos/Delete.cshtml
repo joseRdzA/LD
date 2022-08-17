@@ -1,0 +1,35 @@
+﻿@model testautenticacion.Models.Cargos
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Eliminar</h2>
+
+<h3> ¿Desea eliminar este cargo?</h3>
+<div>
+    <h4>Cargos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Nombre del Cargo")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre_Cargo)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Regresar a la lista", "Index")
+        </div>
+    }
+</div>

@@ -65,13 +65,7 @@
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Vida_Util_Meses, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Vida_Util_Meses, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Vida_Util_Meses, "", new { @class = "text-danger" })
-            </div>
-        </div>
+     
 
         <div class="form-group">
             @Html.LabelFor(model => model.Costo_Adquisitivo, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -81,21 +75,7 @@
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Deprec_Mes, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Deprec_Mes, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Deprec_Mes, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Deprec_Acum, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Deprec_Acum, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Deprec_Acum, "", new { @class = "text-danger" })
-            </div>
-        </div>
+      
 
         <div class="form-group">
             @Html.LabelFor(model => model.Valor_Libros, htmlAttributes: new { @class = "control-label col-md-2" })

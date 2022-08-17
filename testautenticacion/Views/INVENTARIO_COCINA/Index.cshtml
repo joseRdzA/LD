@@ -1,4 +1,7 @@
 ﻿@model testautenticacion.Models.Inventario
+@using PagedList
+@using PagedList.Mvc;
+
 
 @{
     ViewBag.Title = "Index";
@@ -97,4 +100,9 @@
     }
 
 </table>
+<br />
+<div>
+    Página @(Model.Datos.PageCount < Model.Datos.PageNumber ? 0 : Model.Datos.PageNumber) 
+    de @Model.Datos.PageCount   @Html.PagedListPager(Model.Datos, pageNumber => Url.Action("Index", new { pageNumber }))
+</div>
 

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+    <title>@ViewBag.Title - Administración Arbolitos de Felicidad</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -25,13 +25,16 @@
                 <ul class="nav navbar-nav">
                     <!-- <li> <img img src="~/images/Imagen1.png" width="100" height="100"></li>-->
 
-                    <li> @Html.ActionLink("Arbolitos De Felicidad Luz Divina (Administracion)", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
+                    <li> @Html.ActionLink("Administración", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
                     <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
-                    <li>@Html.ActionLink("Evaluaciones", "Evaluaciones", "Home")</li>
+                    <li>@Html.ActionLink("Planilla", "Index", "AdminPlanillaCargos")</li>
                     <li>@Html.ActionLink("Inventarios", "Inventarios", "Inventarios")</li>
+                    <li>@Html.ActionLink("Alumnos", "Index", "Estudiantes")</li>
+                    <li>@Html.ActionLink("Asistencias", "Index", "Asistencias")</li>
+                    <li>@Html.ActionLink("Evaluaciones", "Evaluaciones", "Home")</li>
                     <li>@Html.ActionLink("Agregar Usuarios", "Index", "USUARIOS")</li>
                     <li>@Html.ActionLink("Cerrar Sesion", "CerrarSesion", "Home")</li>
+
                 </ul>
             </div>
         </div>

@@ -8,18 +8,22 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using testautenticacion.Models;
+using PagedList;
+using PagedList.Mvc;
 
 namespace testautenticacion.Controllers
 {
+    [Authorize]
     public class Activos_RecreativosController : Controller
     {
         private AADFLDEntities db = new AADFLDEntities();
 
         // GET: Activos_Recreativos
-        public ActionResult Index()
+        public ActionResult Index(int? pageNumber)
         {
+            pageNumber = pageNumber ?? 1;
             InventarioRecreativo inv = new InventarioRecreativo();
-            inv.DatosRec = db.Activos_Recreativos.ToList();
+            inv.DatosRec = db.Activos_Recreativos.ToList().ToPagedList((int)pageNumber, 5); 
 
             return View(inv);
         }
@@ -27,24 +31,30 @@ namespace testautenticacion.Controllers
         //consultarDatos
 
         [HttpPost]
-        public ActionResult ConsultarDatos(Activos_Recreativos obj)
+        public ActionResult ConsultarDatos(Activos_Recreativos obj, int? pageNumber)
         {
+            pageNumber = pageNumber ?? 1;
             InventarioRecreativo inv = new InventarioRecreativo();
 
             if (!string.IsNullOrEmpty(obj.Descripcion))
-                inv.DatosRec = db.Activos_Recreativos.Where(x => x.Descripcion.Contains(obj.Descripcion)).ToList();
+            {
+                inv.DatosRec = db.Activos_Recreativos.Where(x => x.Descripcion.Contains(obj.Descripcion)).ToList().ToPagedList((int)pageNumber, 5);
+            }
             else
-                inv.DatosRec = db.Activos_Recreativos.ToList();
+            {
+                inv.DatosRec = db.Activos_Recreativos.ToList().ToPagedList((int)pageNumber, 5);
+            }
 
             return View("Index", inv);
         }
 
 
         [HttpPost]
-        public ActionResult OrdenarProductos()
+        public ActionResult OrdenarProductos(int? pageNumber)
         {
+            pageNumber = pageNumber ?? 1;
             InventarioRecreativo inv = new InventarioRecreativo();
-            inv.DatosRec = db.Activos_Recreativos.OrderBy(Descripcion => Descripcion.Descripcion).ToList();
+            inv.DatosRec = db.Activos_Recreativos.OrderBy(Descripcion => Descripcion.Descripcion).ToList().ToPagedList((int)pageNumber, 5);
 
             return View("Index", inv);
         }
@@ -59,7 +69,7 @@ namespace testautenticacion.Controllers
         public ActionResult ReporteRecreativos()
         {
             InventarioRecreativo inv = new InventarioRecreativo();
-            inv.DatosRec = db.Activos_Recreativos.ToList();
+            inv.DatosList = db.Activos_Recreativos.ToList();
             return View(inv);
         }
         // GET: Activos_Recreativos/Details/5

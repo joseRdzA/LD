@@ -11,15 +11,20 @@ namespace testautenticacion.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Funcionario
     {
+        [Range(1, 999999999, ErrorMessage ="La cédula consta de 9 digitos")]
         public int Id_Funcionario { get; set; }
         public string Nombre_Completo { get; set; }
         public Nullable<int> Num_Tel { get; set; }
+        [DataType(DataType.EmailAddress)]
+        [EmailAddress]
         public string Correo_Electronico { get; set; }
         public string Id_Cargo { get; set; }
-    
+
         public virtual Cargos Cargos { get; set; }
     }
 }
+
