@@ -12,7 +12,7 @@
 </p>
 
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-6">
         @using (Html.BeginForm("ConsultarDatos", "PreKinders", FormMethod.Post))
         {
             @Html.TextBoxFor(Model => Model.AnoMes, new { placeholder = "00/0000", @class = "form-input" })
@@ -21,9 +21,7 @@
         }
 
     </div>
-</div>
-<div class="row">
-    <div class="col-md-4">
+    <div class="col-md-6">
 
         @using (Html.BeginForm("Imprimir", "PreKinders", FormMethod.Post))
         {
@@ -32,8 +30,8 @@
             <input type="submit" class="btn btn-close-white btn-group-xs" value="PDF">
         }
     </div>
-
 </div>
+
 <br />
 <table class="table table-hover table-striped table-bordered">
     <tr>

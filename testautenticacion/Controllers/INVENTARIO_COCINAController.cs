@@ -10,13 +10,12 @@ using System.Web.Mvc;
 using testautenticacion.Models;
 using PagedList;
 using PagedList.Mvc;
-
-
-
+using testautenticacion.Permisos;
 
 namespace testautenticacion.Controllers
 {
     [Authorize]
+    [PermisosRol(Rol1.Administrador)]
     public class Inventario_CocinaController : Controller
     {
         private AADFLDEntities db = new AADFLDEntities();

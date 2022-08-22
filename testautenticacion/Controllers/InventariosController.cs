@@ -11,6 +11,7 @@ using testautenticacion.Models;
 namespace testautenticacion.Controllers
 {
     [Authorize]
+    [PermisosRol(Rol1.Administrador)]
     public class InventariosController : Controller
     {
         // GET: Inventarios

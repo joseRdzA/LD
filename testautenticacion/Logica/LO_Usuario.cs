@@ -14,8 +14,6 @@ namespace testautenticacion.Logica
 
         public void activarCuenta(string token,string correo,string clave)
         {
-
-
             using (SqlConnection conexion = new SqlConnection("Data Source = (local) ; Initial Catalog=AADFLD; Integrated Security=true"))
             {
                 // solo tendra un token activo, al generar uno nuevo desativa cualquier otro q existiera, asociado
